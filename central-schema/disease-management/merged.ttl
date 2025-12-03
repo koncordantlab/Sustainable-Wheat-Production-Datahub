@@ -1,0 +1,282 @@
+@prefix ns: <http://grip.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns:Bacteria a owl:Class ;
+    rdfs:subClassOf ns:Pathogen .
+
+ns:Common_Bunt a owl:Class ;
+    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
+    ns:influenced_by ns:Soil_Moisture,
+        ns:Soil_Temperature ;
+    ns:is_carried_by ns:Seed_Carrier ;
+    ns:survive_in ns:Seed ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Conservational a owl:Class ;
+    rdfs:subClassOf ns:Tillage .
+
+ns:Conventional a owl:Class ;
+    rdfs:subClassOf ns:Tillage .
+
+ns:Crop_Rotation a owl:Class ;
+    rdfs:subClassOf ns:Cultural_Practice .
+
+ns:Disease_Management a owl:Class ;
+    ns:depends_on ns:Pathogen .
+
+ns:Flag_Leaf a owl:Class ;
+    rdfs:subClassOf ns:Timing .
+
+ns:Flowering a owl:Class ;
+    rdfs:subClassOf ns:Timing .
+
+ns:Fusarium_Foot_Rot a owl:Class ;
+    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
+    ns:influenced_by ns:Rainfall,
+        ns:Soil_Temperature ;
+    ns:is_carried_by ns:Machinery_Equipment ;
+    ns:survive_in ns:Soil ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Fusarium_Head_Blight a owl:Class ;
+    ns:has_treatment ns:Foliar_Fungicide ;
+    ns:influenced_by ns:Rainfall,
+        ns:Relative_Humidity,
+        ns:Temperature ;
+    ns:is_carried_by ns:Wind_Carrier ;
+    ns:survive_in ns:Residue ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Horizontal_Resistance a owl:Class ;
+    rdfs:subClassOf ns:Resistance .
+
+ns:Leaf_Rust a owl:Class ;
+    ns:has_treatment ns:Foliar_Fungicide ;
+    ns:influenced_by ns:Rainfall,
+        ns:Relative_Humidity,
+        ns:Temperature,
+        ns:Wind ;
+    ns:is_carried_by ns:Wind_Carrier ;
+    ns:survive_in ns:Living_Host ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Leaf_Spot_Complex a owl:Class ;
+    ns:has_treatment ns:Foliar_Fungicide ;
+    ns:influenced_by ns:Rainfall,
+        ns:Relative_Humidity,
+        ns:Temperature,
+        ns:Wind ;
+    ns:is_carried_by ns:Wind_Carrier ;
+    ns:survive_in ns:Residue ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Loose_Smut a owl:Class ;
+    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
+    ns:influenced_by ns:Temperature,
+        ns:Wind ;
+    ns:is_carried_by ns:Seed_Carrier,
+        ns:Wind_Carrier ;
+    ns:survive_in ns:Seed ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Moderate a owl:Class ;
+    rdfs:subClassOf ns:Level_of_Resistance .
+
+ns:No_Tillage a owl:Class ;
+    rdfs:subClassOf ns:Tillage .
+
+ns:Planting_Date a owl:Class ;
+    rdfs:subClassOf ns:Cultural_Practice .
+
+ns:Pre_Flag_Leaf a owl:Class ;
+    rdfs:subClassOf ns:Timing .
+
+ns:Resistant a owl:Class ;
+    rdfs:subClassOf ns:Level_of_Resistance .
+
+ns:Seeding_Rate a owl:Class ;
+    rdfs:subClassOf ns:Cultural_Practice .
+
+ns:Sharp_Eye_Spot a owl:Class ;
+    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
+    ns:influenced_by ns:Rainfall,
+        ns:Soil_Temperature ;
+    ns:is_carried_by ns:Machinery_Equipment ;
+    ns:survive_in ns:Soil ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Stem_Rust a owl:Class ;
+    ns:has_treatment ns:Foliar_Fungicide ;
+    ns:influenced_by ns:Rainfall,
+        ns:Relative_Humidity,
+        ns:Temperature,
+        ns:Wind ;
+    ns:is_carried_by ns:Wind_Carrier ;
+    ns:survive_in ns:Living_Host ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Stripe_Rust a owl:Class ;
+    ns:has_treatment ns:Foliar_Fungicide ;
+    ns:influenced_by ns:Rainfall,
+        ns:Relative_Humidity,
+        ns:Temperature,
+        ns:Wind ;
+    ns:is_carried_by ns:Wind_Carrier ;
+    ns:survive_in ns:Living_Host ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Susceptible a owl:Class ;
+    rdfs:subClassOf ns:Level_of_Resistance .
+
+ns:Take_All a owl:Class ;
+    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
+    ns:influenced_by ns:Rainfall,
+        ns:Soil_Temperature ;
+    ns:is_carried_by ns:Machinery_Equipment ;
+    ns:survive_in ns:Soil ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Vertical_Resistance a owl:Class ;
+    rdfs:subClassOf ns:Resistance .
+
+ns:Virus a owl:Class ;
+    rdfs:subClassOf ns:Pathogen .
+
+ns:can_be_applied_within a owl:ObjectProperty .
+
+ns:depends_on a owl:ObjectProperty .
+
+ns:has_active_ingredient a owl:ObjectProperty .
+
+ns:has_efficacy a owl:ObjectProperty .
+
+ns:has_mode_of_action a owl:ObjectProperty .
+
+ns:has_product_name a owl:ObjectProperty .
+
+ns:has_rate_range a owl:ObjectProperty .
+
+ns:has_timing a owl:ObjectProperty .
+
+ns:has_treatment a owl:ObjectProperty .
+
+ns:has_treatment_strategy a owl:ObjectProperty .
+
+ns:includes_application_of a owl:ObjectProperty .
+
+ns:influenced_by a owl:ObjectProperty .
+
+ns:is_carried_by a owl:ObjectProperty .
+
+ns:Active_Ingredient a owl:Class ;
+    ns:has_mode_of_action ns:Mode_of_Action .
+
+ns:Efficacy a owl:Class .
+
+ns:Harvest_Restriction a owl:Class .
+
+ns:Incidence a owl:Class .
+
+ns:Mode_of_Action a owl:Class .
+
+ns:Product_Name a owl:Class .
+
+ns:Rate_Range a owl:Class .
+
+ns:Severity a owl:Class .
+
+ns:Soil_Moisture a owl:Class ;
+    rdfs:subClassOf ns:Environment_Factors .
+
+ns:Chemical_Strategy a owl:Class ;
+    ns:includes_application_of ns:Fungicide .
+
+ns:Cultural_Practices a owl:Class .
+
+ns:Residue a owl:Class ;
+    rdfs:subClassOf ns:Pathogen_Environment .
+
+ns:Resistance a owl:Class ;
+    ns:has_level ns:Level_of_Resistance ;
+    ns:is_measured_by ns:Incidence,
+        ns:Severity ;
+    rdfs:subClassOf ns:Host_Genetics .
+
+ns:Seed a owl:Class ;
+    rdfs:subClassOf ns:Pathogen_Environment .
+
+ns:Seed_Carrier a owl:Class ;
+    rdfs:subClassOf ns:Carrier .
+
+ns:Fungicide a owl:Class ;
+    ns:has_active_ingredient ns:Active_Ingredient ;
+    ns:has_efficacy ns:Efficacy ;
+    ns:has_product_name ns:Product_Name ;
+    ns:has_rate_range ns:Rate_Range .
+
+ns:Host_Genetics a owl:Class .
+
+ns:Living_Host a owl:Class ;
+    rdfs:subClassOf ns:Pathogen_Environment .
+
+ns:Machinery_Equipment a owl:Class ;
+    rdfs:subClassOf ns:Carrier .
+
+ns:Soil a owl:Class ;
+    rdfs:subClassOf ns:Pathogen_Environment .
+
+ns:Tillage a owl:Class ;
+    rdfs:subClassOf ns:Cultural_Practice .
+
+ns:Carrier a owl:Class .
+
+ns:Cultural_Practice a owl:Class .
+
+ns:Level_of_Resistance a owl:Class .
+
+ns:Pathogen a owl:Class .
+
+ns:Soil_Temperature a owl:Class ;
+    rdfs:subClassOf ns:Environment_Factors .
+
+ns:Timing a owl:Class .
+
+ns:Foliar_Fungicide a owl:Class ;
+    ns:can_be_applied_within ns:Harvest_Restriction ;
+    ns:has_timing ns:Timing ;
+    rdfs:subClassOf ns:Fungicide .
+
+ns:Fungicidal_Seed_Treatment a owl:Class ;
+    rdfs:subClassOf ns:Fungicide .
+
+ns:Pathogen_Environment a owl:Class .
+
+ns:Relative_Humidity a owl:Class ;
+    rdfs:subClassOf ns:Environment_Factors .
+
+ns:Wind a owl:Class ;
+    rdfs:subClassOf ns:Environment_Factors .
+
+ns:Environment_Factors a owl:Class .
+
+ns:Temperature a owl:Class ;
+    rdfs:subClassOf ns:Environment_Factors .
+
+ns:Wind_Carrier a owl:Class ;
+    rdfs:subClassOf ns:Carrier .
+
+ns:Rainfall a owl:Class ;
+    rdfs:subClassOf ns:Environment_Factors .
+
+ns:Fungi a owl:Class ;
+    ns:has_treatment_strategy ns:Chemical_Strategy,
+        ns:Cultural_Practices,
+        ns:Host_Genetics ;
+    ns:is_carried_by ns:Carrier ;
+    ns:is_cured_by ns:Chemical_Strategy,
+        ns:Cultural_Practices,
+        ns:Host_Genetics ;
+    ns:survive_in ns:Pathogen_Environment ;
+    rdfs:subClassOf ns:Pathogen .
+

@@ -1,0 +1,31 @@
+@prefix ns: <http://grip.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns:Bacteria a owl:Class ;
+    rdfs:subClassOf ns:Pathogen .
+
+ns:Disease_Management a owl:Class ;
+    ns:depends_on ns:Pathogen .
+
+ns:Fungi a owl:Class ;
+    ns:has_treatment_strategy ns:Chemical_Strategy,
+        ns:Cultural_Practices,
+        ns:Host_Genetics ;
+    rdfs:subClassOf ns:Pathogen .
+
+ns:Virus a owl:Class ;
+    rdfs:subClassOf ns:Pathogen .
+
+ns:depends_on a owl:ObjectProperty .
+
+ns:has_treatment_strategy a owl:ObjectProperty .
+
+ns:Chemical_Strategy a owl:Class .
+
+ns:Cultural_Practices a owl:Class .
+
+ns:Host_Genetics a owl:Class .
+
+ns:Pathogen a owl:Class .
+

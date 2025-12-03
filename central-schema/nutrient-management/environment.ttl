@@ -1,0 +1,175 @@
+@prefix ns: <http://grip.org/nutrient-management/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns:Bulk_Density a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Cation_Exchange_Capacity a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Clay a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Clay_Loam a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Dew_Point_Temperature a owl:Class ;
+    rdfs:subClassOf ns:Temperature .
+
+ns:Electrical_Conductivity a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Elevation a owl:Class ;
+    rdfs:subClassOf ns:Location_Component .
+
+ns:Environment a owl:Class ;
+    ns:has_component ns:Environment_Component .
+
+ns:Hydraulic_Conductivity a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Latitude a owl:Class ;
+    rdfs:subClassOf ns:Location_Component .
+
+ns:Loam a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Loamy_Sand a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Location a owl:Class ;
+    rdfs:subClassOf ns:Experimental_Component .
+
+ns:Longitude a owl:Class ;
+    rdfs:subClassOf ns:Location_Component .
+
+ns:Maximum_Temperature a owl:Class ;
+    rdfs:subClassOf ns:Temperature .
+
+ns:Maximum_Vapor_Pressure_Deficit a owl:Class ;
+    rdfs:subClassOf ns:Vapor_Pressure_Deficit .
+
+ns:Mean_Temperature a owl:Class ;
+    rdfs:subClassOf ns:Temperature .
+
+ns:Minimum_Temperature a owl:Class ;
+    rdfs:subClassOf ns:Temperature .
+
+ns:Minimum_Vapor_Pressure_Deficit a owl:Class ;
+    rdfs:subClassOf ns:Vapor_Pressure_Deficit .
+
+ns:Particle_Density a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Plot a owl:Class ;
+    rdfs:subClassOf ns:Experimental_Component .
+
+ns:Precipitation a owl:Class ;
+    rdfs:subClassOf ns:Weather_Component .
+
+ns:Relative_Humidity a owl:Class ;
+    rdfs:subClassOf ns:Weather_Component .
+
+ns:Replication a owl:Class ;
+    rdfs:subClassOf ns:Experimental_Component .
+
+ns:Sand a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Sandy_Clay a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Sandy_Clay_Loam a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Sandy_Loam a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Silt a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Silt_Loam a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Silty_Clay_Loam a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Silty_clay a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Soil_Moisture a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Soil_Nutrients a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Soil_Organic_Matter a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Soil_Temperature a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Soil_pH a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Sub_Surface_6_18_inches a owl:Class ;
+    rdfs:subClassOf ns:Sampling_Depth .
+
+ns:Sub_Surface_6_24_inches a owl:Class ;
+    rdfs:subClassOf ns:Sampling_Depth .
+
+ns:Surface_0_6_inches a owl:Class ;
+    rdfs:subClassOf ns:Sampling_Depth .
+
+ns:Trial a owl:Class ;
+    rdfs:subClassOf ns:Experimental_Component .
+
+ns:Wind_Speed a owl:Class ;
+    rdfs:subClassOf ns:Weather_Component .
+
+ns:Year a owl:Class ;
+    rdfs:subClassOf ns:Experimental_Component .
+
+ns:has_Sampling_Depth a owl:ObjectProperty .
+
+ns:has_component a owl:ObjectProperty .
+
+ns:has_nutrient_status a owl:ObjectProperty .
+
+ns:has_soil_trait a owl:ObjectProperty .
+
+ns:Nutrient a owl:Class .
+
+ns:Soil_Component a owl:Class ;
+    ns:has_Sampling_Depth ns:Sampling_Depth ;
+    rdfs:subClassOf ns:Environment_Component .
+
+ns:Vapor_Pressure_Deficit a owl:Class ;
+    rdfs:subClassOf ns:Temperature .
+
+ns:Location_Component a owl:Class ;
+    rdfs:subClassOf ns:Environment_Component .
+
+ns:Sampling_Depth a owl:Class ;
+    ns:has_nutrient_status ns:Nutrient ;
+    ns:has_soil_trait ns:Soil_Trait ;
+    rdfs:subClassOf ns:Soil_Component .
+
+ns:Weather_Component a owl:Class ;
+    rdfs:subClassOf ns:Environment_Component .
+
+ns:Environment_Component a owl:Class .
+
+ns:Experimental_Component a owl:Class ;
+    rdfs:subClassOf ns:Environment_Component .
+
+ns:Temperature a owl:Class ;
+    rdfs:subClassOf ns:Weather_Component .
+
+ns:Soil_Texture a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Soil_Trait a owl:Class ;
+    rdfs:subClassOf ns:Soil_Component .
+

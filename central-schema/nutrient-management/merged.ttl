@@ -1,0 +1,711 @@
+@prefix ns: <http://grip.org/nutrient-management/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns:Aboveground_Biomass a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures .
+
+ns:Aluminum a owl:Class ;
+    rdfs:subClassOf ns:Other_Nutrient .
+
+ns:Ammonium_Nitrate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Ammonium_Nitrogen a owl:Class ;
+    rdfs:subClassOf ns:Other_Nutrient .
+
+ns:Ammonium_Poly_Phosphate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Ammonium_Sulfate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Amount_Of_Nitrogen_Remained_In_Senesced_Leaf a owl:Class ;
+    rdfs:subClassOf ns:Mobilizable_Nitrogen_In_Stem .
+
+ns:Anhydrous_Ammonia rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Atmospheric_Nitrogen a owl:Class ;
+    rdfs:subClassOf ns:Nitrogen_Supply_Source .
+
+ns:Azotobacter a owl:Class ;
+    rdfs:subClassOf ns:Bacteria .
+
+ns:Bacillus a owl:Class ;
+    rdfs:subClassOf ns:Bacteria .
+
+ns:Banding a owl:Class ;
+    rdfs:subClassOf ns:N_Application_Method .
+
+ns:Blue_Green_Algae a owl:Class ;
+    rdfs:subClassOf ns:Algae .
+
+ns:Boron a owl:Class ;
+    rdfs:subClassOf ns:Micronutrient .
+
+ns:Broadcast a owl:Class ;
+    rdfs:subClassOf ns:N_Application_Method .
+
+ns:Bulk_Density a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Calcium a owl:Class ;
+    rdfs:subClassOf ns:Secondary_Mineral_Nutrient .
+
+ns:Calcium_Nitrate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Canopy_Cover a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures .
+
+ns:Carbon a owl:Class ;
+    rdfs:subClassOf ns:Non_Mineral_Nutrient .
+
+ns:Cation_Exchange_Capacity a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Chlorine a owl:Class ;
+    rdfs:subClassOf ns:Micronutrient .
+
+ns:Clay a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Clay_Loam a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Clostridium a owl:Class ;
+    rdfs:subClassOf ns:Bacteria .
+
+ns:Copper a owl:Class ;
+    rdfs:subClassOf ns:Micronutrient .
+
+ns:Crop_Growth_and_Development a owl:Class ;
+    ns:has_measure ns:Crop_Growth_and_Development_Measures ;
+    rdfs:subClassOf ns:Observational_Traits .
+
+ns:Daily_Increase_In_Leaf_Area_Index a owl:Class ;
+    rdfs:subClassOf ns:Leaf_Nitrogen_Demand_Computation .
+
+ns:Daily_Increase_In_Stem_Dry_Matter a owl:Class ;
+    rdfs:subClassOf ns:Stem_Nitrogen_Demand_Computation .
+
+ns:Denitrificans a owl:Class ;
+    rdfs:subClassOf ns:Bacteria .
+
+ns:Dew_Point_Temperature a owl:Class ;
+    rdfs:subClassOf ns:Temperature .
+
+ns:Di_Ammonium_Phosphate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Electrical_Conductivity a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Elevation a owl:Class ;
+    rdfs:subClassOf ns:Location_Component .
+
+ns:Falling_Number a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Farinograph_Stability_Index a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Flour_Protein_Content a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Flour_Yield a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Gluten_Content a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Grain_Nitrogen_Concentration a owl:Class ;
+    rdfs:subClassOf ns:Grain_Nitrogen_Demand_Computation .
+
+ns:Grain_Nitrogen_Demand a owl:Class ;
+    ns:fulfilled_by ns:Nitrogen_Translocation_For_Growing_Grain ;
+    ns:has_computation ns:Grain_Nitrogen_Demand_Computation ;
+    rdfs:subClassOf ns:Nitrogen_Demand .
+
+ns:Grain_Number a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Grain_Number_Per_Spike a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Grain_Number_Per_Spikelet a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Grain_Number_Per_Tiller a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Grain_Protein a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Grain_Weight a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Grain_Weight_Per_Spike a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Grain_Weight_Per_Spikelet a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Harvest_Index a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Hydraulic_Conductivity a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Hydrogen a owl:Class ;
+    rdfs:subClassOf ns:Non_Mineral_Nutrient .
+
+ns:Infertile_Spike_Number a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Infertile_Tiller_Number a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Injection a owl:Class ;
+    rdfs:subClassOf ns:N_Application_Method .
+
+ns:Iron a owl:Class ;
+    rdfs:subClassOf ns:Micronutrient .
+
+ns:Latitude a owl:Class ;
+    rdfs:subClassOf ns:Location_Component .
+
+ns:Leaf_Area_Index a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures,
+        ns:Mobilizable_Nitrogen_In_Leaf .
+
+ns:Leaf_Nitrogen_Demand a owl:Class ;
+    ns:has_computation ns:Leaf_Nitrogen_Demand_Computation ;
+    rdfs:subClassOf ns:Nitrogen_Demand .
+
+ns:Leaf_Number a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures .
+
+ns:Loaf_Volume a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Loam a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Loamy_Sand a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Location a owl:Class ;
+    rdfs:subClassOf ns:Experimental_Component .
+
+ns:Longitude a owl:Class ;
+    rdfs:subClassOf ns:Location_Component .
+
+ns:Magnesium a owl:Class ;
+    rdfs:subClassOf ns:Secondary_Mineral_Nutrient .
+
+ns:Manganese a owl:Class ;
+    rdfs:subClassOf ns:Micronutrient .
+
+ns:Maximum_Temperature a owl:Class ;
+    rdfs:subClassOf ns:Temperature .
+
+ns:Maximum_Vapor_Pressure_Deficit a owl:Class ;
+    rdfs:subClassOf ns:Vapor_Pressure_Deficit .
+
+ns:Mean_Temperature a owl:Class ;
+    rdfs:subClassOf ns:Temperature .
+
+ns:Minimum_Temperature a owl:Class ;
+    rdfs:subClassOf ns:Temperature .
+
+ns:Minimum_Vapor_Pressure_Deficit a owl:Class ;
+    rdfs:subClassOf ns:Vapor_Pressure_Deficit .
+
+ns:Mixing_Tolerance a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Mono_Ammonium_Phosphate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Nitrate_Nitrogen a owl:Class ;
+    rdfs:subClassOf ns:Other_Nutrient .
+
+ns:Nitrification a owl:Class ;
+    rdfs:subClassOf ns:Nitrogen_Supply_Source .
+
+ns:Nitrogen a owl:Class ;
+    rdfs:subClassOf ns:Primary_Mineral_Nutrient .
+
+ns:Nitrogen_Accumulation_In_Water_Bodies a owl:Class ;
+    rdfs:subClassOf ns:EnvironmentalImpact .
+
+ns:Nitrogen_Concentration_In_Green_Leaf a owl:Class ;
+    rdfs:subClassOf ns:Mobilizable_Nitrogen_In_Leaf .
+
+ns:Nitrogen_Concentration_In_Senesced_Leaf a owl:Class ;
+    rdfs:subClassOf ns:Mobilizable_Nitrogen_In_Leaf .
+
+ns:Nitrogen_Content_Per_Unit_Leaf_Area a owl:Class ;
+    rdfs:subClassOf ns:Leaf_Nitrogen_Demand_Computation .
+
+ns:Nitrogen_Content_Per_Unit_Stem_Weight a owl:Class ;
+    rdfs:subClassOf ns:Stem_Nitrogen_Demand_Computation .
+
+ns:Nitrogen_Fertilization a owl:Class ;
+    ns:is_influenced_by ns:Cultivar,
+        ns:Environment,
+        ns:N_Application,
+        ns:Yield_Goal ;
+    rdfs:subClassOf ns:Nitrogen_Supply_Source .
+
+ns:Number_Of_Spikelet a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Number_Of_Spikes a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Nutrient_Management a owl:Class ;
+    ns:includes ns:Nutrient .
+
+ns:Organic_Matter a owl:Class ;
+    rdfs:subClassOf ns:Mineralization_Source .
+
+ns:Oxygen a owl:Class ;
+    rdfs:subClassOf ns:Non_Mineral_Nutrient .
+
+ns:Particle_Density a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Phosphorus a owl:Class ;
+    rdfs:subClassOf ns:Primary_Mineral_Nutrient .
+
+ns:Plant_Height a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures .
+
+ns:Plot a owl:Class ;
+    rdfs:subClassOf ns:Experimental_Component .
+
+ns:Potassium a owl:Class ;
+    rdfs:subClassOf ns:Primary_Mineral_Nutrient .
+
+ns:Precipitation a owl:Class ;
+    rdfs:subClassOf ns:Weather_Component .
+
+ns:Pseudomonas a owl:Class ;
+    rdfs:subClassOf ns:Bacteria .
+
+ns:Relative_Humidity a owl:Class ;
+    rdfs:subClassOf ns:Weather_Component .
+
+ns:Replication a owl:Class ;
+    rdfs:subClassOf ns:Experimental_Component .
+
+ns:Residue a owl:Class ;
+    rdfs:subClassOf ns:Mineralization_Source .
+
+ns:Root_Length a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures .
+
+ns:Root_Nitrogen_Demand a owl:Class ;
+    ns:has_computation ns:Root_Nitrogen_Demand_Computation ;
+    rdfs:subClassOf ns:Nitrogen_Demand .
+
+ns:Sand a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Sandy_Clay a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Sandy_Clay_Loam a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Sandy_Loam a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Seed_Growth_Rate a owl:Class ;
+    rdfs:subClassOf ns:Grain_Nitrogen_Demand_Computation .
+
+ns:Silt a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Silt_Loam a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Silty_Clay_Loam a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Silty_clay a owl:Class ;
+    rdfs:subClassOf ns:Soil_Texture .
+
+ns:Soil_Acidification a owl:Class ;
+    rdfs:subClassOf ns:EnvironmentalImpact .
+
+ns:Soil_Available_Nitrogen a owl:Class ;
+    ns:depends_on ns:Soil_Mineral_Nitrogen_Content ;
+    ns:lost_through ns:Crop_Nitrogen_Uptake,
+        ns:Denitrification,
+        ns:Nitrate_Leaching,
+        ns:Nitrogen_Immobilization,
+        ns:Volatilization ;
+    ns:supplied_through ns:Nitrogen_Supply_Source .
+
+ns:Soil_Degradation a owl:Class ;
+    rdfs:subClassOf ns:EnvironmentalImpact .
+
+ns:Soil_Nutrients a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Soil_Organic_Matter a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Soil_Water_Content a owl:Class ;
+    rdfs:subClassOf ns:Mineralization_Driver .
+
+ns:Spike_Dry_Weight a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Spike_Sterility_Index a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Stem_Nitrogen_Demand a owl:Class ;
+    ns:has_computation ns:Stem_Nitrogen_Demand_Computation ;
+    rdfs:subClassOf ns:Nitrogen_Demand .
+
+ns:Sub_Surface_6_18_inches a owl:Class ;
+    rdfs:subClassOf ns:Sampling_Depth .
+
+ns:Sub_Surface_6_24_inches a owl:Class ;
+    rdfs:subClassOf ns:Sampling_Depth .
+
+ns:Sulfate_Sulfur a owl:Class ;
+    rdfs:subClassOf ns:Other_Nutrient .
+
+ns:Sulfur a owl:Class ;
+    rdfs:subClassOf ns:Secondary_Mineral_Nutrient .
+
+ns:Surface_0_6_inches a owl:Class ;
+    rdfs:subClassOf ns:Sampling_Depth .
+
+ns:Symbiotic a owl:Class ;
+    rdfs:subClassOf ns:Nitrogen_Fixation .
+
+ns:T_thioparus a owl:Class ;
+    rdfs:subClassOf ns:Bacteria .
+
+ns:Test_Weight a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Thiobacillus a owl:Class ;
+    rdfs:subClassOf ns:Bacteria .
+
+ns:Thousand_Kernel_Weight a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Tiller_Number a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures .
+
+ns:Total_Nitrogen_In_Stem a owl:Class ;
+    rdfs:subClassOf ns:Mobilizable_Nitrogen_In_Stem .
+
+ns:Trial a owl:Class ;
+    rdfs:subClassOf ns:Experimental_Component .
+
+ns:Urea rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Urea_Ammonium_Nitrate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Water_Pollution a owl:Class ;
+    rdfs:subClassOf ns:EnvironmentalImpact .
+
+ns:Wind_Speed a owl:Class ;
+    rdfs:subClassOf ns:Weather_Component .
+
+ns:Year a owl:Class ;
+    rdfs:subClassOf ns:Experimental_Component .
+
+ns:Zinc a owl:Class ;
+    rdfs:subClassOf ns:Micronutrient .
+
+ns:affected_by a owl:ObjectProperty .
+
+ns:depends_on a owl:ObjectProperty .
+
+ns:fulfilled_by a owl:ObjectProperty .
+
+ns:has_Sampling_Depth a owl:ObjectProperty .
+
+ns:has_component a owl:ObjectProperty .
+
+ns:has_computation a owl:ObjectProperty .
+
+ns:has_nitrogen_percentage a owl:ObjectProperty ;
+    rdfs:domain ns:Nitrogen_sources ;
+    rdfs:range ns:Nitrogen_Percentage .
+
+ns:has_nutrient_status a owl:ObjectProperty .
+
+ns:has_soil_trait a owl:ObjectProperty .
+
+ns:includes a owl:ObjectProperty .
+
+ns:lost_through a owl:ObjectProperty .
+
+ns:supplied_through a owl:ObjectProperty .
+
+ns:varies_with a owl:ObjectProperty .
+
+ns:Agronomic_Optimal_Nitrogen_Rate a owl:Class .
+
+ns:Algae a owl:Class ;
+    rdfs:subClassOf ns:Non_Symbiotic .
+
+ns:Cereals a owl:Class .
+
+ns:Critical_Nitrogen_Requirement a owl:Class .
+
+ns:Crop_Growth_Stage a owl:Class .
+
+ns:Crop_Nitrogen_Uptake a owl:Class ;
+    ns:depends_on ns:Root_Growth ;
+    ns:varies_with ns:Crop_Yield,
+        ns:Quality .
+
+ns:Crop_Yield a owl:Class ;
+    ns:has_measure ns:Crop_Yield_Measures ;
+    rdfs:subClassOf ns:Observational_Traits .
+
+ns:Cultivar a owl:Class .
+
+ns:Denitrification a owl:Class ;
+    ns:caused_by ns:Bacteria ;
+    ns:causes ns:EnvironmentalImpact ;
+    ns:depends_on ns:Soil_Temperature,
+        ns:Soil_pH .
+
+ns:Economic_Optimal_Nitrogen_Rate a owl:Class .
+
+ns:Environment a owl:Class ;
+    ns:has_component ns:Environment_Component .
+
+ns:Grazing a owl:Class ;
+    ns:includes ns:Grazing_Adjustment .
+
+ns:Grazing_Adjustment a owl:Class .
+
+ns:Growing_Season a owl:Class .
+
+ns:Irrigation a owl:Class .
+
+ns:Legumes a owl:Class .
+
+ns:Manure_Application a owl:Class .
+
+ns:N_Application a owl:Class ;
+    ns:is_influenced_by ns:Grazing,
+        ns:Irrigation,
+        ns:Manure_Application,
+        ns:N_Application_Method,
+        ns:N_Rate,
+        ns:N_Timing,
+        ns:Nitrogen_sources,
+        ns:Previous_Crop,
+        ns:Tillage .
+
+ns:N_Rate a owl:Class ;
+    ns:depends_on ns:Agronomic_Optimal_Nitrogen_Rate,
+        ns:Economic_Optimal_Nitrogen_Rate,
+        ns:Protein_Behavior,
+        ns:Yield_Potential .
+
+ns:N_Timing a owl:Class .
+
+ns:Nitrate_Leaching a owl:Class ;
+    ns:depends_on ns:Soil_Moisture,
+        ns:Soil_Texture .
+
+ns:Nitrogen_Immobilization a owl:Class .
+
+ns:Nitrogen_Supply a owl:Class ;
+    rdfs:subClassOf ns:Nitrogen_Balance .
+
+ns:Nitrogen_Uptake a owl:Class .
+
+ns:Pests_and_Diseases a owl:Class .
+
+ns:Previous_Crop a owl:Class ;
+    ns:includes ns:Cereals,
+        ns:Legumes,
+        ns:Previous_Crop_Adjustment .
+
+ns:Previous_Crop_Adjustment a owl:Class .
+
+ns:Protein_Behavior a owl:Class .
+
+ns:Quality a owl:Class ;
+    ns:has_measure ns:Quality_Measures ;
+    rdfs:subClassOf ns:Observational_Traits .
+
+ns:Root_Growth a owl:Class .
+
+ns:Root_Nitrogen_Demand_Computation a owl:Class ;
+    rdfs:subClassOf ns:Nitrogen_Demand_Computation .
+
+ns:Soil_Mineral_Nitrogen_Content a owl:Class .
+
+ns:Soil_Moisture a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Soil_Temperature a owl:Class ;
+    rdfs:subClassOf ns:Mineralization_Driver,
+        ns:Soil_Trait .
+
+ns:Soil_pH a owl:Class ;
+    rdfs:subClassOf ns:Mineralization_Driver,
+        ns:Soil_Trait .
+
+ns:Tillage a owl:Class ;
+    ns:includes ns:Tillage_Adjustment .
+
+ns:Tillage_Adjustment a owl:Class .
+
+ns:Volatilization a owl:Class .
+
+ns:Yield_Goal a owl:Class .
+
+ns:Yield_Potential a owl:Class .
+
+ns:caused_by a owl:ObjectProperty ;
+    owl:inverseOf ns:causes .
+
+ns:causes a owl:ObjectProperty ;
+    owl:inverseOf ns:caused_by .
+
+ns:influence a owl:ObjectProperty ;
+    owl:inverseOf ns:is_influenced_by .
+
+ns:is_influenced_by a owl:ObjectProperty ;
+    owl:inverseOf ns:influence .
+
+ns:Mineralization a owl:Class ;
+    rdfs:subClassOf ns:Nitrogen_Supply_Source .
+
+ns:Mineralization_Source a owl:Class ;
+    rdfs:subClassOf ns:Mineralization .
+
+ns:Mobilizable_Nitrogen_In_Stem a owl:Class ;
+    ns:has_computation ns:Stem_Nitrogen_Demand_Computation ;
+    rdfs:subClassOf ns:Nitrogen_Translocation_For_Growing_Grain .
+
+ns:Nitrogen_Balance a owl:Class .
+
+ns:Nitrogen_Fixation a owl:Class ;
+    rdfs:subClassOf ns:Nitrogen_Supply_Source .
+
+ns:Nitrogen_Percentage a owl:Class .
+
+ns:Non_Symbiotic a owl:Class ;
+    rdfs:subClassOf ns:Nitrogen_Fixation .
+
+ns:Soil_Component a owl:Class ;
+    ns:has_Sampling_Depth ns:Sampling_Depth ;
+    rdfs:subClassOf ns:Environment_Component .
+
+ns:Vapor_Pressure_Deficit a owl:Class ;
+    rdfs:subClassOf ns:Temperature .
+
+ns:Location_Component a owl:Class ;
+    rdfs:subClassOf ns:Environment_Component .
+
+ns:Mineralization_Driver a owl:Class ;
+    rdfs:subClassOf ns:Mineralization .
+
+ns:Mobilizable_Nitrogen_In_Leaf a owl:Class ;
+    ns:has_computation ns:Leaf_Nitrogen_Demand_Computation ;
+    rdfs:subClassOf ns:Nitrogen_Translocation_For_Growing_Grain .
+
+ns:Nitrogen_Translocation_For_Growing_Grain a owl:Class ;
+    rdfs:subClassOf ns:Grain_Nitrogen_Demand_Computation .
+
+ns:Non_Mineral_Nutrient a owl:Class ;
+    rdfs:subClassOf ns:Nutrient .
+
+ns:Primary_Mineral_Nutrient a owl:Class ;
+    rdfs:subClassOf ns:Nutrient .
+
+ns:Secondary_Mineral_Nutrient a owl:Class ;
+    rdfs:subClassOf ns:Nutrient .
+
+ns:Grain_Nitrogen_Demand_Computation a owl:Class ;
+    rdfs:subClassOf ns:Nitrogen_Demand_Computation .
+
+ns:Leaf_Nitrogen_Demand_Computation a owl:Class ;
+    rdfs:subClassOf ns:Nitrogen_Demand_Computation .
+
+ns:N_Application_Method a owl:Class .
+
+ns:Nitrogen_Demand a owl:Class ;
+    ns:affected_by ns:Growing_Season,
+        ns:Nutrient,
+        ns:Pests_and_Diseases ;
+    ns:depends_on ns:Critical_Nitrogen_Requirement,
+        ns:Crop_Growth_Stage,
+        ns:Nitrogen_Uptake ;
+    ns:has_computation ns:Nitrogen_Demand_Computation ;
+    rdfs:subClassOf ns:Nitrogen_Balance .
+
+ns:Observational_Traits a owl:Class ;
+    ns:has_measure ns:Observational_Traits_Measures .
+
+ns:Observational_Traits_Measures a owl:Class .
+
+ns:Other_Nutrient a owl:Class ;
+    rdfs:subClassOf ns:Nutrient .
+
+ns:Sampling_Depth a owl:Class ;
+    ns:has_nutrient_status ns:Nutrient ;
+    ns:has_soil_trait ns:Soil_Trait ;
+    rdfs:subClassOf ns:Soil_Component .
+
+ns:Stem_Nitrogen_Demand_Computation a owl:Class ;
+    rdfs:subClassOf ns:Nitrogen_Demand_Computation .
+
+ns:Weather_Component a owl:Class ;
+    rdfs:subClassOf ns:Environment_Component .
+
+ns:Environment_Component a owl:Class .
+
+ns:EnvironmentalImpact a owl:Class .
+
+ns:Experimental_Component a owl:Class ;
+    rdfs:subClassOf ns:Environment_Component .
+
+ns:Nitrogen_Demand_Computation a owl:Class .
+
+ns:Temperature a owl:Class ;
+    rdfs:subClassOf ns:Weather_Component .
+
+ns:Micronutrient a owl:Class ;
+    rdfs:subClassOf ns:Nutrient .
+
+ns:Nitrogen_Supply_Source a owl:Class ;
+    rdfs:subClassOf ns:Nitrogen_Supply .
+
+ns:Bacteria a owl:Class ;
+    rdfs:subClassOf ns:Non_Symbiotic .
+
+ns:Crop_Growth_and_Development_Measures a owl:Class ;
+    rdfs:subClassOf ns:Observational_Traits_Measures .
+
+ns:Nutrient a owl:Class ;
+    ns:influence ns:Observational_Traits .
+
+ns:Nitrogen_sources a owl:Class ;
+    ns:has_nitrogen_percentage ns:Nitrogen_Percentage .
+
+ns:Quality_Measures a owl:Class ;
+    rdfs:subClassOf ns:Observational_Traits_Measures .
+
+ns:Soil_Trait a owl:Class ;
+    rdfs:subClassOf ns:Soil_Component .
+
+ns:Soil_Texture a owl:Class ;
+    rdfs:subClassOf ns:Soil_Trait .
+
+ns:Crop_Yield_Measures a owl:Class ;
+    rdfs:subClassOf ns:Observational_Traits_Measures .
+

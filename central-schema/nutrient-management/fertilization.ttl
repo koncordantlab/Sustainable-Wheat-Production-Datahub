@@ -1,0 +1,112 @@
+@prefix ns: <http://grip.org/nutrient-management/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns:Ammonium_Nitrate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Ammonium_Poly_Phosphate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Ammonium_Sulfate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Anhydrous_Ammonia rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Banding a owl:Class ;
+    rdfs:subClassOf ns:N_Application_Method .
+
+ns:Broadcast a owl:Class ;
+    rdfs:subClassOf ns:N_Application_Method .
+
+ns:Calcium_Nitrate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Di_Ammonium_Phosphate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Injection a owl:Class ;
+    rdfs:subClassOf ns:N_Application_Method .
+
+ns:Mono_Ammonium_Phosphate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Nitrogen_Fertilization a owl:Class ;
+    ns:is_influenced_by ns:Cultivar,
+        ns:Environment,
+        ns:N_Application,
+        ns:Yield_Goal .
+
+ns:Urea rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Urea_Ammonium_Nitrate rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:depends_on a owl:ObjectProperty .
+
+ns:has_nitrogen_percentage a owl:ObjectProperty ;
+    rdfs:domain ns:Nitrogen_sources ;
+    rdfs:range ns:Nitrogen_Percentage .
+
+ns:includes a owl:ObjectProperty .
+
+ns:is_influenced_by a owl:ObjectProperty .
+
+ns:Agronomic_Optimal_Nitrogen_Rate a owl:Class .
+
+ns:Cereals a owl:Class .
+
+ns:Cultivar a owl:Class .
+
+ns:Economic_Optimal_Nitrogen_Rate a owl:Class .
+
+ns:Environment a owl:Class .
+
+ns:Grazing a owl:Class ;
+    ns:includes ns:Grazing_Adjustment .
+
+ns:Grazing_Adjustment a owl:Class .
+
+ns:Irrigation a owl:Class .
+
+ns:Legumes a owl:Class .
+
+ns:Manure_Application a owl:Class .
+
+ns:N_Application a owl:Class ;
+    ns:is_influenced_by ns:Grazing,
+        ns:Irrigation,
+        ns:Manure_Application,
+        ns:N_Application_Method,
+        ns:N_Rate,
+        ns:N_Timing,
+        ns:Nitrogen_sources,
+        ns:Previous_Crop,
+        ns:Tillage .
+
+ns:N_Rate a owl:Class ;
+    ns:depends_on ns:Agronomic_Optimal_Nitrogen_Rate,
+        ns:Economic_Optimal_Nitrogen_Rate,
+        ns:Protein_Behavior,
+        ns:Yield_Potential .
+
+ns:N_Timing a owl:Class .
+
+ns:Previous_Crop a owl:Class ;
+    ns:includes ns:Cereals,
+        ns:Legumes,
+        ns:Previous_Crop_Adjustment .
+
+ns:Previous_Crop_Adjustment a owl:Class .
+
+ns:Protein_Behavior a owl:Class .
+
+ns:Tillage a owl:Class ;
+    ns:includes ns:Tillage_Adjustment .
+
+ns:Tillage_Adjustment a owl:Class .
+
+ns:Yield_Goal a owl:Class .
+
+ns:Yield_Potential a owl:Class .
+
+ns:Nitrogen_Percentage a owl:Class .
+
+ns:N_Application_Method a owl:Class .
+
+ns:Nitrogen_sources a owl:Class ;
+    ns:has_nitrogen_percentage ns:Nitrogen_Percentage .
+

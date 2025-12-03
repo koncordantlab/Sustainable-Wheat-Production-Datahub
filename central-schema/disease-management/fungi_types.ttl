@@ -1,0 +1,162 @@
+@prefix ns: <http://grip.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns:Common_Bunt a owl:Class ;
+    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
+    ns:influenced_by ns:Soil_Moisture,
+        ns:Soil_Temperature ;
+    ns:is_carried_by ns:Seed_Carrier ;
+    ns:survive_in ns:Seed ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Fusarium_Foot_Rot a owl:Class ;
+    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
+    ns:influenced_by ns:Rainfall,
+        ns:Soil_Temperature ;
+    ns:is_carried_by ns:Machinery_Equipment ;
+    ns:survive_in ns:Soil ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Fusarium_Head_Blight a owl:Class ;
+    ns:has_treatment ns:Foliar_Fungicide ;
+    ns:influenced_by ns:Rainfall,
+        ns:Relative_Humidity,
+        ns:Temperature ;
+    ns:is_carried_by ns:Wind_Carrier ;
+    ns:survive_in ns:Residue ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Leaf_Rust a owl:Class ;
+    ns:has_treatment ns:Foliar_Fungicide ;
+    ns:influenced_by ns:Rainfall,
+        ns:Relative_Humidity,
+        ns:Temperature,
+        ns:Wind ;
+    ns:is_carried_by ns:Wind_Carrier ;
+    ns:survive_in ns:Living_Host ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Leaf_Spot_Complex a owl:Class ;
+    ns:has_treatment ns:Foliar_Fungicide ;
+    ns:influenced_by ns:Rainfall,
+        ns:Relative_Humidity,
+        ns:Temperature,
+        ns:Wind ;
+    ns:is_carried_by ns:Wind_Carrier ;
+    ns:survive_in ns:Residue ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Loose_Smut a owl:Class ;
+    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
+    ns:influenced_by ns:Temperature,
+        ns:Wind ;
+    ns:is_carried_by ns:Seed_Carrier,
+        ns:Wind_Carrier ;
+    ns:survive_in ns:Seed ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Sharp_Eye_Spot a owl:Class ;
+    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
+    ns:influenced_by ns:Rainfall,
+        ns:Soil_Temperature ;
+    ns:is_carried_by ns:Machinery_Equipment ;
+    ns:survive_in ns:Soil ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Stem_Rust a owl:Class ;
+    ns:has_treatment ns:Foliar_Fungicide ;
+    ns:influenced_by ns:Rainfall,
+        ns:Relative_Humidity,
+        ns:Temperature,
+        ns:Wind ;
+    ns:is_carried_by ns:Wind_Carrier ;
+    ns:survive_in ns:Living_Host ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Stripe_Rust a owl:Class ;
+    ns:has_treatment ns:Foliar_Fungicide ;
+    ns:influenced_by ns:Rainfall,
+        ns:Relative_Humidity,
+        ns:Temperature,
+        ns:Wind ;
+    ns:is_carried_by ns:Wind_Carrier ;
+    ns:survive_in ns:Living_Host ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:Take_All a owl:Class ;
+    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
+    ns:influenced_by ns:Rainfall,
+        ns:Soil_Temperature ;
+    ns:is_carried_by ns:Machinery_Equipment ;
+    ns:survive_in ns:Soil ;
+    rdfs:subClassOf ns:Fungi .
+
+ns:has_treatment a owl:ObjectProperty .
+
+ns:influenced_by a owl:ObjectProperty .
+
+ns:is_carried_by a owl:ObjectProperty .
+
+ns:Chemical_Strategy a owl:Class .
+
+ns:Cultural_Practices a owl:Class .
+
+ns:Host_Genetics a owl:Class .
+
+ns:Soil_Moisture a owl:Class ;
+    rdfs:subClassOf ns:Environment_Factors .
+
+ns:Residue a owl:Class ;
+    rdfs:subClassOf ns:Pathogen_Environment .
+
+ns:Seed a owl:Class ;
+    rdfs:subClassOf ns:Pathogen_Environment .
+
+ns:Seed_Carrier a owl:Class ;
+    rdfs:subClassOf ns:Carrier .
+
+ns:Living_Host a owl:Class ;
+    rdfs:subClassOf ns:Pathogen_Environment .
+
+ns:Machinery_Equipment a owl:Class ;
+    rdfs:subClassOf ns:Carrier .
+
+ns:Soil a owl:Class ;
+    rdfs:subClassOf ns:Pathogen_Environment .
+
+ns:Carrier a owl:Class .
+
+ns:Soil_Temperature a owl:Class ;
+    rdfs:subClassOf ns:Environment_Factors .
+
+ns:Foliar_Fungicide a owl:Class .
+
+ns:Fungicidal_Seed_Treatment a owl:Class .
+
+ns:Pathogen_Environment a owl:Class .
+
+ns:Relative_Humidity a owl:Class ;
+    rdfs:subClassOf ns:Environment_Factors .
+
+ns:Wind a owl:Class ;
+    rdfs:subClassOf ns:Environment_Factors .
+
+ns:Environment_Factors a owl:Class .
+
+ns:Temperature a owl:Class ;
+    rdfs:subClassOf ns:Environment_Factors .
+
+ns:Wind_Carrier a owl:Class ;
+    rdfs:subClassOf ns:Carrier .
+
+ns:Rainfall a owl:Class ;
+    rdfs:subClassOf ns:Environment_Factors .
+
+ns:Fungi a owl:Class ;
+    ns:is_carried_by ns:Carrier ;
+    ns:is_cured_by ns:Chemical_Strategy,
+        ns:Cultural_Practices,
+        ns:Host_Genetics ;
+    ns:survive_in ns:Pathogen_Environment .
+

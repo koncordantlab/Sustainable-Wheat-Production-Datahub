@@ -1,0 +1,61 @@
+@prefix ns: <http://grip.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns:Chemical_Strategy a owl:Class ;
+    ns:includes_application_of ns:Fungicide .
+
+ns:Flag_Leaf a owl:Class ;
+    rdfs:subClassOf ns:Timing .
+
+ns:Flowering a owl:Class ;
+    rdfs:subClassOf ns:Timing .
+
+ns:Foliar_Fungicide a owl:Class ;
+    ns:can_be_applied_within ns:Harvest_Restriction ;
+    ns:has_timing ns:Timing ;
+    rdfs:subClassOf ns:Fungicide .
+
+ns:Fungicidal_Seed_Treatment a owl:Class ;
+    rdfs:subClassOf ns:Fungicide .
+
+ns:Pre_Flag_Leaf a owl:Class ;
+    rdfs:subClassOf ns:Timing .
+
+ns:can_be_applied_within a owl:ObjectProperty .
+
+ns:has_active_ingredient a owl:ObjectProperty .
+
+ns:has_efficacy a owl:ObjectProperty .
+
+ns:has_mode_of_action a owl:ObjectProperty .
+
+ns:has_product_name a owl:ObjectProperty .
+
+ns:has_rate_range a owl:ObjectProperty .
+
+ns:has_timing a owl:ObjectProperty .
+
+ns:includes_application_of a owl:ObjectProperty .
+
+ns:Active_Ingredient a owl:Class ;
+    ns:has_mode_of_action ns:Mode_of_Action .
+
+ns:Efficacy a owl:Class .
+
+ns:Harvest_Restriction a owl:Class .
+
+ns:Mode_of_Action a owl:Class .
+
+ns:Product_Name a owl:Class .
+
+ns:Rate_Range a owl:Class .
+
+ns:Fungicide a owl:Class ;
+    ns:has_active_ingredient ns:Active_Ingredient ;
+    ns:has_efficacy ns:Efficacy ;
+    ns:has_product_name ns:Product_Name ;
+    ns:has_rate_range ns:Rate_Range .
+
+ns:Timing a owl:Class .
+

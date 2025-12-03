@@ -1,0 +1,1309 @@
+@prefix grip: <http://grip.org/fungicide-trials/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+grip:ActiveIngredient a owl:Class .
+
+grip:DON a owl:Class .
+
+grip:Date a owl:Class .
+
+grip:Fungicide2 a owl:Class ;
+    rdfs:subClassOf grip:Fungicide .
+
+grip:Fungicide3 a owl:Class ;
+    rdfs:subClassOf grip:Fungicide .
+
+grip:GrowthStage a owl:Class .
+
+grip:HarvestDate a owl:Class .
+
+grip:Incidence a owl:Class .
+
+grip:MOA a owl:Class .
+
+grip:PlantingDate a owl:Class .
+
+grip:Population a owl:Class .
+
+grip:Protein a owl:Class .
+
+grip:Severity a owl:Class .
+
+grip:TestWeight a owl:Class .
+
+grip:Yield a owl:Class .
+
+grip:appliedOnVariety a owl:ObjectProperty .
+
+grip:hasA_I a owl:ObjectProperty .
+
+grip:hasAppDate a owl:DatatypeProperty .
+
+grip:hasBlock a owl:DatatypeProperty .
+
+grip:hasDON a owl:DatatypeProperty .
+
+grip:hasDate a owl:DatatypeProperty .
+
+grip:hasDiseaseObservation a owl:ObjectProperty .
+
+grip:hasExpDesign a owl:ObjectProperty .
+
+grip:hasFungicideApplication a owl:ObjectProperty .
+
+grip:hasGrowthStage a owl:DatatypeProperty .
+
+grip:hasHarvestDate a owl:DatatypeProperty .
+
+grip:hasIncidence a owl:DatatypeProperty .
+
+grip:hasLocationCity a owl:ObjectProperty .
+
+grip:hasLocationCounty a owl:ObjectProperty .
+
+grip:hasMOA a owl:ObjectProperty .
+
+grip:hasManagement a owl:ObjectProperty .
+
+grip:hasName a owl:DatatypeProperty .
+
+grip:hasObs a owl:ObjectProperty .
+
+grip:hasOutcome a owl:ObjectProperty .
+
+grip:hasPlantingDate a owl:DatatypeProperty .
+
+grip:hasPlotLength a owl:DatatypeProperty .
+
+grip:hasPlotWidth a owl:DatatypeProperty .
+
+grip:hasPopulation a owl:DatatypeProperty .
+
+grip:hasProtein a owl:DatatypeProperty .
+
+grip:hasRate a owl:DatatypeProperty .
+
+grip:hasSeverity a owl:DatatypeProperty .
+
+grip:hasTestWeight a owl:DatatypeProperty .
+
+grip:hasTiming a owl:DatatypeProperty .
+
+grip:hasTreatDesign a owl:ObjectProperty .
+
+grip:hasTreatment a owl:ObjectProperty .
+
+grip:hasTrial a owl:ObjectProperty .
+
+grip:hasYear a owl:DatatypeProperty .
+
+grip:hasYield a owl:DatatypeProperty .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1 a grip:FieldTrial ;
+    grip:hasBlock "1"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_outcome ;
+    grip:hasPlotLength "10.8"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13 a grip:FieldTrial ;
+    grip:hasBlock "1"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_outcome ;
+    grip:hasPlotLength "10.5"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14 a grip:FieldTrial ;
+    grip:hasBlock "1"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_outcome ;
+    grip:hasPlotLength "10.2"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2 a grip:FieldTrial ;
+    grip:hasBlock "1"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_outcome ;
+    grip:hasPlotLength "10.6"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7 a grip:FieldTrial ;
+    grip:hasBlock "1"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_outcome ;
+    grip:hasPlotLength "10.6"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8 a grip:FieldTrial ;
+    grip:hasBlock "1"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_outcome ;
+    grip:hasPlotLength "10.2"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10 a grip:FieldTrial ;
+    grip:hasBlock "2"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_outcome ;
+    grip:hasPlotLength "10.7"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15 a grip:FieldTrial ;
+    grip:hasBlock "2"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_outcome ;
+    grip:hasPlotLength "10.2"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16 a grip:FieldTrial ;
+    grip:hasBlock "2"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_outcome ;
+    grip:hasPlotLength "10.7"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3 a grip:FieldTrial ;
+    grip:hasBlock "2"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_outcome ;
+    grip:hasPlotLength "10.8"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4 a grip:FieldTrial ;
+    grip:hasBlock "2"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_outcome ;
+    grip:hasPlotLength "10.7"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9 a grip:FieldTrial ;
+    grip:hasBlock "2"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_outcome ;
+    grip:hasPlotLength "10.4"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11 a grip:FieldTrial ;
+    grip:hasBlock "3"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_outcome ;
+    grip:hasPlotLength "10.6"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12 a grip:FieldTrial ;
+    grip:hasBlock "3"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_outcome ;
+    grip:hasPlotLength "10.5"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5 a grip:FieldTrial ;
+    grip:hasBlock "3"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_outcome ;
+    grip:hasPlotLength "10.6"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6 a grip:FieldTrial ;
+    grip:hasBlock "3"^^xsd:int ;
+    grip:hasDiseaseObservation grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_disease ;
+    grip:hasExpDesign grip:Split ;
+    grip:hasLocationCity grip:Rossville ;
+    grip:hasLocationCounty grip:Shawnee ;
+    grip:hasManagement grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_management ;
+    grip:hasOutcome grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_outcome ;
+    grip:hasPlotLength "10.4"^^xsd:float ;
+    grip:hasPlotWidth "2.04"^^xsd:float ;
+    grip:hasTreatment grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_treatment ;
+    grip:hasTrial grip:FRL ;
+    grip:hasYear "2024"^^xsd:int .
+
+grip:isInoculated a owl:DatatypeProperty .
+
+grip:LocationCity a owl:Class .
+
+grip:LocationCounty a owl:Class .
+
+grip:TreatDesign a owl:Class .
+
+grip:Trial a owl:Class .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-15"^^xsd:date ;
+    grip:hasName "Prosaro"^^xsd:string ;
+    grip:hasRate "8.2"^^xsd:float ;
+    grip:hasTiming "Feekes 7"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "1.5"^^xsd:float ;
+    grip:hasSeverity "0.2"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "19.0"^^xsd:float ;
+    grip:hasSeverity "14.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "63.0"^^xsd:float ;
+    grip:hasSeverity "42.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "95.0"^^xsd:float ;
+    grip:hasSeverity "85.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_outcome a grip:Outcome ;
+    grip:hasTestWeight "49.7"^^xsd:float ;
+    grip:hasYield "81.93670112"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:SY_Monument ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-15"^^xsd:date ;
+    grip:hasName "Prosaro"^^xsd:string ;
+    grip:hasRate "8.2"^^xsd:float ;
+    grip:hasTiming "Feekes 7"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "10.0"^^xsd:float ;
+    grip:hasSeverity "8.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_outcome a grip:Outcome ;
+    grip:hasTestWeight "55.2"^^xsd:float ;
+    grip:hasYield "108.160323"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:KS_180B ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial14_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-15"^^xsd:date ;
+    grip:hasName "Headline"^^xsd:string ;
+    grip:hasRate "9.0"^^xsd:float ;
+    grip:hasTiming "Feekes 7"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "1.0"^^xsd:float ;
+    grip:hasSeverity "0.5"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "15.0"^^xsd:float ;
+    grip:hasSeverity "20.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "83.0"^^xsd:float ;
+    grip:hasSeverity "55.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "100.0"^^xsd:float ;
+    grip:hasSeverity "60.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_outcome a grip:Outcome ;
+    grip:hasTestWeight "49.7"^^xsd:float ;
+    grip:hasYield "73.24449703"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:SY_Monument ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-15"^^xsd:date ;
+    grip:hasName "Headline"^^xsd:string ;
+    grip:hasRate "9.0"^^xsd:float ;
+    grip:hasTiming "Feekes 7"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "1.0"^^xsd:float ;
+    grip:hasSeverity "1.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "15.0"^^xsd:float ;
+    grip:hasSeverity "5.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "90.0"^^xsd:float ;
+    grip:hasSeverity "40.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_outcome a grip:Outcome ;
+    grip:hasTestWeight "53.7"^^xsd:float ;
+    grip:hasYield "83.45445036"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:KS_180B ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial2_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-20"^^xsd:date ;
+    grip:hasName "Headline"^^xsd:string ;
+    grip:hasRate "9.0"^^xsd:float ;
+    grip:hasTiming "Feekes 9"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "1.5"^^xsd:float ;
+    grip:hasSeverity "0.5"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "23.0"^^xsd:float ;
+    grip:hasSeverity "17.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "55.0"^^xsd:float ;
+    grip:hasSeverity "13.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_outcome a grip:Outcome ;
+    grip:hasTestWeight "48.1"^^xsd:float ;
+    grip:hasYield "76.24650133"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:SY_Monument ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial7_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-20"^^xsd:date ;
+    grip:hasName "Headline"^^xsd:string ;
+    grip:hasRate "9.0"^^xsd:float ;
+    grip:hasTiming "Feekes 9"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_outcome a grip:Outcome ;
+    grip:hasTestWeight "54.8"^^xsd:float ;
+    grip:hasYield "94.55305652"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:KS_180B ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial8_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-20"^^xsd:date ;
+    grip:hasName "Headline"^^xsd:string ;
+    grip:hasRate "9.0"^^xsd:float ;
+    grip:hasTiming "Feekes 9"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "20.0"^^xsd:float ;
+    grip:hasSeverity "10.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "45.0"^^xsd:float ;
+    grip:hasSeverity "30.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_outcome a grip:Outcome ;
+    grip:hasTestWeight "48.9"^^xsd:float ;
+    grip:hasYield "70.58199529"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:KS_180B ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial10_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-15"^^xsd:date ;
+    grip:hasName "Prosaro"^^xsd:string ;
+    grip:hasRate "8.2"^^xsd:float ;
+    grip:hasTiming "Feekes 7"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "5.0"^^xsd:float ;
+    grip:hasSeverity "20.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_outcome a grip:Outcome ;
+    grip:hasTestWeight "53.8"^^xsd:float ;
+    grip:hasYield "103.2852882"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:KS_180B ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial15_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-15"^^xsd:date ;
+    grip:hasName "Prosaro"^^xsd:string ;
+    grip:hasRate "8.2"^^xsd:float ;
+    grip:hasTiming "Feekes 7"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "7.0"^^xsd:float ;
+    grip:hasSeverity "5.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "67.0"^^xsd:float ;
+    grip:hasSeverity "51.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "100.0"^^xsd:float ;
+    grip:hasSeverity "80.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_outcome a grip:Outcome ;
+    grip:hasTestWeight "46.1"^^xsd:float ;
+    grip:hasYield "64.92970117"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:SY_Monument ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial16_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-15"^^xsd:date ;
+    grip:hasName "Headline"^^xsd:string ;
+    grip:hasRate "9.0"^^xsd:float ;
+    grip:hasTiming "Feekes 7"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "71.0"^^xsd:float ;
+    grip:hasSeverity "21.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "80.0"^^xsd:float ;
+    grip:hasSeverity "70.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "100.0"^^xsd:float ;
+    grip:hasSeverity "44.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_outcome a grip:Outcome ;
+    grip:hasTestWeight "50.0"^^xsd:float ;
+    grip:hasYield "81.08595335"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:SY_Monument ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial3_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-15"^^xsd:date ;
+    grip:hasName "Headline"^^xsd:string ;
+    grip:hasRate "9.0"^^xsd:float ;
+    grip:hasTiming "Feekes 7"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "25.0"^^xsd:float ;
+    grip:hasSeverity "9.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "100.0"^^xsd:float ;
+    grip:hasSeverity "22.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_outcome a grip:Outcome ;
+    grip:hasTestWeight "54.1"^^xsd:float ;
+    grip:hasYield "87.34161122"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:KS_180B ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial4_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-20"^^xsd:date ;
+    grip:hasName "Headline"^^xsd:string ;
+    grip:hasRate "9.0"^^xsd:float ;
+    grip:hasTiming "Feekes 9"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "5.0"^^xsd:float ;
+    grip:hasSeverity "3.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_outcome a grip:Outcome ;
+    grip:hasTestWeight "53.7"^^xsd:float ;
+    grip:hasYield "108.313628"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:SY_Monument ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_2_trial9_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-20"^^xsd:date ;
+    grip:hasName "Headline"^^xsd:string ;
+    grip:hasRate "9.0"^^xsd:float ;
+    grip:hasTiming "Feekes 9"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "12.0"^^xsd:float ;
+    grip:hasSeverity "8.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "45.0"^^xsd:float ;
+    grip:hasSeverity "40.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "100.0"^^xsd:float ;
+    grip:hasSeverity "70.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_outcome a grip:Outcome ;
+    grip:hasTestWeight "49.4"^^xsd:float ;
+    grip:hasYield "93.45558575"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:KS_180B ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial11_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-20"^^xsd:date ;
+    grip:hasName "Headline"^^xsd:string ;
+    grip:hasRate "9.0"^^xsd:float ;
+    grip:hasTiming "Feekes 9"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "7.0"^^xsd:float ;
+    grip:hasSeverity "5.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_outcome a grip:Outcome ;
+    grip:hasTestWeight "53.6"^^xsd:float ;
+    grip:hasYield "103.2565279"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:SY_Monument ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial12_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-15"^^xsd:date ;
+    grip:hasName "Headline"^^xsd:string ;
+    grip:hasRate "9.0"^^xsd:float ;
+    grip:hasTiming "Feekes 7"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "70.0"^^xsd:float ;
+    grip:hasSeverity "30.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "93.0"^^xsd:float ;
+    grip:hasSeverity "81.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "100.0"^^xsd:float ;
+    grip:hasSeverity "95.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_outcome a grip:Outcome ;
+    grip:hasTestWeight "43.9"^^xsd:float ;
+    grip:hasYield "71.99459094"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:SY_Monument ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial5_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_disease a grip:Disease ;
+    grip:hasName "Rust" ;
+    grip:hasObs grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_observation1,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_observation2,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_observation3,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_observation4,
+        grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_observation5 ;
+    grip:isInoculated true .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_fungicide1 a grip:Fungicide1 ;
+    grip:hasAppDate "2024-04-15"^^xsd:date ;
+    grip:hasName "Headline"^^xsd:string ;
+    grip:hasRate "9.0"^^xsd:float ;
+    grip:hasTiming "Feekes 7"^^xsd:string .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_management a grip:Management ;
+    grip:hasHarvestDate "2024-06-17"^^xsd:date ;
+    grip:hasPlantingDate "2024-10-20"^^xsd:date .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_observation1 a grip:Observation1 ;
+    grip:hasDate "2024-04-26"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_observation2 a grip:Observation2 ;
+    grip:hasDate "2024-05-03"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.1"^^xsd:string ;
+    grip:hasIncidence "0.0"^^xsd:float ;
+    grip:hasSeverity "0.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_observation3 a grip:Observation3 ;
+    grip:hasDate "2024-05-10"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_10.5.3"^^xsd:string ;
+    grip:hasIncidence "8.0"^^xsd:float ;
+    grip:hasSeverity "5.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_observation4 a grip:Observation4 ;
+    grip:hasDate "2024-05-16"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.1"^^xsd:string ;
+    grip:hasIncidence "14.0"^^xsd:float ;
+    grip:hasSeverity "11.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_observation5 a grip:Observation5 ;
+    grip:hasDate "2024-05-22"^^xsd:date ;
+    grip:hasGrowthStage "Feekes_11.2"^^xsd:string ;
+    grip:hasIncidence "75.0"^^xsd:float ;
+    grip:hasSeverity "55.0"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_outcome a grip:Outcome ;
+    grip:hasTestWeight "52.6"^^xsd:float ;
+    grip:hasYield "93.09698276"^^xsd:float .
+
+grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_treatment a grip:Treatment ;
+    grip:appliedOnVariety grip:KS_180B ;
+    grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_fungicide1 ;
+    grip:hasTreatDesign grip:Two-way .
+
+grip:WheatVariety a owl:Class .
+
+grip:Fungicide a owl:Class .
+
+grip:Observation a owl:Class .
+
+grip:KS_180B a grip:WheatVariety .
+
+grip:SY_Monument a grip:WheatVariety .
+
+grip:Disease a owl:Class .
+
+grip:FRL a grip:Trial .
+
+grip:Fungicide1 a owl:Class ;
+    rdfs:subClassOf grip:Fungicide .
+
+grip:Management a owl:Class .
+
+grip:Observation1 a owl:Class ;
+    rdfs:subClassOf grip:Observation .
+
+grip:Observation2 a owl:Class ;
+    rdfs:subClassOf grip:Observation .
+
+grip:Observation3 a owl:Class ;
+    rdfs:subClassOf grip:Observation .
+
+grip:Observation4 a owl:Class ;
+    rdfs:subClassOf grip:Observation .
+
+grip:Observation5 a owl:Class ;
+    rdfs:subClassOf grip:Observation .
+
+grip:Outcome a owl:Class .
+
+grip:Rossville a grip:LocationCity .
+
+grip:Shawnee a grip:LocationCounty .
+
+grip:Split a grip:ExperimentDesign .
+
+grip:Two-way a grip:TreatDesign .
+

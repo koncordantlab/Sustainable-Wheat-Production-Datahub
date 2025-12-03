@@ -1,0 +1,209 @@
+@prefix ns: <http://grip.org/nutrient-management/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns:Aboveground_Biomass a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures .
+
+ns:Aluminum a owl:Class ;
+    rdfs:subClassOf ns:Other_Nutrient .
+
+ns:Ammonium_Nitrogen a owl:Class ;
+    rdfs:subClassOf ns:Other_Nutrient .
+
+ns:Boron a owl:Class ;
+    rdfs:subClassOf ns:Micronutrient .
+
+ns:Calcium a owl:Class ;
+    rdfs:subClassOf ns:Secondary_Mineral_Nutrient .
+
+ns:Canopy_Cover a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures .
+
+ns:Carbon a owl:Class ;
+    rdfs:subClassOf ns:Non_Mineral_Nutrient .
+
+ns:Chlorine a owl:Class ;
+    rdfs:subClassOf ns:Micronutrient .
+
+ns:Copper a owl:Class ;
+    rdfs:subClassOf ns:Micronutrient .
+
+ns:Crop_Growth_and_Development a owl:Class ;
+    ns:has_measure ns:Crop_Growth_and_Development_Measures ;
+    rdfs:subClassOf ns:Observational_Traits .
+
+ns:Crop_Yield a owl:Class ;
+    ns:has_measure ns:Crop_Yield_Measures ;
+    rdfs:subClassOf ns:Observational_Traits .
+
+ns:Falling_Number a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Farinograph_Stability_Index a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Flour_Protein_Content a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Flour_Yield a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Gluten_Content a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Grain_Number a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Grain_Number_Per_Spike a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Grain_Number_Per_Spikelet a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Grain_Number_Per_Tiller a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Grain_Protein a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Grain_Weight a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Grain_Weight_Per_Spike a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Grain_Weight_Per_Spikelet a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Harvest_Index a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Hydrogen a owl:Class ;
+    rdfs:subClassOf ns:Non_Mineral_Nutrient .
+
+ns:Infertile_Spike_Number a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Infertile_Tiller_Number a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Iron a owl:Class ;
+    rdfs:subClassOf ns:Micronutrient .
+
+ns:Leaf_Area_Index a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures .
+
+ns:Leaf_Number a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures .
+
+ns:Loaf_Volume a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Magnesium a owl:Class ;
+    rdfs:subClassOf ns:Secondary_Mineral_Nutrient .
+
+ns:Manganese a owl:Class ;
+    rdfs:subClassOf ns:Micronutrient .
+
+ns:Mixing_Tolerance a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Nitrate_Nitrogen a owl:Class ;
+    rdfs:subClassOf ns:Other_Nutrient .
+
+ns:Nitrogen a owl:Class ;
+    rdfs:subClassOf ns:Primary_Mineral_Nutrient .
+
+ns:Number_Of_Spikelet a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Number_Of_Spikes a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Nutrient_Management a owl:Class ;
+    ns:includes ns:Nutrient .
+
+ns:Oxygen a owl:Class ;
+    rdfs:subClassOf ns:Non_Mineral_Nutrient .
+
+ns:Phosphorus a owl:Class ;
+    rdfs:subClassOf ns:Primary_Mineral_Nutrient .
+
+ns:Plant_Height a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures .
+
+ns:Potassium a owl:Class ;
+    rdfs:subClassOf ns:Primary_Mineral_Nutrient .
+
+ns:Quality a owl:Class ;
+    ns:has_measure ns:Quality_Measures ;
+    rdfs:subClassOf ns:Observational_Traits .
+
+ns:Root_Length a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures .
+
+ns:Spike_Dry_Weight a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Spike_Sterility_Index a owl:Class ;
+    rdfs:subClassOf ns:Crop_Yield_Measures .
+
+ns:Sulfate_Sulfur a owl:Class ;
+    rdfs:subClassOf ns:Other_Nutrient .
+
+ns:Sulfur a owl:Class ;
+    rdfs:subClassOf ns:Secondary_Mineral_Nutrient .
+
+ns:Test_Weight a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Thousand_Kernel_Weight a owl:Class ;
+    rdfs:subClassOf ns:Quality_Measures .
+
+ns:Tiller_Number a owl:Class ;
+    rdfs:subClassOf ns:Crop_Growth_and_Development_Measures .
+
+ns:Zinc a owl:Class ;
+    rdfs:subClassOf ns:Micronutrient .
+
+ns:includes a owl:ObjectProperty .
+
+ns:influence a owl:ObjectProperty ;
+    owl:inverseOf ns:is_influenced_by .
+
+ns:is_influenced_by a owl:ObjectProperty ;
+    owl:inverseOf ns:influence .
+
+ns:Non_Mineral_Nutrient a owl:Class ;
+    rdfs:subClassOf ns:Nutrient .
+
+ns:Primary_Mineral_Nutrient a owl:Class ;
+    rdfs:subClassOf ns:Nutrient .
+
+ns:Secondary_Mineral_Nutrient a owl:Class ;
+    rdfs:subClassOf ns:Nutrient .
+
+ns:Observational_Traits a owl:Class ;
+    ns:has_measure ns:Observational_Traits_Measures .
+
+ns:Observational_Traits_Measures a owl:Class .
+
+ns:Other_Nutrient a owl:Class ;
+    rdfs:subClassOf ns:Nutrient .
+
+ns:Micronutrient a owl:Class ;
+    rdfs:subClassOf ns:Nutrient .
+
+ns:Nutrient a owl:Class ;
+    ns:influence ns:Observational_Traits .
+
+ns:Crop_Growth_and_Development_Measures a owl:Class ;
+    rdfs:subClassOf ns:Observational_Traits_Measures .
+
+ns:Quality_Measures a owl:Class ;
+    rdfs:subClassOf ns:Observational_Traits_Measures .
+
+ns:Crop_Yield_Measures a owl:Class ;
+    rdfs:subClassOf ns:Observational_Traits_Measures .
+

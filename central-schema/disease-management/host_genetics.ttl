@@ -1,0 +1,33 @@
+@prefix ns: <http://grip.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns:Horizontal_Resistance a owl:Class ;
+    rdfs:subClassOf ns:Resistance .
+
+ns:Moderate a owl:Class ;
+    rdfs:subClassOf ns:Level_of_Resistance .
+
+ns:Resistant a owl:Class ;
+    rdfs:subClassOf ns:Level_of_Resistance .
+
+ns:Susceptible a owl:Class ;
+    rdfs:subClassOf ns:Level_of_Resistance .
+
+ns:Vertical_Resistance a owl:Class ;
+    rdfs:subClassOf ns:Resistance .
+
+ns:Host_Genetics a owl:Class .
+
+ns:Incidence a owl:Class .
+
+ns:Severity a owl:Class .
+
+ns:Resistance a owl:Class ;
+    ns:has_level ns:Level_of_Resistance ;
+    ns:is_measured_by ns:Incidence,
+        ns:Severity ;
+    rdfs:subClassOf ns:Host_Genetics .
+
+ns:Level_of_Resistance a owl:Class .
+

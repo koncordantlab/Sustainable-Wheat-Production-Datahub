@@ -1,0 +1,27 @@
+@prefix ns: <http://grip.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns:Conservational a owl:Class ;
+    rdfs:subClassOf ns:Tillage .
+
+ns:Conventional a owl:Class ;
+    rdfs:subClassOf ns:Tillage .
+
+ns:Crop_Rotation a owl:Class ;
+    rdfs:subClassOf ns:Cultural_Practice .
+
+ns:No_Tillage a owl:Class ;
+    rdfs:subClassOf ns:Tillage .
+
+ns:Planting_Date a owl:Class ;
+    rdfs:subClassOf ns:Cultural_Practice .
+
+ns:Seeding_Rate a owl:Class ;
+    rdfs:subClassOf ns:Cultural_Practice .
+
+ns:Tillage a owl:Class ;
+    rdfs:subClassOf ns:Cultural_Practice .
+
+ns:Cultural_Practice a owl:Class .
+

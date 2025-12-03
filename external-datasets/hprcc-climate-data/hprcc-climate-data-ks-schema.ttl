@@ -1,0 +1,60 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix unl_KS: <http://grip.org/unlclimate/> .
+@prefix uo: <http://purl.obolibrary.org/obo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+unl_KS:Climate a rdfs:Class .
+
+unl_KS:Date a rdfs:Class .
+
+unl_KS:MaxTemp a rdfs:Class ;
+    unl_KS:hasUnit uo:UO_0000028 .
+
+unl_KS:MinTemp a rdfs:Class ;
+    unl_KS:hasUnit uo:UO_0000028 .
+
+unl_KS:Precipitation a rdfs:Class ;
+    unl_KS:hasUnit uo:UO_0000030 ;
+    rdfs:comment "T: Trace amount — less than 0.01\". S: Subsequent — missing but included in a subsequent value. A: Accumulated — includes current day and any immediately preceding missing days (starting at an \"S\" day). M: Missing data."^^xsd:string .
+
+unl_KS:SnowDepth a rdfs:Class ;
+    unl_KS:hasUnit uo:UO_0000030 ;
+    rdfs:comment "T: Trace amount — less than 1\". S: Subsequent — missing but included in a subsequent value. A: Accumulated — includes current day and any immediately preceding missing days (starting at an \"S\" day). M: Missing data."^^xsd:string .
+
+unl_KS:Snowfall a rdfs:Class ;
+    unl_KS:hasUnit uo:UO_0000030 ;
+    rdfs:comment "T: Trace amount — less than 0.1\". S: Subsequent — missing but included in a subsequent value. A: Accumulated — includes current day and any immediately preceding missing days (starting at an \"S\" day). M: Missing data."^^xsd:string .
+
+unl_KS:State a rdfs:Class .
+
+unl_KS:Station a rdfs:Class .
+
+unl_KS:StationID a rdfs:Class .
+
+unl_KS:StationName a rdfs:Class .
+
+unl_KS:hasClimate a owl:ObjectProperty .
+
+unl_KS:hasId a owl:ObjectProperty .
+
+unl_KS:hasMaxTemp a owl:ObjectProperty .
+
+unl_KS:hasMinTemp a owl:ObjectProperty .
+
+unl_KS:hasName a owl:ObjectProperty .
+
+unl_KS:hasPrecipitation a owl:ObjectProperty .
+
+unl_KS:hasRecordingDate a owl:ObjectProperty .
+
+unl_KS:hasSnowDepth a owl:ObjectProperty .
+
+unl_KS:hasSnowfall a owl:ObjectProperty .
+
+unl_KS:hasState a owl:ObjectProperty .
+
+unl_KS:hasUnit a owl:ObjectProperty .
+
+unl_KS:hasValue a owl:ObjectProperty .
+

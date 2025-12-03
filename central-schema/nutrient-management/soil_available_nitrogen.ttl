@@ -1,0 +1,90 @@
+@prefix ns: <http://grip.org/nutrient-management/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns:Bacillus a owl:Class ;
+    rdfs:subClassOf ns:Bacteria .
+
+ns:Denitrificans a owl:Class ;
+    rdfs:subClassOf ns:Bacteria .
+
+ns:Nitrogen_Accumulation_In_Water_Bodies a owl:Class ;
+    rdfs:subClassOf ns:EnvironmentalImpact .
+
+ns:Pseudomonas a owl:Class ;
+    rdfs:subClassOf ns:Bacteria .
+
+ns:Soil_Acidification a owl:Class ;
+    rdfs:subClassOf ns:EnvironmentalImpact .
+
+ns:Soil_Available_Nitrogen a owl:Class ;
+    ns:depends_on ns:Soil_Mineral_Nitrogen_Content ;
+    ns:lost_through ns:Crop_Nitrogen_Uptake,
+        ns:Denitrification,
+        ns:Nitrate_Leaching,
+        ns:Nitrogen_Immobilization,
+        ns:Volatilization .
+
+ns:Soil_Degradation a owl:Class ;
+    rdfs:subClassOf ns:EnvironmentalImpact .
+
+ns:T_thioparus a owl:Class ;
+    rdfs:subClassOf ns:Bacteria .
+
+ns:Thiobacillus a owl:Class ;
+    rdfs:subClassOf ns:Bacteria .
+
+ns:Water_Pollution a owl:Class ;
+    rdfs:subClassOf ns:EnvironmentalImpact .
+
+ns:depends_on a owl:ObjectProperty .
+
+ns:lost_through a owl:ObjectProperty .
+
+ns:varies_with a owl:ObjectProperty .
+
+ns:Crop_Nitrogen_Uptake a owl:Class ;
+    ns:depends_on ns:Root_Growth ;
+    ns:varies_with ns:Crop_Yield,
+        ns:Quality .
+
+ns:Crop_Yield a owl:Class .
+
+ns:Denitrification a owl:Class ;
+    ns:caused_by ns:Bacteria ;
+    ns:causes ns:EnvironmentalImpact ;
+    ns:depends_on ns:Soil_Temperature,
+        ns:Soil_pH .
+
+ns:Nitrate_Leaching a owl:Class ;
+    ns:depends_on ns:Soil_Moisture,
+        ns:Soil_Texture .
+
+ns:Nitrogen_Immobilization a owl:Class .
+
+ns:Quality a owl:Class .
+
+ns:Root_Growth a owl:Class .
+
+ns:Soil_Mineral_Nitrogen_Content a owl:Class .
+
+ns:Soil_Moisture a owl:Class .
+
+ns:Soil_Temperature a owl:Class .
+
+ns:Soil_Texture a owl:Class .
+
+ns:Soil_pH a owl:Class .
+
+ns:Volatilization a owl:Class .
+
+ns:caused_by a owl:ObjectProperty ;
+    owl:inverseOf ns:causes .
+
+ns:causes a owl:ObjectProperty ;
+    owl:inverseOf ns:caused_by .
+
+ns:EnvironmentalImpact a owl:Class .
+
+ns:Bacteria a owl:Class .
+

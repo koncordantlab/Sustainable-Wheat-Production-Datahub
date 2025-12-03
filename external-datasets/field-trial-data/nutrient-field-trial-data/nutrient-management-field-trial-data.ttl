@@ -1,0 +1,678 @@
+@prefix ns: <http://grip.org/nutrient-trials/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns:biomass a rdfs:Class ;
+    rdfs:subClassOf ns:Observational_System .
+
+ns:dap_apps a rdfs:Class ;
+    rdfs:subClassOf ns:Management_System .
+
+ns:dap_n a rdfs:Class ;
+    rdfs:subClassOf ns:Management_System .
+
+ns:environment a rdfs:Class ;
+    ns:has_dap_apps ns:dap_apps ;
+    ns:has_dap_n ns:dap_n ;
+    ns:has_fung_apps_date ns:fung_apps_date ;
+    ns:has_location ns:location ;
+    ns:has_no3 ns:no3 ;
+    ns:has_plot ns:plot ;
+    ns:has_previous_crop ns:previous_crop ;
+    ns:has_rep ns:rep ;
+    ns:has_seed_rate ns:seed_rate ;
+    ns:has_sowing_date ns:sowing_date ;
+    ns:has_total_n ns:total_n ;
+    ns:has_trial ns:trial ;
+    ns:has_year ns:year ;
+    rdfs:subClassOf ns:Experimental_System .
+
+ns:est_anthesis_time a rdfs:Class ;
+    rdfs:subClassOf ns:Management_System .
+
+ns:experimental_design a rdfs:Class ;
+    rdfs:subClassOf ns:Experimental_System .
+
+ns:fung_apps_date a rdfs:Class ;
+    rdfs:subClassOf ns:Management_System .
+
+ns:grain_protein a rdfs:Class ;
+    rdfs:subClassOf ns:Observational_System .
+
+ns:harvest_index a rdfs:Class ;
+    rdfs:subClassOf ns:Observational_System .
+
+ns:heads_per_sqm a rdfs:Class ;
+    rdfs:subClassOf ns:Observational_System .
+
+ns:kernel_per_head a rdfs:Class ;
+    rdfs:subClassOf ns:Observational_System .
+
+ns:kernel_per_sqm a rdfs:Class ;
+    rdfs:subClassOf ns:Observational_System .
+
+ns:location a rdfs:Class ;
+    rdfs:subClassOf ns:Experimental_System .
+
+ns:maturity a rdfs:Class ;
+    rdfs:subClassOf ns:Management_System .
+
+ns:no3 a rdfs:Class ;
+    rdfs:subClassOf ns:Management_System .
+
+ns:no_of_treatments a rdfs:Class ;
+    rdfs:subClassOf ns:Treatment_System .
+
+ns:plant_growth_regulator a rdfs:Class ;
+    rdfs:subClassOf ns:treatment_3 .
+
+ns:plot a rdfs:Class ;
+    rdfs:subClassOf ns:Experimental_System .
+
+ns:previous_crop a rdfs:Class ;
+    rdfs:subClassOf ns:Management_System .
+
+ns:rep a rdfs:Class ;
+    rdfs:subClassOf ns:Experimental_System .
+
+ns:seed_rate a rdfs:Class ;
+    rdfs:subClassOf ns:Management_System .
+
+ns:sowing_date a rdfs:Class ;
+    rdfs:subClassOf ns:Management_System .
+
+ns:test_weight a rdfs:Class ;
+    rdfs:subClassOf ns:Observational_System .
+
+ns:thousand_kernel_weight a rdfs:Class ;
+    rdfs:subClassOf ns:Observational_System .
+
+ns:total_n a rdfs:Class ;
+    rdfs:subClassOf ns:Management_System .
+
+ns:treatment_1 a rdfs:Class ;
+    rdfs:subClassOf ns:Treatment_System .
+
+ns:treatment_2 a rdfs:Class ;
+    rdfs:subClassOf ns:Treatment_System .
+
+ns:treatment_3 a rdfs:Class ;
+    rdfs:subClassOf ns:Treatment_System .
+
+ns:treatment_structure a rdfs:Class ;
+    rdfs:subClassOf ns:Treatment_System .
+
+ns:trial a rdfs:Class ;
+    ns:has_experimental_design ns:experimental_design ;
+    ns:has_no_of_treatments ns:no_of_treatments ;
+    ns:has_treatment_structure ns:treatment_structure ;
+    rdfs:subClassOf ns:Experimental_System .
+
+ns:year a rdfs:Class ;
+    rdfs:subClassOf ns:Experimental_System .
+
+ns:yield a rdfs:Class ;
+    rdfs:subClassOf ns:Observational_System .
+
+ns:Plot_1001_2017-18_IWM_BJ_2_HUT a ns:environment ;
+    ns:has_biomass "612.0734908136483"^^xsd:float ;
+    ns:has_dap_apps 0 ;
+    ns:has_dap_n 0.0 ;
+    ns:has_est_anthesis_time "2018-05-16T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2018-05-09T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "9.7745"^^xsd:float ;
+    ns:has_harvest_index "0.4243616833375157"^^xsd:float ;
+    ns:has_heads_per_sqm "409.4488188976378"^^xsd:float ;
+    ns:has_kernel_per_head "15.60391363022942"^^xsd:float ;
+    ns:has_kernel_per_sqm "6389.004006078188"^^xsd:float ;
+    ns:has_location ns:HUT ;
+    ns:has_no3 54.0 ;
+    ns:has_nrate "9.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_1001 ;
+    ns:has_previous_crop ns:wheat ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 90 ;
+    ns:has_sowing_date "2017-10-19T00:00:00"^^xsd:date ;
+    ns:has_thousand_kernel_weight "30.4"^^xsd:float ;
+    ns:has_total_n 63.0 ;
+    ns:has_treatment1 ns:fp ;
+    ns:has_treatment2 ns:wb_grainfield ;
+    ns:has_trial ns:IWM_BJ_2 ;
+    ns:has_year "2017-18"^^xsd:string ;
+    ns:has_yield "2319.1119364995466"^^xsd:float .
+
+ns:Plot_101_2016-17_WB-NxV_HUT a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2017-04-30T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2017-04-25T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "9.2"^^xsd:float ;
+    ns:has_location ns:HUT ;
+    ns:has_no3 51.0 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_101 ;
+    ns:has_previous_crop ns:wheat ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2016-10-21T00:00:00"^^xsd:date ;
+    ns:has_test_weight "59.04"^^xsd:float ;
+    ns:has_total_n 60.45 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:wb4515 ;
+    ns:has_trial ns:WB-NxV ;
+    ns:has_year "2016-17"^^xsd:string ;
+    ns:has_yield "3333.147214767001"^^xsd:float .
+
+ns:Plot_101_2017-18_N_FFF_BE a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2018-05-26T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2018-05-17T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "13.311"^^xsd:float ;
+    ns:has_location ns:BE ;
+    ns:has_no3 39.06 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_101 ;
+    ns:has_previous_crop ns:soybeans ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2017-10-17T00:00:00"^^xsd:date ;
+    ns:has_test_weight "61.889848275862064"^^xsd:float ;
+    ns:has_total_n 48.510000000000005 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:lcs_chrome ;
+    ns:has_trial ns:N_FFF ;
+    ns:has_year "2017-18"^^xsd:string ;
+    ns:has_yield "3238.3151544895427"^^xsd:float .
+
+ns:Plot_101_2017-18_N_FFF_MNH a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2018-05-19T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2018-05-10T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "10.613999999999999"^^xsd:float ;
+    ns:has_location ns:MNH ;
+    ns:has_no3 29.196 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_101 ;
+    ns:has_previous_crop ns:soybeans ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2017-10-16T00:00:00"^^xsd:date ;
+    ns:has_test_weight "60.48723333333333"^^xsd:float ;
+    ns:has_total_n 38.646 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:lcs_chrome ;
+    ns:has_trial ns:N_FFF ;
+    ns:has_year "2017-18"^^xsd:string ;
+    ns:has_yield "4432.837842845951"^^xsd:float .
+
+ns:Plot_101_2018-19_N_FFF_BE a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2019-06-06T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2019-05-30T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "11.397"^^xsd:float ;
+    ns:has_location ns:BE ;
+    ns:has_no3 10.26 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_101 ;
+    ns:has_previous_crop ns:soybeans ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2018-10-24T00:00:00"^^xsd:date ;
+    ns:has_test_weight "55.47964741663109"^^xsd:float ;
+    ns:has_total_n 19.71 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:wb_grainfield ;
+    ns:has_trial ns:N_FFF ;
+    ns:has_year "2018-19"^^xsd:string ;
+    ns:has_yield "1601.971250863168"^^xsd:float .
+
+ns:Plot_101_2018-19_N_FFF_HUT a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2019-05-29T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2019-05-22T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "10.962"^^xsd:float ;
+    ns:has_location ns:HUT ;
+    ns:has_no3 34.956 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_101 ;
+    ns:has_previous_crop ns:soybeans ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2018-11-02T00:00:00"^^xsd:date ;
+    ns:has_test_weight "64.16139256126512"^^xsd:float ;
+    ns:has_total_n 44.406000000000006 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:wb_grainfield ;
+    ns:has_trial ns:N_FFF ;
+    ns:has_year "2018-19"^^xsd:string ;
+    ns:has_yield "3824.574093772247"^^xsd:float .
+
+ns:Plot_101_2018-19_N_FFF_MNH a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2019-05-27T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2019-05-20T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "9.309"^^xsd:float ;
+    ns:has_location ns:MNH ;
+    ns:has_no3 19.8 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_101 ;
+    ns:has_previous_crop ns:soybeans ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2018-10-23T00:00:00"^^xsd:date ;
+    ns:has_test_weight "61.1080330849392"^^xsd:float ;
+    ns:has_total_n 29.25 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:wb_grainfield ;
+    ns:has_trial ns:N_FFF ;
+    ns:has_year "2018-19"^^xsd:string ;
+    ns:has_yield "3567.02678537438"^^xsd:float .
+
+ns:Plot_102_2016-17_WB-NxV_HUT a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2017-04-25T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2017-04-25T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "10.1"^^xsd:float ;
+    ns:has_location ns:HUT ;
+    ns:has_no3 51.0 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_102 ;
+    ns:has_previous_crop ns:wheat ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2016-10-21T00:00:00"^^xsd:date ;
+    ns:has_test_weight "49.77"^^xsd:float ;
+    ns:has_total_n 60.45 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:variety_4303 ;
+    ns:has_trial ns:WB-NxV ;
+    ns:has_year "2016-17"^^xsd:string ;
+    ns:has_yield "3353.5580327274793"^^xsd:float .
+
+ns:Plot_103_2016-17_WB-NxV_HUT a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2017-04-25T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2017-04-25T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "9.3"^^xsd:float ;
+    ns:has_location ns:HUT ;
+    ns:has_no3 51.0 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_103 ;
+    ns:has_previous_crop ns:wheat ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2016-10-21T00:00:00"^^xsd:date ;
+    ns:has_test_weight "57.88"^^xsd:float ;
+    ns:has_total_n 60.45 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:wb4269 ;
+    ns:has_trial ns:WB-NxV ;
+    ns:has_year "2016-17"^^xsd:string ;
+    ns:has_yield "4254.166246531906"^^xsd:float .
+
+ns:Plot_104_2016-17_WB-NxV_HUT a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2017-05-02T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2017-04-25T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "8.1"^^xsd:float ;
+    ns:has_location ns:HUT ;
+    ns:has_no3 51.0 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_104 ;
+    ns:has_previous_crop ns:wheat ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2016-10-21T00:00:00"^^xsd:date ;
+    ns:has_test_weight "58.1"^^xsd:float ;
+    ns:has_total_n 60.45 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:wb_grainfield ;
+    ns:has_trial ns:WB-NxV ;
+    ns:has_year "2016-17"^^xsd:string ;
+    ns:has_yield "4225.483498329653"^^xsd:float .
+
+ns:Plot_105_2016-17_WB-NxV_HUT a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2017-04-28T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2017-04-25T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "10.1"^^xsd:float ;
+    ns:has_location ns:HUT ;
+    ns:has_no3 51.0 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_105 ;
+    ns:has_previous_crop ns:wheat ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2016-10-21T00:00:00"^^xsd:date ;
+    ns:has_test_weight "54.75"^^xsd:float ;
+    ns:has_total_n 60.45 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:variety_4458 ;
+    ns:has_trial ns:WB-NxV ;
+    ns:has_year "2016-17"^^xsd:string ;
+    ns:has_yield "3726.183387124172"^^xsd:float .
+
+ns:Plot_114_2017-18_N_FFF_BE a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2018-05-24T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2018-05-17T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "11.571"^^xsd:float ;
+    ns:has_location ns:BE ;
+    ns:has_no3 39.06 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_114 ;
+    ns:has_previous_crop ns:soybeans ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2017-10-17T00:00:00"^^xsd:date ;
+    ns:has_test_weight "64.85618965517241"^^xsd:float ;
+    ns:has_total_n 48.510000000000005 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:wb_grainfield ;
+    ns:has_trial ns:N_FFF ;
+    ns:has_year "2017-18"^^xsd:string ;
+    ns:has_yield "3563.3351886048245"^^xsd:float .
+
+ns:Plot_114_2017-18_N_FFF_MNH a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2018-05-17T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2018-05-10T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "8.873999999999999"^^xsd:float ;
+    ns:has_location ns:MNH ;
+    ns:has_no3 29.196 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_114 ;
+    ns:has_previous_crop ns:soybeans ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2017-10-16T00:00:00"^^xsd:date ;
+    ns:has_test_weight "61.742866666666664"^^xsd:float ;
+    ns:has_total_n 38.646 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:wb_grainfield ;
+    ns:has_trial ns:N_FFF ;
+    ns:has_year "2017-18"^^xsd:string ;
+    ns:has_yield "5749.49717958057"^^xsd:float .
+
+ns:Plot_114_2018-19_N_FFF_BE a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2019-06-08T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2019-05-30T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "13.137"^^xsd:float ;
+    ns:has_location ns:BE ;
+    ns:has_no3 10.26 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_114 ;
+    ns:has_previous_crop ns:soybeans ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2018-10-24T00:00:00"^^xsd:date ;
+    ns:has_test_weight "56.53965624884483"^^xsd:float ;
+    ns:has_total_n 19.71 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:lcs_chrome ;
+    ns:has_trial ns:N_FFF ;
+    ns:has_year "2018-19"^^xsd:string ;
+    ns:has_yield "1547.4187178274678"^^xsd:float .
+
+ns:Plot_114_2018-19_N_FFF_HUT a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2019-05-31T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2019-05-22T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "11.049"^^xsd:float ;
+    ns:has_location ns:HUT ;
+    ns:has_no3 34.956 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_114 ;
+    ns:has_previous_crop ns:soybeans ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2018-11-02T00:00:00"^^xsd:date ;
+    ns:has_test_weight "61.25264726370414"^^xsd:float ;
+    ns:has_total_n 44.406000000000006 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:lcs_chrome ;
+    ns:has_trial ns:N_FFF ;
+    ns:has_year "2018-19"^^xsd:string ;
+    ns:has_yield "4045.662908805546"^^xsd:float .
+
+ns:Plot_114_2018-19_N_FFF_MNH a ns:environment ;
+    ns:has_dap_apps 50 ;
+    ns:has_dap_n 9.45 ;
+    ns:has_est_anthesis_time "2019-05-29T00:00:00"^^xsd:date ;
+    ns:has_fung_apps_date "2019-05-20T00:00:00"^^xsd:date ;
+    ns:has_grain_protein "10.092"^^xsd:float ;
+    ns:has_location ns:MNH ;
+    ns:has_no3 19.8 ;
+    ns:has_nrate "0.0"^^xsd:float ;
+    ns:has_plot ns:PLOT_114 ;
+    ns:has_previous_crop ns:soybeans ;
+    ns:has_rep ns:REP_1 ;
+    ns:has_seed_rate 75 ;
+    ns:has_sowing_date "2018-10-23T00:00:00"^^xsd:date ;
+    ns:has_test_weight "61.519113895943036"^^xsd:float ;
+    ns:has_total_n 29.25 ;
+    ns:has_treatment1 ns:nrate ;
+    ns:has_treatment2 ns:lcs_chrome ;
+    ns:has_trial ns:N_FFF ;
+    ns:has_year "2018-19"^^xsd:string ;
+    ns:has_yield "3422.0582116062246"^^xsd:float .
+
+ns:anthesis_timing a ns:N_time\(Fall-Spring-Anthesis\) .
+
+ns:bentley a ns:variety ;
+    ns:has_maturity_property ns:early .
+
+ns:bobdole a ns:variety ;
+    ns:has_maturity_property ns:medium_early .
+
+ns:byrd a ns:variety ;
+    ns:has_maturity_property ns:medium_late .
+
+ns:control a ns:plant_growth_regulator .
+
+ns:double_stop a ns:variety ;
+    ns:has_maturity_property ns:medium_late .
+
+ns:everest a ns:variety ;
+    ns:has_maturity_property ns:super_early .
+
+ns:fall_timing a ns:N_time\(Fall-Spring-Anthesis\) .
+
+<http://grip.org/nutrient-trials/fp+n+mesz> a ns:fertility .
+
+ns:greenhammer a ns:variety ;
+    ns:has_maturity_property ns:medium .
+
+ns:has_anthesis_timing a owl:DatatypeProperty .
+
+ns:has_biomass a owl:DatatypeProperty .
+
+ns:has_dap_apps a owl:DatatypeProperty .
+
+ns:has_dap_n a owl:DatatypeProperty .
+
+ns:has_est_anthesis_time a owl:DatatypeProperty .
+
+ns:has_experimental_design a owl:ObjectProperty .
+
+ns:has_fall_timing a owl:DatatypeProperty .
+
+ns:has_fung_apps_date a owl:DatatypeProperty .
+
+ns:has_grain_protein a owl:DatatypeProperty .
+
+ns:has_harvest_index a owl:DatatypeProperty .
+
+ns:has_heads_per_sqm a owl:DatatypeProperty .
+
+ns:has_kernel_per_head a owl:DatatypeProperty .
+
+ns:has_kernel_per_sqm a owl:DatatypeProperty .
+
+ns:has_location a owl:ObjectProperty .
+
+ns:has_maturity_property a owl:ObjectProperty .
+
+ns:has_no3 a owl:DatatypeProperty .
+
+ns:has_no_of_treatments a owl:ObjectProperty .
+
+ns:has_nrate a owl:DatatypeProperty .
+
+ns:has_plot a owl:ObjectProperty .
+
+ns:has_previous_crop a owl:ObjectProperty .
+
+ns:has_rep a owl:ObjectProperty .
+
+ns:has_seed_rate a owl:DatatypeProperty .
+
+ns:has_sowing_date a owl:DatatypeProperty .
+
+ns:has_spring_timing a owl:DatatypeProperty .
+
+ns:has_test_weight a owl:DatatypeProperty .
+
+ns:has_thousand_kernel_weight a owl:DatatypeProperty .
+
+ns:has_total_n a owl:DatatypeProperty .
+
+ns:has_treatment1 a owl:ObjectProperty .
+
+ns:has_treatment2 a owl:ObjectProperty .
+
+ns:has_treatment3 a owl:ObjectProperty .
+
+ns:has_treatment_level a owl:ObjectProperty .
+
+ns:has_treatment_structure a owl:ObjectProperty .
+
+ns:has_trial a owl:ObjectProperty .
+
+ns:has_year a owl:ObjectProperty .
+
+ns:has_yield a owl:DatatypeProperty .
+
+ns:high a ns:management .
+
+ns:high_n a ns:management .
+
+ns:joe a ns:variety ;
+    ns:has_maturity_property ns:late .
+
+ns:larry a ns:variety ;
+    ns:has_maturity_property ns:medium .
+
+ns:mesz a ns:fertility .
+
+ns:palisade a ns:plant_growth_regulator .
+
+ns:spring_timing a ns:N_time\(Fall-Spring-Anthesis\) .
+
+ns:sy_mountain a ns:variety ;
+    ns:has_maturity_property ns:medium_late .
+
+ns:tatanaka a ns:variety ;
+    ns:has_maturity_property ns:medium_late .
+
+ns:variety_1863 a ns:variety ;
+    ns:has_maturity_property ns:medium .
+
+ns:zenda a ns:variety ;
+    ns:has_maturity_property ns:medium .
+
+ns:IWM_BJ_2 a ns:trial .
+
+ns:PLOT_1001 a ns:plot .
+
+ns:PLOT_102 a ns:plot .
+
+ns:PLOT_103 a ns:plot .
+
+ns:PLOT_104 a ns:plot .
+
+ns:PLOT_105 a ns:plot .
+
+ns:fp a ns:fertility .
+
+ns:super_early a ns:maturity .
+
+ns:variety_4303 a ns:variety ;
+    ns:has_maturity_property ns:early .
+
+ns:variety_4458 a ns:variety ;
+    ns:has_maturity_property ns:medium_early .
+
+ns:wb4269 a ns:variety ;
+    ns:has_maturity_property ns:early .
+
+ns:wb4515 a ns:variety ;
+    ns:has_maturity_property ns:medium .
+
+ns:late a ns:maturity .
+
+ns:management rdfs:subClassOf ns:treatment_1 .
+
+ns:medium_early a ns:maturity .
+
+ns:N_time\(Fall-Spring-Anthesis\) rdfs:subClassOf ns:treatment_3 .
+
+ns:early a ns:maturity .
+
+ns:BE a ns:location .
+
+ns:MNH a ns:location .
+
+ns:fertility rdfs:subClassOf ns:treatment_1 .
+
+ns:PLOT_114 a ns:plot .
+
+ns:WB-NxV a ns:trial .
+
+ns:lcs_chrome a ns:variety ;
+    ns:has_maturity_property ns:late .
+
+ns:medium a ns:maturity .
+
+ns:medium_late a ns:maturity .
+
+ns:PLOT_101 a ns:plot .
+
+ns:wheat a ns:previous_crop .
+
+ns:Experimental_System a owl:Class .
+
+ns:wb_grainfield a ns:variety ;
+    ns:has_maturity_property ns:medium_late .
+
+ns:HUT a ns:location .
+
+ns:Observational_System a owl:Class .
+
+ns:Management_System a owl:Class .
+
+ns:N_FFF a ns:trial .
+
+ns:soybeans a ns:previous_crop .
+
+ns:nrate a ns:fertility .
+
+ns:REP_1 a ns:rep .
+
+ns:variety rdfs:subClassOf ns:treatment_2 .
+
