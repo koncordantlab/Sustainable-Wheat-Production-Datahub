@@ -9,7 +9,7 @@ To the best of our knowledge, this is the first unified, wheat-focused agricultu
 ---
 
 ## Repository Structure
-
+```
 GRIP_DATAHUB/
 ├─ central-schema/
 │   ├─ disease-management/
@@ -38,7 +38,7 @@ GRIP_DATAHUB/
 │   └─ unl-drought-monitor-data/
 │       └─ unl-drought-monitor-data.ttl
 └─ README.md
-
+```
 ---
 ## Central Schema
 The `central-schema/` directory contains two subdirectories representing the two major modules of our core ontology: disease management and nutrient management. Rather than storing data, this directory defines the core vocabulary and upper-level concepts that specify what nutrient management and disease management are within the GRIP Datahub.
