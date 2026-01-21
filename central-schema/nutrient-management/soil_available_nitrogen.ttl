@@ -1,90 +1,156 @@
-@prefix ns: <http://grip.org/nutrient-management/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns: <https://gwsp.cs.ksu.edu/nutrient-management/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+ns: a owl:Ontology ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
+
 ns:Bacillus a owl:Class ;
+    rdfs:label "Bacillus" ;
     rdfs:subClassOf ns:Bacteria .
 
 ns:Denitrificans a owl:Class ;
+    rdfs:label "Denitrificans" ;
     rdfs:subClassOf ns:Bacteria .
 
 ns:Nitrogen_Accumulation_In_Water_Bodies a owl:Class ;
+    rdfs:label "Nitrogen Accumulation In Water Bodies" ;
     rdfs:subClassOf ns:EnvironmentalImpact .
 
 ns:Pseudomonas a owl:Class ;
+    rdfs:label "Pseudomonas" ;
     rdfs:subClassOf ns:Bacteria .
 
 ns:Soil_Acidification a owl:Class ;
+    rdfs:label "Soil Acidification" ;
     rdfs:subClassOf ns:EnvironmentalImpact .
 
 ns:Soil_Available_Nitrogen a owl:Class ;
-    ns:depends_on ns:Soil_Mineral_Nitrogen_Content ;
-    ns:lost_through ns:Crop_Nitrogen_Uptake,
-        ns:Denitrification,
-        ns:Nitrate_Leaching,
-        ns:Nitrogen_Immobilization,
-        ns:Volatilization .
+    rdfs:label "Soil Available Nitrogen" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:lost_through ;
+            owl:someValuesFrom ns:Crop_Nitrogen_Uptake ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:lost_through ;
+            owl:someValuesFrom ns:Volatilization ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:lost_through ;
+            owl:someValuesFrom ns:Denitrification ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Soil_Mineral_Nitrogen_Content ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:lost_through ;
+            owl:someValuesFrom ns:Nitrate_Leaching ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:lost_through ;
+            owl:someValuesFrom ns:Nitrogen_Immobilization ] .
 
 ns:Soil_Degradation a owl:Class ;
+    rdfs:label "Soil Degradation" ;
     rdfs:subClassOf ns:EnvironmentalImpact .
 
 ns:T_thioparus a owl:Class ;
+    rdfs:label "T. thioparus" ;
     rdfs:subClassOf ns:Bacteria .
 
 ns:Thiobacillus a owl:Class ;
+    rdfs:label "Thiobacillus" ;
     rdfs:subClassOf ns:Bacteria .
 
 ns:Water_Pollution a owl:Class ;
+    rdfs:label "Water Pollution" ;
     rdfs:subClassOf ns:EnvironmentalImpact .
 
-ns:depends_on a owl:ObjectProperty .
-
-ns:lost_through a owl:ObjectProperty .
-
-ns:varies_with a owl:ObjectProperty .
+<https://creativecommons.org/licenses/by/4.0/> dcterms:title "Creative Commons Attribution 4.0 International"@en .
 
 ns:Crop_Nitrogen_Uptake a owl:Class ;
-    ns:depends_on ns:Root_Growth ;
-    ns:varies_with ns:Crop_Yield,
-        ns:Quality .
+    rdfs:label "Crop Nitrogen Uptake" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:varies_with ;
+            owl:someValuesFrom ns:Quality ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Root_Growth ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:varies_with ;
+            owl:someValuesFrom ns:Crop_Yield ] .
 
-ns:Crop_Yield a owl:Class .
+ns:Crop_Yield a owl:Class ;
+    rdfs:label "Crop Yield" .
 
 ns:Denitrification a owl:Class ;
-    ns:caused_by ns:Bacteria ;
-    ns:causes ns:EnvironmentalImpact ;
-    ns:depends_on ns:Soil_Temperature,
-        ns:Soil_pH .
+    rdfs:label "Denitrification" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Soil_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:caused_by ;
+            owl:someValuesFrom ns:Bacteria ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Soil_pH ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:causes ;
+            owl:someValuesFrom ns:EnvironmentalImpact ] .
 
 ns:Nitrate_Leaching a owl:Class ;
-    ns:depends_on ns:Soil_Moisture,
-        ns:Soil_Texture .
+    rdfs:label "Nitrate Leaching" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Soil_Texture ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Soil_Moisture ] .
 
-ns:Nitrogen_Immobilization a owl:Class .
+ns:Nitrogen_Immobilization a owl:Class ;
+    rdfs:label "Nitrogen Immobilization" .
 
-ns:Quality a owl:Class .
+ns:Quality a owl:Class ;
+    rdfs:label "Quality" .
 
-ns:Root_Growth a owl:Class .
+ns:Root_Growth a owl:Class ;
+    rdfs:label "Root Growth" .
 
-ns:Soil_Mineral_Nitrogen_Content a owl:Class .
+ns:Soil_Mineral_Nitrogen_Content a owl:Class ;
+    rdfs:label "Soil Mineral Nitrogen Content" .
 
-ns:Soil_Moisture a owl:Class .
+ns:Soil_Moisture a owl:Class ;
+    rdfs:label "Soil Moisture" .
 
-ns:Soil_Temperature a owl:Class .
+ns:Soil_Temperature a owl:Class ;
+    rdfs:label "Soil Temperature" .
 
-ns:Soil_Texture a owl:Class .
+ns:Soil_Texture a owl:Class ;
+    rdfs:label "Soil Texture" .
 
-ns:Soil_pH a owl:Class .
+ns:Soil_pH a owl:Class ;
+    rdfs:label "Soil pH" .
 
-ns:Volatilization a owl:Class .
+ns:Volatilization a owl:Class ;
+    rdfs:label "Volatilization" .
 
 ns:caused_by a owl:ObjectProperty ;
+    rdfs:label "caused by" ;
     owl:inverseOf ns:causes .
 
 ns:causes a owl:ObjectProperty ;
+    rdfs:label "causes" ;
     owl:inverseOf ns:caused_by .
 
-ns:EnvironmentalImpact a owl:Class .
+ns:varies_with a owl:ObjectProperty ;
+    rdfs:label "varies with" .
 
-ns:Bacteria a owl:Class .
+ns:EnvironmentalImpact a owl:Class ;
+    rdfs:label "Environmental Impact" .
+
+ns:lost_through a owl:ObjectProperty ;
+    rdfs:label "lost through" .
+
+ns:Bacteria a owl:Class ;
+    rdfs:label "Bacteria" .
+
+ns:depends_on a owl:ObjectProperty ;
+    rdfs:label "depends on" .
 

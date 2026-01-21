@@ -1,162 +1,352 @@
-@prefix ns: <http://grip.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns: <https://gwsp.cs.ksu.edu/disease-management/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+ns: a owl:Ontology ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
+
 ns:Common_Bunt a owl:Class ;
-    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
-    ns:influenced_by ns:Soil_Moisture,
-        ns:Soil_Temperature ;
-    ns:is_carried_by ns:Seed_Carrier ;
-    ns:survive_in ns:Seed ;
-    rdfs:subClassOf ns:Fungi .
+    rdfs:label "Common Bunt" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Soil_Moisture ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Soil_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment ;
+            owl:someValuesFrom ns:Fungicidal_Seed_Treatment ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_carried_by ;
+            owl:someValuesFrom ns:Seed_Carrier ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:survive_in ;
+            owl:someValuesFrom ns:Seed ],
+        ns:Fungi .
 
 ns:Fusarium_Foot_Rot a owl:Class ;
-    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
-    ns:influenced_by ns:Rainfall,
-        ns:Soil_Temperature ;
-    ns:is_carried_by ns:Machinery_Equipment ;
-    ns:survive_in ns:Soil ;
-    rdfs:subClassOf ns:Fungi .
+    rdfs:label "Fusarium Foot Rot" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:is_carried_by ;
+            owl:someValuesFrom ns:Machinery_Equipment ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment ;
+            owl:someValuesFrom ns:Fungicidal_Seed_Treatment ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:survive_in ;
+            owl:someValuesFrom ns:Soil ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Rainfall ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Soil_Temperature ],
+        ns:Fungi .
 
 ns:Fusarium_Head_Blight a owl:Class ;
-    ns:has_treatment ns:Foliar_Fungicide ;
-    ns:influenced_by ns:Rainfall,
-        ns:Relative_Humidity,
-        ns:Temperature ;
-    ns:is_carried_by ns:Wind_Carrier ;
-    ns:survive_in ns:Residue ;
-    rdfs:subClassOf ns:Fungi .
+    rdfs:label "Fusarium Head Blight" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Relative_Humidity ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment ;
+            owl:someValuesFrom ns:Foliar_Fungicide ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Rainfall ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_carried_by ;
+            owl:someValuesFrom ns:Wind_Carrier ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:survive_in ;
+            owl:someValuesFrom ns:Residue ],
+        ns:Fungi .
 
 ns:Leaf_Rust a owl:Class ;
-    ns:has_treatment ns:Foliar_Fungicide ;
-    ns:influenced_by ns:Rainfall,
-        ns:Relative_Humidity,
-        ns:Temperature,
-        ns:Wind ;
-    ns:is_carried_by ns:Wind_Carrier ;
-    ns:survive_in ns:Living_Host ;
-    rdfs:subClassOf ns:Fungi .
+    rdfs:label "Leaf Rust" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:is_carried_by ;
+            owl:someValuesFrom ns:Wind_Carrier ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Relative_Humidity ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Wind ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:survive_in ;
+            owl:someValuesFrom ns:Living_Host ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Rainfall ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment ;
+            owl:someValuesFrom ns:Foliar_Fungicide ],
+        ns:Fungi .
 
 ns:Leaf_Spot_Complex a owl:Class ;
-    ns:has_treatment ns:Foliar_Fungicide ;
-    ns:influenced_by ns:Rainfall,
-        ns:Relative_Humidity,
-        ns:Temperature,
-        ns:Wind ;
-    ns:is_carried_by ns:Wind_Carrier ;
-    ns:survive_in ns:Residue ;
-    rdfs:subClassOf ns:Fungi .
+    rdfs:label "Leaf Spot Complex" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_carried_by ;
+            owl:someValuesFrom ns:Wind_Carrier ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Relative_Humidity ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:survive_in ;
+            owl:someValuesFrom ns:Residue ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment ;
+            owl:someValuesFrom ns:Foliar_Fungicide ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Wind ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Rainfall ],
+        ns:Fungi .
 
 ns:Loose_Smut a owl:Class ;
-    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
-    ns:influenced_by ns:Temperature,
-        ns:Wind ;
-    ns:is_carried_by ns:Seed_Carrier,
-        ns:Wind_Carrier ;
-    ns:survive_in ns:Seed ;
-    rdfs:subClassOf ns:Fungi .
+    rdfs:label "Loose Smut" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:is_carried_by ;
+            owl:someValuesFrom ns:Wind_Carrier ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Wind ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_carried_by ;
+            owl:someValuesFrom ns:Seed_Carrier ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment ;
+            owl:someValuesFrom ns:Fungicidal_Seed_Treatment ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:survive_in ;
+            owl:someValuesFrom ns:Seed ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Temperature ],
+        ns:Fungi .
 
 ns:Sharp_Eye_Spot a owl:Class ;
-    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
-    ns:influenced_by ns:Rainfall,
-        ns:Soil_Temperature ;
-    ns:is_carried_by ns:Machinery_Equipment ;
-    ns:survive_in ns:Soil ;
-    rdfs:subClassOf ns:Fungi .
+    rdfs:label "Sharp Eye Spot" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:is_carried_by ;
+            owl:someValuesFrom ns:Machinery_Equipment ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment ;
+            owl:someValuesFrom ns:Fungicidal_Seed_Treatment ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:survive_in ;
+            owl:someValuesFrom ns:Soil ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Rainfall ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Soil_Temperature ],
+        ns:Fungi .
 
 ns:Stem_Rust a owl:Class ;
-    ns:has_treatment ns:Foliar_Fungicide ;
-    ns:influenced_by ns:Rainfall,
-        ns:Relative_Humidity,
-        ns:Temperature,
-        ns:Wind ;
-    ns:is_carried_by ns:Wind_Carrier ;
-    ns:survive_in ns:Living_Host ;
-    rdfs:subClassOf ns:Fungi .
+    rdfs:label "Stem Rust" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Wind ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_carried_by ;
+            owl:someValuesFrom ns:Wind_Carrier ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Relative_Humidity ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:survive_in ;
+            owl:someValuesFrom ns:Living_Host ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Rainfall ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment ;
+            owl:someValuesFrom ns:Foliar_Fungicide ],
+        ns:Fungi .
 
 ns:Stripe_Rust a owl:Class ;
-    ns:has_treatment ns:Foliar_Fungicide ;
-    ns:influenced_by ns:Rainfall,
-        ns:Relative_Humidity,
-        ns:Temperature,
-        ns:Wind ;
-    ns:is_carried_by ns:Wind_Carrier ;
-    ns:survive_in ns:Living_Host ;
-    rdfs:subClassOf ns:Fungi .
+    rdfs:label "Stripe Rust" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Rainfall ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_carried_by ;
+            owl:someValuesFrom ns:Wind_Carrier ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Relative_Humidity ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:survive_in ;
+            owl:someValuesFrom ns:Living_Host ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment ;
+            owl:someValuesFrom ns:Foliar_Fungicide ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Wind ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Temperature ],
+        ns:Fungi .
 
 ns:Take_All a owl:Class ;
-    ns:has_treatment ns:Fungicidal_Seed_Treatment ;
-    ns:influenced_by ns:Rainfall,
-        ns:Soil_Temperature ;
-    ns:is_carried_by ns:Machinery_Equipment ;
-    ns:survive_in ns:Soil ;
-    rdfs:subClassOf ns:Fungi .
+    rdfs:label "Take All" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Soil_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:survive_in ;
+            owl:someValuesFrom ns:Soil ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Rainfall ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_carried_by ;
+            owl:someValuesFrom ns:Machinery_Equipment ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment ;
+            owl:someValuesFrom ns:Fungicidal_Seed_Treatment ],
+        ns:Fungi .
 
-ns:has_treatment a owl:ObjectProperty .
+<https://creativecommons.org/licenses/by/4.0/> dcterms:title "Creative Commons Attribution 4.0 International"@en .
 
-ns:influenced_by a owl:ObjectProperty .
+ns:Chemical_Strategy a owl:Class ;
+    rdfs:label "Chemical Strategy" .
 
-ns:is_carried_by a owl:ObjectProperty .
+ns:Cultural_Practice a owl:Class ;
+    rdfs:label "Cultural Practice" .
 
-ns:Chemical_Strategy a owl:Class .
-
-ns:Cultural_Practices a owl:Class .
-
-ns:Host_Genetics a owl:Class .
+ns:Host_Genetics a owl:Class ;
+    rdfs:label "Host Genetics" .
 
 ns:Soil_Moisture a owl:Class ;
+    rdfs:label "Soil Moisture" ;
     rdfs:subClassOf ns:Environment_Factors .
 
 ns:Residue a owl:Class ;
+    rdfs:label "Residue" ;
     rdfs:subClassOf ns:Pathogen_Environment .
 
 ns:Seed a owl:Class ;
+    rdfs:label "Seed" ;
     rdfs:subClassOf ns:Pathogen_Environment .
 
 ns:Seed_Carrier a owl:Class ;
+    rdfs:label "Seed Carrier" ;
     rdfs:subClassOf ns:Carrier .
 
+ns:Fungicide a owl:Class ;
+    rdfs:label "Fungicide" .
+
 ns:Living_Host a owl:Class ;
+    rdfs:label "Living Host" ;
     rdfs:subClassOf ns:Pathogen_Environment .
 
 ns:Machinery_Equipment a owl:Class ;
+    rdfs:label "Machinery Equipment" ;
     rdfs:subClassOf ns:Carrier .
 
 ns:Soil a owl:Class ;
+    rdfs:label "Soil" ;
     rdfs:subClassOf ns:Pathogen_Environment .
 
-ns:Carrier a owl:Class .
+ns:is_cured_by rdfs:label "is cured by" .
+
+ns:Carrier a owl:Class ;
+    rdfs:label "Carrier" .
 
 ns:Soil_Temperature a owl:Class ;
+    rdfs:label "Soil Temperature" ;
     rdfs:subClassOf ns:Environment_Factors .
 
-ns:Foliar_Fungicide a owl:Class .
+ns:Foliar_Fungicide a owl:Class ;
+    rdfs:label "Foliar Fungicide" ;
+    rdfs:subClassOf ns:Fungicide .
 
-ns:Fungicidal_Seed_Treatment a owl:Class .
-
-ns:Pathogen_Environment a owl:Class .
+ns:Fungicidal_Seed_Treatment a owl:Class ;
+    rdfs:label "Fungicidal Seed Treatment" ;
+    rdfs:subClassOf ns:Fungicide .
 
 ns:Relative_Humidity a owl:Class ;
+    rdfs:label "Relative Humidity" ;
     rdfs:subClassOf ns:Environment_Factors .
 
 ns:Wind a owl:Class ;
+    rdfs:label "Wind" ;
     rdfs:subClassOf ns:Environment_Factors .
 
-ns:Environment_Factors a owl:Class .
+ns:Pathogen_Environment a owl:Class ;
+    rdfs:label "Pathogen Environment" .
 
 ns:Temperature a owl:Class ;
+    rdfs:label "Temperature" ;
     rdfs:subClassOf ns:Environment_Factors .
 
 ns:Wind_Carrier a owl:Class ;
+    rdfs:label "Wind Carrier" ;
     rdfs:subClassOf ns:Carrier .
 
+ns:Environment_Factors a owl:Class ;
+    rdfs:label "Environment Factors" .
+
 ns:Rainfall a owl:Class ;
+    rdfs:label "Rainfall" ;
     rdfs:subClassOf ns:Environment_Factors .
 
 ns:Fungi a owl:Class ;
-    ns:is_carried_by ns:Carrier ;
-    ns:is_cured_by ns:Chemical_Strategy,
-        ns:Cultural_Practices,
-        ns:Host_Genetics ;
-    ns:survive_in ns:Pathogen_Environment .
+    rdfs:label "Fungi" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment ;
+            owl:someValuesFrom ns:Fungicide ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:influenced_by ;
+            owl:someValuesFrom ns:Environment_Factors ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_cured_by ;
+            owl:someValuesFrom ns:Chemical_Strategy ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:survive_in ;
+            owl:someValuesFrom ns:Pathogen_Environment ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:survive_in ;
+            owl:someValuesFrom ns:Pathogen_Environment ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_cured_by ;
+            owl:someValuesFrom ns:Cultural_Practice ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_carried_by ;
+            owl:someValuesFrom ns:Carrier ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_cured_by ;
+            owl:someValuesFrom ns:Host_Genetics ] .
+
+ns:has_treatment a owl:ObjectProperty ;
+    rdfs:label "has treatment" .
+
+ns:is_carried_by a owl:ObjectProperty ;
+    rdfs:label "is carried by" .
+
+ns:survive_in a owl:ObjectProperty ;
+    rdfs:label "survive in" .
+
+ns:influenced_by a owl:ObjectProperty ;
+    rdfs:label "influenced by" .
 

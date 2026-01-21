@@ -1,112 +1,213 @@
-@prefix ns: <http://grip.org/nutrient-management/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns: <https://gwsp.cs.ksu.edu/nutrient-management/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-ns:Ammonium_Nitrate rdfs:subClassOf ns:Nitrogen_sources .
+ns: a owl:Ontology ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
 
-ns:Ammonium_Poly_Phosphate rdfs:subClassOf ns:Nitrogen_sources .
+ns:Ammonium_Nitrate a owl:Class ;
+    rdfs:label "Ammonium Nitrate" ;
+    rdfs:subClassOf ns:Nitrogen_sources .
 
-ns:Ammonium_Sulfate rdfs:subClassOf ns:Nitrogen_sources .
+ns:Ammonium_Poly_Phosphate a owl:Class ;
+    rdfs:label "Ammonium Poly Phosphate" ;
+    rdfs:subClassOf ns:Nitrogen_sources .
 
-ns:Anhydrous_Ammonia rdfs:subClassOf ns:Nitrogen_sources .
+ns:Ammonium_Sulfate a owl:Class ;
+    rdfs:label "Ammonium Sulfate" ;
+    rdfs:subClassOf ns:Nitrogen_sources .
+
+ns:Anhydrous_Ammonia a owl:Class ;
+    rdfs:label "Anhydrous Ammonia" ;
+    rdfs:subClassOf ns:Nitrogen_sources .
 
 ns:Banding a owl:Class ;
+    rdfs:label "Banding" ;
     rdfs:subClassOf ns:N_Application_Method .
 
 ns:Broadcast a owl:Class ;
+    rdfs:label "Broadcast" ;
     rdfs:subClassOf ns:N_Application_Method .
 
-ns:Calcium_Nitrate rdfs:subClassOf ns:Nitrogen_sources .
+ns:Calcium_Nitrate a owl:Class ;
+    rdfs:label "Calcium Nitrate" ;
+    rdfs:subClassOf ns:Nitrogen_sources .
 
-ns:Di_Ammonium_Phosphate rdfs:subClassOf ns:Nitrogen_sources .
+ns:Di_Ammonium_Phosphate a owl:Class ;
+    rdfs:label "Di-Ammonium Phosphate" ;
+    rdfs:subClassOf ns:Nitrogen_sources .
 
 ns:Injection a owl:Class ;
+    rdfs:label "Injection" ;
     rdfs:subClassOf ns:N_Application_Method .
 
-ns:Mono_Ammonium_Phosphate rdfs:subClassOf ns:Nitrogen_sources .
+ns:Mono_Ammonium_Phosphate a owl:Class ;
+    rdfs:label "Mono-Ammonium Phosphate" ;
+    rdfs:subClassOf ns:Nitrogen_sources .
 
 ns:Nitrogen_Fertilization a owl:Class ;
-    ns:is_influenced_by ns:Cultivar,
-        ns:Environment,
-        ns:N_Application,
-        ns:Yield_Goal .
+    rdfs:label "Nitrogen Fertilization" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:is_influenced_by ;
+            owl:someValuesFrom ns:N_Application ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_influenced_by ;
+            owl:someValuesFrom ns:Yield_Goal ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_influenced_by ;
+            owl:someValuesFrom ns:Environment ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_influenced_by ;
+            owl:someValuesFrom ns:Cultivar ] .
 
-ns:Urea rdfs:subClassOf ns:Nitrogen_sources .
+ns:Urea a owl:Class ;
+    rdfs:label "Urea" ;
+    rdfs:subClassOf ns:Nitrogen_sources .
 
-ns:Urea_Ammonium_Nitrate rdfs:subClassOf ns:Nitrogen_sources .
+ns:Urea_Ammonium_Nitrate a owl:Class ;
+    rdfs:label "Urea Ammonium Nitrate" ;
+    rdfs:subClassOf ns:Nitrogen_sources .
 
-ns:depends_on a owl:ObjectProperty .
+<https://creativecommons.org/licenses/by/4.0/> dcterms:title "Creative Commons Attribution 4.0 International"@en .
+
+ns:Agronomic_Optimal_Nitrogen_Rate a owl:Class ;
+    rdfs:label "Agronomic Optimal Nitrogen Rate" .
+
+ns:Cereals a owl:Class ;
+    rdfs:label "Cereals" .
+
+ns:Cultivar a owl:Class ;
+    rdfs:label "Cultivar" .
+
+ns:Economic_Optimal_Nitrogen_Rate a owl:Class ;
+    rdfs:label "Economic Optimal Nitrogen Rate" .
+
+ns:Environment a owl:Class ;
+    rdfs:label "Environment" .
+
+ns:Grazing a owl:Class ;
+    rdfs:label "Grazing" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:includes ;
+            owl:someValuesFrom ns:Grazing_Adjustment ] .
+
+ns:Grazing_Adjustment a owl:Class ;
+    rdfs:label "Grazing Adjustment" .
+
+ns:Irrigation a owl:Class ;
+    rdfs:label "Irrigation" .
+
+ns:Legumes a owl:Class ;
+    rdfs:label "Legumes" .
+
+ns:Manure_Application a owl:Class ;
+    rdfs:label "Manure Application" .
+
+ns:N_Application a owl:Class ;
+    rdfs:label "N Application" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:is_influenced_by ;
+            owl:someValuesFrom ns:Tillage ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_influenced_by ;
+            owl:someValuesFrom ns:Previous_Crop ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_influenced_by ;
+            owl:someValuesFrom ns:Nitrogen_sources ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_influenced_by ;
+            owl:someValuesFrom ns:Manure_Application ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_influenced_by ;
+            owl:someValuesFrom ns:N_Application_Method ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_influenced_by ;
+            owl:someValuesFrom ns:Grazing ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_influenced_by ;
+            owl:someValuesFrom ns:N_Rate ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_influenced_by ;
+            owl:someValuesFrom ns:N_Timing ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_influenced_by ;
+            owl:someValuesFrom ns:Irrigation ] .
+
+ns:N_Rate a owl:Class ;
+    rdfs:label "N Rate" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Economic_Optimal_Nitrogen_Rate ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Yield_Potential ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Agronomic_Optimal_Nitrogen_Rate ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Protein_Behavior ] .
+
+ns:N_Timing a owl:Class ;
+    rdfs:label "N Timing" .
+
+ns:Previous_Crop a owl:Class ;
+    rdfs:label "Previous Crop" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:includes ;
+            owl:someValuesFrom ns:Cereals ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:includes ;
+            owl:someValuesFrom ns:Previous_Crop_Adjustment ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:includes ;
+            owl:someValuesFrom ns:Legumes ] .
+
+ns:Previous_Crop_Adjustment a owl:Class ;
+    rdfs:label "Previous Crop Adjustment" .
+
+ns:Protein_Behavior a owl:Class ;
+    rdfs:label "Protein Behavior" .
+
+ns:Tillage a owl:Class ;
+    rdfs:label "Tillage" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:includes ;
+            owl:someValuesFrom ns:Tillage_Adjustment ] .
+
+ns:Tillage_Adjustment a owl:Class ;
+    rdfs:label "Tillage Adjustment" .
+
+ns:Yield_Goal a owl:Class ;
+    rdfs:label "Yield Goal" .
+
+ns:Yield_Potential a owl:Class ;
+    rdfs:label "Yield Potential" .
 
 ns:has_nitrogen_percentage a owl:ObjectProperty ;
+    rdfs:label "has nitrogen percentage" ;
     rdfs:domain ns:Nitrogen_sources ;
     rdfs:range ns:Nitrogen_Percentage .
 
-ns:includes a owl:ObjectProperty .
+ns:Nitrogen_Percentage a owl:Class ;
+    rdfs:label "Nitrogen Percentage" .
 
-ns:is_influenced_by a owl:ObjectProperty .
+ns:N_Application_Method a owl:Class ;
+    rdfs:label "N Application Method" .
 
-ns:Agronomic_Optimal_Nitrogen_Rate a owl:Class .
+ns:depends_on a owl:ObjectProperty ;
+    rdfs:label "depends on" .
 
-ns:Cereals a owl:Class .
-
-ns:Cultivar a owl:Class .
-
-ns:Economic_Optimal_Nitrogen_Rate a owl:Class .
-
-ns:Environment a owl:Class .
-
-ns:Grazing a owl:Class ;
-    ns:includes ns:Grazing_Adjustment .
-
-ns:Grazing_Adjustment a owl:Class .
-
-ns:Irrigation a owl:Class .
-
-ns:Legumes a owl:Class .
-
-ns:Manure_Application a owl:Class .
-
-ns:N_Application a owl:Class ;
-    ns:is_influenced_by ns:Grazing,
-        ns:Irrigation,
-        ns:Manure_Application,
-        ns:N_Application_Method,
-        ns:N_Rate,
-        ns:N_Timing,
-        ns:Nitrogen_sources,
-        ns:Previous_Crop,
-        ns:Tillage .
-
-ns:N_Rate a owl:Class ;
-    ns:depends_on ns:Agronomic_Optimal_Nitrogen_Rate,
-        ns:Economic_Optimal_Nitrogen_Rate,
-        ns:Protein_Behavior,
-        ns:Yield_Potential .
-
-ns:N_Timing a owl:Class .
-
-ns:Previous_Crop a owl:Class ;
-    ns:includes ns:Cereals,
-        ns:Legumes,
-        ns:Previous_Crop_Adjustment .
-
-ns:Previous_Crop_Adjustment a owl:Class .
-
-ns:Protein_Behavior a owl:Class .
-
-ns:Tillage a owl:Class ;
-    ns:includes ns:Tillage_Adjustment .
-
-ns:Tillage_Adjustment a owl:Class .
-
-ns:Yield_Goal a owl:Class .
-
-ns:Yield_Potential a owl:Class .
-
-ns:Nitrogen_Percentage a owl:Class .
-
-ns:N_Application_Method a owl:Class .
+ns:includes a owl:ObjectProperty ;
+    rdfs:label "includes" .
 
 ns:Nitrogen_sources a owl:Class ;
-    ns:has_nitrogen_percentage ns:Nitrogen_Percentage .
+    rdfs:label "Nitrogen Sources" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_nitrogen_percentage ;
+            owl:someValuesFrom ns:Nitrogen_Percentage ] .
+
+ns:is_influenced_by a owl:ObjectProperty ;
+    rdfs:label "is influenced by" .
 

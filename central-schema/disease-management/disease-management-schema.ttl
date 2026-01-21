@@ -1,31 +1,55 @@
-@prefix ns: <http://grip.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns: <https://gwsp.cs.ksu.edu/disease-management/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+ns: a owl:Ontology ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
+
 ns:Bacteria a owl:Class ;
+    rdfs:label "Bacteria" ;
     rdfs:subClassOf ns:Pathogen .
 
 ns:Disease_Management a owl:Class ;
-    ns:depends_on ns:Pathogen .
+    rdfs:label "Disease Management" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Pathogen ] .
 
 ns:Fungi a owl:Class ;
-    ns:has_treatment_strategy ns:Chemical_Strategy,
-        ns:Cultural_Practices,
-        ns:Host_Genetics ;
-    rdfs:subClassOf ns:Pathogen .
+    rdfs:label "Fungi" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment_strategy ;
+            owl:someValuesFrom ns:Host_Genetics ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment_strategy ;
+            owl:someValuesFrom ns:Chemical_Strategy ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment_strategy ;
+            owl:someValuesFrom ns:Cultural_Practice ],
+        ns:Pathogen .
 
 ns:Virus a owl:Class ;
+    rdfs:label "Virus" ;
     rdfs:subClassOf ns:Pathogen .
 
-ns:depends_on a owl:ObjectProperty .
+<https://creativecommons.org/licenses/by/4.0/> dcterms:title "Creative Commons Attribution 4.0 International"@en .
 
-ns:has_treatment_strategy a owl:ObjectProperty .
+ns:Chemical_Strategy a owl:Class ;
+    rdfs:label "Chemical Strategy" .
 
-ns:Chemical_Strategy a owl:Class .
+ns:Cultural_Practice a owl:Class ;
+    rdfs:label "Cultural Practice" .
 
-ns:Cultural_Practices a owl:Class .
+ns:Host_Genetics a owl:Class ;
+    rdfs:label "Host Genetics" .
 
-ns:Host_Genetics a owl:Class .
+ns:depends_on a owl:ObjectProperty ;
+    rdfs:label "depends on" .
 
-ns:Pathogen a owl:Class .
+ns:has_treatment_strategy a owl:ObjectProperty ;
+    rdfs:label "has treatment strategy" .
+
+ns:Pathogen a owl:Class ;
+    rdfs:label "Pathogen" .
 

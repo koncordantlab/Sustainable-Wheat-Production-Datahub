@@ -1,27 +1,41 @@
-@prefix ns: <http://grip.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns: <https://gwsp.cs.ksu.edu/disease-management/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+ns: a owl:Ontology ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
+
 ns:Conservational a owl:Class ;
+    rdfs:label "Conservational" ;
     rdfs:subClassOf ns:Tillage .
 
 ns:Conventional a owl:Class ;
+    rdfs:label "Conventional" ;
     rdfs:subClassOf ns:Tillage .
 
 ns:Crop_Rotation a owl:Class ;
+    rdfs:label "Crop Rotation" ;
     rdfs:subClassOf ns:Cultural_Practice .
 
 ns:No_Tillage a owl:Class ;
+    rdfs:label "No Tillage" ;
     rdfs:subClassOf ns:Tillage .
 
 ns:Planting_Date a owl:Class ;
+    rdfs:label "Planting Date" ;
     rdfs:subClassOf ns:Cultural_Practice .
 
 ns:Seeding_Rate a owl:Class ;
+    rdfs:label "Seeding Rate" ;
     rdfs:subClassOf ns:Cultural_Practice .
+
+<https://creativecommons.org/licenses/by/4.0/> dcterms:title "Creative Commons Attribution 4.0 International"@en .
 
 ns:Tillage a owl:Class ;
+    rdfs:label "Tillage" ;
     rdfs:subClassOf ns:Cultural_Practice .
 
-ns:Cultural_Practice a owl:Class .
+ns:Cultural_Practice a owl:Class ;
+    rdfs:label "Cultural Practice" .
 

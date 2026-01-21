@@ -1,33 +1,59 @@
-@prefix ns: <http://grip.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns: <https://gwsp.cs.ksu.edu/disease-management/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+ns: a owl:Ontology ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
+
 ns:Horizontal_Resistance a owl:Class ;
+    rdfs:label "Horizontal Resistance" ;
     rdfs:subClassOf ns:Resistance .
 
 ns:Moderate a owl:Class ;
+    rdfs:label "Moderate" ;
     rdfs:subClassOf ns:Level_of_Resistance .
 
 ns:Resistant a owl:Class ;
+    rdfs:label "Resistant" ;
     rdfs:subClassOf ns:Level_of_Resistance .
 
 ns:Susceptible a owl:Class ;
+    rdfs:label "Susceptible" ;
     rdfs:subClassOf ns:Level_of_Resistance .
 
 ns:Vertical_Resistance a owl:Class ;
+    rdfs:label "Vertical Resistance" ;
     rdfs:subClassOf ns:Resistance .
 
-ns:Host_Genetics a owl:Class .
+<https://creativecommons.org/licenses/by/4.0/> dcterms:title "Creative Commons Attribution 4.0 International" .
 
-ns:Incidence a owl:Class .
+ns:Host_Genetics a owl:Class ;
+    rdfs:label "Host Genetics" .
 
-ns:Severity a owl:Class .
+ns:Incidence a owl:Class ;
+    rdfs:label "Incidence" .
+
+ns:Severity a owl:Class ;
+    rdfs:label "Severity" .
+
+ns:has_level rdfs:label "has level" .
 
 ns:Resistance a owl:Class ;
-    ns:has_level ns:Level_of_Resistance ;
-    ns:is_measured_by ns:Incidence,
-        ns:Severity ;
-    rdfs:subClassOf ns:Host_Genetics .
+    rdfs:label "Resistance" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_level ;
+            owl:someValuesFrom ns:Level_of_Resistance ],
+        ns:Host_Genetics .
 
-ns:Level_of_Resistance a owl:Class .
+ns:is_measured_by rdfs:label "is measured by" .
+
+ns:Level_of_Resistance a owl:Class ;
+    rdfs:label "Level of Resistance" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:is_measured_by ;
+            owl:someValuesFrom ns:Severity ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:is_measured_by ;
+            owl:someValuesFrom ns:Incidence ] .
 

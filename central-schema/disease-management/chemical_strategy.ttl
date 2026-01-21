@@ -1,61 +1,105 @@
-@prefix ns: <http://grip.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns: <https://gwsp.cs.ksu.edu/disease-management/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+ns: a owl:Ontology ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
+
 ns:Chemical_Strategy a owl:Class ;
-    ns:includes_application_of ns:Fungicide .
+    rdfs:label "Chemical Strategy" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:includes_application_of ;
+            owl:someValuesFrom ns:Fungicide ] .
 
 ns:Flag_Leaf a owl:Class ;
+    rdfs:label "Flag Leaf" ;
     rdfs:subClassOf ns:Timing .
 
 ns:Flowering a owl:Class ;
+    rdfs:label "Flowering" ;
     rdfs:subClassOf ns:Timing .
 
 ns:Foliar_Fungicide a owl:Class ;
-    ns:can_be_applied_within ns:Harvest_Restriction ;
-    ns:has_timing ns:Timing ;
-    rdfs:subClassOf ns:Fungicide .
+    rdfs:label "Foliar Fungicide" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:can_be_applied_within ;
+            owl:someValuesFrom ns:Harvest_Restriction ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_timing ;
+            owl:someValuesFrom ns:Timing ],
+        ns:Fungicide .
 
 ns:Fungicidal_Seed_Treatment a owl:Class ;
+    rdfs:label "Fungicidal Seed Treatment" ;
     rdfs:subClassOf ns:Fungicide .
 
 ns:Pre_Flag_Leaf a owl:Class ;
+    rdfs:label "Pre-Flag Leaf" ;
     rdfs:subClassOf ns:Timing .
 
-ns:can_be_applied_within a owl:ObjectProperty .
-
-ns:has_active_ingredient a owl:ObjectProperty .
-
-ns:has_efficacy a owl:ObjectProperty .
-
-ns:has_mode_of_action a owl:ObjectProperty .
-
-ns:has_product_name a owl:ObjectProperty .
-
-ns:has_rate_range a owl:ObjectProperty .
-
-ns:has_timing a owl:ObjectProperty .
-
-ns:includes_application_of a owl:ObjectProperty .
+<https://creativecommons.org/licenses/by/4.0/> dcterms:title "Creative Commons Attribution 4.0 International"@en .
 
 ns:Active_Ingredient a owl:Class ;
-    ns:has_mode_of_action ns:Mode_of_Action .
+    rdfs:label "Active Ingredient" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_mode_of_action ;
+            owl:someValuesFrom ns:Mode_of_Action ] .
 
-ns:Efficacy a owl:Class .
+ns:Efficacy a owl:Class ;
+    rdfs:label "Efficacy" .
 
-ns:Harvest_Restriction a owl:Class .
+ns:Harvest_Restriction a owl:Class ;
+    rdfs:label "Harvest Restriction" .
 
-ns:Mode_of_Action a owl:Class .
+ns:Mode_of_Action a owl:Class ;
+    rdfs:label "Mode of Action" .
 
-ns:Product_Name a owl:Class .
+ns:Product_Name a owl:Class ;
+    rdfs:label "Product Name" .
 
-ns:Rate_Range a owl:Class .
+ns:Rate_Range a owl:Class ;
+    rdfs:label "Rate Range" .
+
+ns:can_be_applied_within a owl:ObjectProperty ;
+    rdfs:label "can be applied within" .
+
+ns:has_active_ingredient a owl:ObjectProperty ;
+    rdfs:label "has active ingredient" .
+
+ns:has_efficacy a owl:ObjectProperty ;
+    rdfs:label "has efficacy" .
+
+ns:has_mode_of_action a owl:ObjectProperty ;
+    rdfs:label "has mode of action" .
+
+ns:has_product_name a owl:ObjectProperty ;
+    rdfs:label "has product name" .
+
+ns:has_rate_range a owl:ObjectProperty ;
+    rdfs:label "has rate range" .
+
+ns:has_timing a owl:ObjectProperty ;
+    rdfs:label "has timing" .
+
+ns:includes_application_of a owl:ObjectProperty ;
+    rdfs:label "includes application of" .
 
 ns:Fungicide a owl:Class ;
-    ns:has_active_ingredient ns:Active_Ingredient ;
-    ns:has_efficacy ns:Efficacy ;
-    ns:has_product_name ns:Product_Name ;
-    ns:has_rate_range ns:Rate_Range .
+    rdfs:label "Fungicide" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_rate_range ;
+            owl:someValuesFrom ns:Rate_Range ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_product_name ;
+            owl:someValuesFrom ns:Product_Name ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_efficacy ;
+            owl:someValuesFrom ns:Efficacy ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_active_ingredient ;
+            owl:someValuesFrom ns:Active_Ingredient ] .
 
-ns:Timing a owl:Class .
+ns:Timing a owl:Class ;
+    rdfs:label "Timing" .
 

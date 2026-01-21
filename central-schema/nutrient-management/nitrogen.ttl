@@ -1,179 +1,273 @@
-@prefix ns: <http://grip.org/nutrient-management/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns: <https://gwsp.cs.ksu.edu/nutrient-management/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+ns: a owl:Ontology ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
+
 ns:Amount_Of_Nitrogen_Remained_In_Senesced_Leaf a owl:Class ;
+    rdfs:label "Amount Of Nitrogen Remained In Senesced Leaf" ;
     rdfs:subClassOf ns:Mobilizable_Nitrogen_In_Stem .
 
 ns:Atmospheric_Nitrogen a owl:Class ;
+    rdfs:label "Atmospheric Nitrogen" ;
     rdfs:subClassOf ns:Nitrogen_Supply_Source .
 
 ns:Azotobacter a owl:Class ;
+    rdfs:label "Azotobacter" ;
     rdfs:subClassOf ns:Bacteria .
 
 ns:Blue_Green_Algae a owl:Class ;
+    rdfs:label "Blue Green Algae" ;
     rdfs:subClassOf ns:Algae .
 
 ns:Clostridium a owl:Class ;
+    rdfs:label "Clostridium" ;
     rdfs:subClassOf ns:Bacteria .
 
 ns:Daily_Increase_In_Leaf_Area_Index a owl:Class ;
+    rdfs:label "Daily Increase In Leaf Area Index" ;
     rdfs:subClassOf ns:Leaf_Nitrogen_Demand_Computation .
 
 ns:Daily_Increase_In_Stem_Dry_Matter a owl:Class ;
+    rdfs:label "Daily Increase In Stem Dry Matter" ;
     rdfs:subClassOf ns:Stem_Nitrogen_Demand_Computation .
 
 ns:Grain_Nitrogen_Concentration a owl:Class ;
+    rdfs:label "Grain Nitrogen Concentration" ;
     rdfs:subClassOf ns:Grain_Nitrogen_Demand_Computation .
 
 ns:Grain_Nitrogen_Demand a owl:Class ;
-    ns:fulfilled_by ns:Nitrogen_Translocation_For_Growing_Grain ;
-    ns:has_computation ns:Grain_Nitrogen_Demand_Computation ;
-    rdfs:subClassOf ns:Nitrogen_Demand .
+    rdfs:label "Grain Nitrogen Demand" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:fulfilled_by ;
+            owl:someValuesFrom ns:Nitrogen_Translocation_For_Growing_Grain ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_computation ;
+            owl:someValuesFrom ns:Grain_Nitrogen_Demand_Computation ],
+        ns:Nitrogen_Demand .
 
 ns:Leaf_Area_Index a owl:Class ;
+    rdfs:label "Leaf Area Index" ;
     rdfs:subClassOf ns:Mobilizable_Nitrogen_In_Leaf .
 
 ns:Leaf_Nitrogen_Demand a owl:Class ;
-    ns:has_computation ns:Leaf_Nitrogen_Demand_Computation ;
-    rdfs:subClassOf ns:Nitrogen_Demand .
+    rdfs:label "Leaf Nitrogen Demand" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_computation ;
+            owl:someValuesFrom ns:Leaf_Nitrogen_Demand_Computation ],
+        ns:Nitrogen_Demand .
 
 ns:Nitrification a owl:Class ;
+    rdfs:label "Nitrification" ;
     rdfs:subClassOf ns:Nitrogen_Supply_Source .
 
 ns:Nitrogen_Concentration_In_Green_Leaf a owl:Class ;
+    rdfs:label "Nitrogen Concentration In Green Leaf" ;
     rdfs:subClassOf ns:Mobilizable_Nitrogen_In_Leaf .
 
 ns:Nitrogen_Concentration_In_Senesced_Leaf a owl:Class ;
+    rdfs:label "Nitrogen Concentration In Senesced Leaf" ;
     rdfs:subClassOf ns:Mobilizable_Nitrogen_In_Leaf .
 
 ns:Nitrogen_Content_Per_Unit_Leaf_Area a owl:Class ;
+    rdfs:label "Nitrogen Content Per Unit Leaf Area" ;
     rdfs:subClassOf ns:Leaf_Nitrogen_Demand_Computation .
 
 ns:Nitrogen_Content_Per_Unit_Stem_Weight a owl:Class ;
+    rdfs:label "Nitrogen Content Per Unit Stem Weight" ;
     rdfs:subClassOf ns:Stem_Nitrogen_Demand_Computation .
 
 ns:Nitrogen_Fertilization a owl:Class ;
+    rdfs:label "Nitrogen Fertilization" ;
     rdfs:subClassOf ns:Nitrogen_Supply_Source .
 
 ns:Organic_Matter a owl:Class ;
+    rdfs:label "Organic Matter" ;
     rdfs:subClassOf ns:Mineralization_Source .
 
 ns:Residue a owl:Class ;
+    rdfs:label "Residue" ;
     rdfs:subClassOf ns:Mineralization_Source .
 
 ns:Root_Nitrogen_Demand a owl:Class ;
-    ns:has_computation ns:Root_Nitrogen_Demand_Computation ;
-    rdfs:subClassOf ns:Nitrogen_Demand .
+    rdfs:label "Root Nitrogen Demand" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_computation ;
+            owl:someValuesFrom ns:Root_Nitrogen_Demand_Computation ],
+        ns:Nitrogen_Demand .
 
 ns:Seed_Growth_Rate a owl:Class ;
+    rdfs:label "Seed Growth Rate" ;
     rdfs:subClassOf ns:Grain_Nitrogen_Demand_Computation .
 
 ns:Soil_Available_Nitrogen a owl:Class ;
-    ns:supplied_through ns:Nitrogen_Supply_Source .
+    rdfs:label "Soil Available Nitrogen" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:supplied_through ;
+            owl:someValuesFrom ns:Nitrogen_Supply_Source ] .
 
 ns:Soil_Temperature a owl:Class ;
+    rdfs:label "Soil Temperature" ;
     rdfs:subClassOf ns:Mineralization_Driver .
 
 ns:Soil_Water_Content a owl:Class ;
+    rdfs:label "Soil Water Content" ;
     rdfs:subClassOf ns:Mineralization_Driver .
 
 ns:Soil_pH a owl:Class ;
+    rdfs:label "Soil pH" ;
     rdfs:subClassOf ns:Mineralization_Driver .
 
 ns:Stem_Nitrogen_Demand a owl:Class ;
-    ns:has_computation ns:Stem_Nitrogen_Demand_Computation ;
-    rdfs:subClassOf ns:Nitrogen_Demand .
+    rdfs:label "Stem Nitrogen Demand" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_computation ;
+            owl:someValuesFrom ns:Stem_Nitrogen_Demand_Computation ],
+        ns:Nitrogen_Demand .
 
 ns:Symbiotic a owl:Class ;
+    rdfs:label "Symbiotic" ;
     rdfs:subClassOf ns:Nitrogen_Fixation .
 
 ns:Total_Nitrogen_In_Stem a owl:Class ;
+    rdfs:label "Total Nitrogen In Stem" ;
     rdfs:subClassOf ns:Mobilizable_Nitrogen_In_Stem .
 
-ns:affected_by a owl:ObjectProperty .
-
-ns:depends_on a owl:ObjectProperty .
-
-ns:fulfilled_by a owl:ObjectProperty .
-
-ns:has_computation a owl:ObjectProperty .
-
-ns:supplied_through a owl:ObjectProperty .
+<https://creativecommons.org/licenses/by/4.0/> dcterms:title "Creative Commons Attribution 4.0 International"@en .
 
 ns:Algae a owl:Class ;
+    rdfs:label "Algae" ;
     rdfs:subClassOf ns:Non_Symbiotic .
 
-ns:Critical_Nitrogen_Requirement a owl:Class .
+ns:Critical_Nitrogen_Requirement a owl:Class ;
+    rdfs:label "Critical Nitrogen Requirement" .
 
-ns:Crop_Growth_Stage a owl:Class .
+ns:Crop_Growth_Stage a owl:Class ;
+    rdfs:label "Crop Growth Stage" .
 
-ns:Growing_Season a owl:Class .
+ns:Growing_Season a owl:Class ;
+    rdfs:label "Growing Season" .
 
 ns:Nitrogen_Supply a owl:Class ;
+    rdfs:label "Nitrogen Supply" ;
     rdfs:subClassOf ns:Nitrogen_Balance .
 
-ns:Nitrogen_Uptake a owl:Class .
+ns:Nitrogen_Uptake a owl:Class ;
+    rdfs:label "Nitrogen Uptake" .
 
-ns:Nutrient a owl:Class .
+ns:Nutrient a owl:Class ;
+    rdfs:label "Nutrient" .
 
-ns:Pests_and_Diseases a owl:Class .
+ns:Pests_and_Diseases a owl:Class ;
+    rdfs:label "Pests and Diseases" .
 
 ns:Root_Nitrogen_Demand_Computation a owl:Class ;
+    rdfs:label "Root Nitrogen Demand Computation" ;
     rdfs:subClassOf ns:Nitrogen_Demand_Computation .
 
+ns:fulfilled_by a owl:ObjectProperty ;
+    rdfs:label "fulfilled by" .
+
+ns:supplied_through a owl:ObjectProperty ;
+    rdfs:label "supplied through" .
+
 ns:Bacteria a owl:Class ;
+    rdfs:label "Bacteria" ;
     rdfs:subClassOf ns:Non_Symbiotic .
 
 ns:Mineralization a owl:Class ;
+    rdfs:label "Mineralization" ;
     rdfs:subClassOf ns:Nitrogen_Supply_Source .
 
 ns:Mineralization_Source a owl:Class ;
+    rdfs:label "Mineralization Source" ;
     rdfs:subClassOf ns:Mineralization .
 
 ns:Mobilizable_Nitrogen_In_Stem a owl:Class ;
-    ns:has_computation ns:Stem_Nitrogen_Demand_Computation ;
-    rdfs:subClassOf ns:Nitrogen_Translocation_For_Growing_Grain .
+    rdfs:label "Mobilizable Nitrogen In Stem" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_computation ;
+            owl:someValuesFrom ns:Stem_Nitrogen_Demand_Computation ],
+        ns:Nitrogen_Translocation_For_Growing_Grain .
 
-ns:Nitrogen_Balance a owl:Class .
+ns:Nitrogen_Balance a owl:Class ;
+    rdfs:label "Nitrogen Balance" .
 
 ns:Nitrogen_Fixation a owl:Class ;
+    rdfs:label "Nitrogen Fixation" ;
     rdfs:subClassOf ns:Nitrogen_Supply_Source .
 
 ns:Non_Symbiotic a owl:Class ;
+    rdfs:label "Non-Symbiotic" ;
     rdfs:subClassOf ns:Nitrogen_Fixation .
 
 ns:Mineralization_Driver a owl:Class ;
+    rdfs:label "Mineralization Driver" ;
     rdfs:subClassOf ns:Mineralization .
 
 ns:Mobilizable_Nitrogen_In_Leaf a owl:Class ;
-    ns:has_computation ns:Leaf_Nitrogen_Demand_Computation ;
-    rdfs:subClassOf ns:Nitrogen_Translocation_For_Growing_Grain .
+    rdfs:label "Mobilizable Nitrogen In Leaf" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_computation ;
+            owl:someValuesFrom ns:Leaf_Nitrogen_Demand_Computation ],
+        ns:Nitrogen_Translocation_For_Growing_Grain .
 
 ns:Nitrogen_Translocation_For_Growing_Grain a owl:Class ;
+    rdfs:label "Nitrogen Translocation For Growing Grain" ;
     rdfs:subClassOf ns:Grain_Nitrogen_Demand_Computation .
 
+ns:affected_by a owl:ObjectProperty ;
+    rdfs:label "affected by" .
+
+ns:depends_on a owl:ObjectProperty ;
+    rdfs:label "depends on" .
+
 ns:Grain_Nitrogen_Demand_Computation a owl:Class ;
+    rdfs:label "Grain Nitrogen Demand Computation" ;
     rdfs:subClassOf ns:Nitrogen_Demand_Computation .
 
 ns:Leaf_Nitrogen_Demand_Computation a owl:Class ;
+    rdfs:label "Leaf Nitrogen Demand Computation" ;
     rdfs:subClassOf ns:Nitrogen_Demand_Computation .
 
 ns:Nitrogen_Demand a owl:Class ;
-    ns:affected_by ns:Growing_Season,
-        ns:Nutrient,
-        ns:Pests_and_Diseases ;
-    ns:depends_on ns:Critical_Nitrogen_Requirement,
-        ns:Crop_Growth_Stage,
-        ns:Nitrogen_Uptake ;
-    ns:has_computation ns:Nitrogen_Demand_Computation ;
-    rdfs:subClassOf ns:Nitrogen_Balance .
+    rdfs:label "Nitrogen Demand" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:affected_by ;
+            owl:someValuesFrom ns:Nutrient ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:affected_by ;
+            owl:someValuesFrom ns:Growing_Season ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_computation ;
+            owl:someValuesFrom ns:Nitrogen_Demand_Computation ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:affected_by ;
+            owl:someValuesFrom ns:Pests_and_Diseases ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Nitrogen_Uptake ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Critical_Nitrogen_Requirement ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:depends_on ;
+            owl:someValuesFrom ns:Crop_Growth_Stage ],
+        ns:Nitrogen_Balance .
 
 ns:Stem_Nitrogen_Demand_Computation a owl:Class ;
+    rdfs:label "Stem Nitrogen Demand Computation" ;
     rdfs:subClassOf ns:Nitrogen_Demand_Computation .
 
-ns:Nitrogen_Demand_Computation a owl:Class .
+ns:Nitrogen_Demand_Computation a owl:Class ;
+    rdfs:label "Nitrogen Demand Computation" .
 
 ns:Nitrogen_Supply_Source a owl:Class ;
+    rdfs:label "Nitrogen Supply Source" ;
     rdfs:subClassOf ns:Nitrogen_Supply .
+
+ns:has_computation a owl:ObjectProperty ;
+    rdfs:label "has computation" .
 
