@@ -1,105 +1,118 @@
-@prefix grip: <http://grip.org/fungicide-trials/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix grip: <https://gwsp.cs.ksu.edu/fungicide-trials/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-grip:ActiveIngredient a owl:Class .
+grip: a owl:Ontology ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
 
-grip:DON a owl:Class .
-
-grip:Date a owl:Class .
+grip:Date a owl:Class ;
+    rdfs:label "Date" .
 
 grip:Fungicide2 a owl:Class ;
+    rdfs:label "Fungicide 2" ;
     rdfs:subClassOf grip:Fungicide .
 
 grip:Fungicide3 a owl:Class ;
+    rdfs:label "Fungicide 3" ;
     rdfs:subClassOf grip:Fungicide .
 
-grip:GrowthStage a owl:Class .
+grip:GrowthStage a owl:Class ;
+    rdfs:label "Growth Stage" .
 
-grip:HarvestDate a owl:Class .
+grip:HarvestDate a owl:Class ;
+    rdfs:label "Harvest Date" .
 
-grip:Incidence a owl:Class .
+grip:Incidence a owl:Class ;
+    rdfs:label "Incidence" .
 
-grip:MOA a owl:Class .
+grip:MOA a owl:Class ;
+    rdfs:label "Mode of Action" .
 
-grip:PlantingDate a owl:Class .
+grip:PlantingDate a owl:Class ;
+    rdfs:label "Planting Date" .
 
-grip:Population a owl:Class .
+grip:Protein a owl:Class ;
+    rdfs:label "Protein" .
 
-grip:Protein a owl:Class .
+grip:Severity a owl:Class ;
+    rdfs:label "Severity" .
 
-grip:Severity a owl:Class .
+grip:TestWeight a owl:Class ;
+    rdfs:label "Test Weight" .
 
-grip:TestWeight a owl:Class .
+grip:Timing a owl:Class ;
+    rdfs:label "Timing" .
 
-grip:Yield a owl:Class .
+grip:Yield a owl:Class ;
+    rdfs:label "Yield" .
 
-grip:appliedOnVariety a owl:ObjectProperty .
+grip:hasAppDate a owl:DatatypeProperty ;
+    rdfs:label "has application date" .
 
-grip:hasA_I a owl:ObjectProperty .
+grip:hasBlock a owl:DatatypeProperty ;
+    rdfs:label "has block" .
 
-grip:hasAppDate a owl:DatatypeProperty .
+grip:hasDate a owl:DatatypeProperty ;
+    rdfs:label "has date" .
 
-grip:hasBlock a owl:DatatypeProperty .
+grip:hasExpDesign a owl:ObjectProperty ;
+    rdfs:label "has experiment design" .
 
-grip:hasDON a owl:DatatypeProperty .
+grip:hasGrowthStage a owl:DatatypeProperty ;
+    rdfs:label "has growth stage" .
 
-grip:hasDate a owl:DatatypeProperty .
+grip:hasHarvestDate a owl:DatatypeProperty ;
+    rdfs:label "has harvest date" .
 
-grip:hasDiseaseObservation a owl:ObjectProperty .
+grip:hasIncidence a owl:DatatypeProperty ;
+    rdfs:label "has incidence" .
 
-grip:hasExpDesign a owl:ObjectProperty .
+grip:hasLocationCity a owl:ObjectProperty ;
+    rdfs:label "has location city" .
 
-grip:hasFungicideApplication a owl:ObjectProperty .
+grip:hasLocationCounty a owl:ObjectProperty ;
+    rdfs:label "has location county" .
 
-grip:hasGrowthStage a owl:DatatypeProperty .
+grip:hasMOA a owl:ObjectProperty ;
+    rdfs:label "has mode of action" .
 
-grip:hasHarvestDate a owl:DatatypeProperty .
+grip:hasPlantingDate a owl:DatatypeProperty ;
+    rdfs:label "has planting date" .
 
-grip:hasIncidence a owl:DatatypeProperty .
+grip:hasPlotLength a owl:DatatypeProperty ;
+    rdfs:label "has plot length" .
 
-grip:hasLocationCity a owl:ObjectProperty .
+grip:hasPlotWidth a owl:DatatypeProperty ;
+    rdfs:label "has plot width" .
 
-grip:hasLocationCounty a owl:ObjectProperty .
+grip:hasPopulation a owl:DatatypeProperty ;
+    rdfs:label "has population" .
 
-grip:hasMOA a owl:ObjectProperty .
+grip:hasProtein a owl:DatatypeProperty ;
+    rdfs:label "has protein" .
 
-grip:hasManagement a owl:ObjectProperty .
+grip:hasRate a owl:DatatypeProperty ;
+    rdfs:label "has rate" .
 
-grip:hasName a owl:DatatypeProperty .
+grip:hasSeverity a owl:DatatypeProperty ;
+    rdfs:label "has severity" .
 
-grip:hasObs a owl:ObjectProperty .
+grip:hasTestWeight a owl:DatatypeProperty ;
+    rdfs:label "has test weight" .
 
-grip:hasOutcome a owl:ObjectProperty .
+grip:hasTiming a owl:DatatypeProperty ;
+    rdfs:label "has timing" .
 
-grip:hasPlantingDate a owl:DatatypeProperty .
+grip:hasTrial a owl:ObjectProperty ;
+    rdfs:label "has trial" .
 
-grip:hasPlotLength a owl:DatatypeProperty .
+grip:hasYear a owl:DatatypeProperty ;
+    rdfs:label "has year" .
 
-grip:hasPlotWidth a owl:DatatypeProperty .
-
-grip:hasPopulation a owl:DatatypeProperty .
-
-grip:hasProtein a owl:DatatypeProperty .
-
-grip:hasRate a owl:DatatypeProperty .
-
-grip:hasSeverity a owl:DatatypeProperty .
-
-grip:hasTestWeight a owl:DatatypeProperty .
-
-grip:hasTiming a owl:DatatypeProperty .
-
-grip:hasTreatDesign a owl:ObjectProperty .
-
-grip:hasTreatment a owl:ObjectProperty .
-
-grip:hasTrial a owl:ObjectProperty .
-
-grip:hasYear a owl:DatatypeProperty .
-
-grip:hasYield a owl:DatatypeProperty .
+grip:hasYield a owl:DatatypeProperty ;
+    rdfs:label "has yield" .
 
 grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial1 a grip:FieldTrial ;
     grip:hasBlock "1"^^xsd:int ;
@@ -325,15 +338,58 @@ grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6 a grip:FieldTrial ;
     grip:hasTrial grip:FRL ;
     grip:hasYear "2024"^^xsd:int .
 
-grip:isInoculated a owl:DatatypeProperty .
+grip:isInoculated a owl:DatatypeProperty ;
+    rdfs:label "is inoculated" .
 
-grip:LocationCity a owl:Class .
+<https://creativecommons.org/licenses/by/4.0/> dcterms:title "Creative Commons Attribution 4.0 International"@en .
 
-grip:LocationCounty a owl:Class .
+grip:ActiveIngredient a owl:Class ;
+    rdfs:label "Active Ingredient" .
 
-grip:TreatDesign a owl:Class .
+grip:DON a owl:Class ;
+    rdfs:label "DON" .
 
-grip:Trial a owl:Class .
+grip:LocationCity a owl:Class ;
+    rdfs:label "Location City" .
+
+grip:LocationCounty a owl:Class ;
+    rdfs:label "Location County" .
+
+grip:Trial a owl:Class ;
+    rdfs:label "Trial" .
+
+grip:appliedOnVariety a owl:ObjectProperty ;
+    rdfs:label "applied on variety" .
+
+grip:hasA_I a owl:ObjectProperty ;
+    rdfs:label "has active ingredient" .
+
+grip:hasDON a owl:DatatypeProperty ;
+    rdfs:label "has DON" .
+
+grip:hasDiseaseObservation a owl:ObjectProperty ;
+    rdfs:label "has disease observation" .
+
+grip:hasFungicideApplication a owl:ObjectProperty ;
+    rdfs:label "has fungicide application" .
+
+grip:hasManagement a owl:ObjectProperty ;
+    rdfs:label "has management" .
+
+grip:hasName a owl:DatatypeProperty ;
+    rdfs:label "has name" .
+
+grip:hasObs a owl:ObjectProperty ;
+    rdfs:label "has observation" .
+
+grip:hasOutcome a owl:ObjectProperty ;
+    rdfs:label "has outcome" .
+
+grip:hasTreatDesign a owl:ObjectProperty ;
+    rdfs:label "has treatment design" .
+
+grip:hasTreatment a owl:ObjectProperty ;
+    rdfs:label "has treatment" .
 
 grip:instance_Rossville_Shawnee_FRL_2024_Split_1_trial13_disease a grip:Disease ;
     grip:hasName "Rust" ;
@@ -1263,41 +1319,65 @@ grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_treatment a grip:Treatme
     grip:hasFungicideApplication grip:instance_Rossville_Shawnee_FRL_2024_Split_3_trial6_fungicide1 ;
     grip:hasTreatDesign grip:Two-way .
 
-grip:WheatVariety a owl:Class .
+grip:TreatDesign a owl:Class ;
+    rdfs:label "Treatment Design" .
 
-grip:Fungicide a owl:Class .
+grip:WheatVariety a owl:Class ;
+    rdfs:label "Wheat Variety" .
 
-grip:Observation a owl:Class .
+grip:Fungicide a owl:Class ;
+    rdfs:label "Fungicide" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty grip:hasA_I ;
+            owl:someValuesFrom grip:ActiveIngredient ] .
+
+grip:Observation a owl:Class ;
+    rdfs:label "Observation" .
 
 grip:KS_180B a grip:WheatVariety .
 
 grip:SY_Monument a grip:WheatVariety .
 
-grip:Disease a owl:Class .
-
 grip:FRL a grip:Trial .
 
+grip:FieldTrial a owl:Class ;
+    rdfs:label "Field Trial" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty grip:hasDiseaseObservation ;
+            owl:someValuesFrom grip:Disease ],
+        [ a owl:Restriction ;
+            owl:onProperty grip:hasOutcome ;
+            owl:someValuesFrom grip:Outcome ],
+        [ a owl:Restriction ;
+            owl:onProperty grip:hasManagement ;
+            owl:someValuesFrom grip:Management ],
+        [ a owl:Restriction ;
+            owl:onProperty grip:hasTreatment ;
+            owl:someValuesFrom grip:Treatment ] .
+
 grip:Fungicide1 a owl:Class ;
+    rdfs:label "Fungicide 1" ;
     rdfs:subClassOf grip:Fungicide .
 
-grip:Management a owl:Class .
-
 grip:Observation1 a owl:Class ;
+    rdfs:label "Observation 1" ;
     rdfs:subClassOf grip:Observation .
 
 grip:Observation2 a owl:Class ;
+    rdfs:label "Observation 2" ;
     rdfs:subClassOf grip:Observation .
 
 grip:Observation3 a owl:Class ;
+    rdfs:label "Observation 3" ;
     rdfs:subClassOf grip:Observation .
 
 grip:Observation4 a owl:Class ;
+    rdfs:label "Observation 4" ;
     rdfs:subClassOf grip:Observation .
 
 grip:Observation5 a owl:Class ;
+    rdfs:label "Observation 5" ;
     rdfs:subClassOf grip:Observation .
-
-grip:Outcome a owl:Class .
 
 grip:Rossville a grip:LocationCity .
 
@@ -1306,4 +1386,34 @@ grip:Shawnee a grip:LocationCounty .
 grip:Split a grip:ExperimentDesign .
 
 grip:Two-way a grip:TreatDesign .
+
+grip:Disease a owl:Class ;
+    rdfs:label "Disease" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty grip:hasName ;
+            owl:someValuesFrom grip:DiseaseName ],
+        [ a owl:Restriction ;
+            owl:onProperty grip:hasDON ;
+            owl:someValuesFrom grip:DON ],
+        [ a owl:Restriction ;
+            owl:onProperty grip:hasObs ;
+            owl:someValuesFrom grip:Observation ] .
+
+grip:Management a owl:Class ;
+    rdfs:label "Management" .
+
+grip:Outcome a owl:Class ;
+    rdfs:label "Outcome" .
+
+grip:Treatment a owl:Class ;
+    rdfs:label "Treatment" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty grip:hasFungicideApplication ;
+            owl:someValuesFrom grip:Fungicide ],
+        [ a owl:Restriction ;
+            owl:onProperty grip:hasTreatDesign ;
+            owl:someValuesFrom grip:TreatDesign ],
+        [ a owl:Restriction ;
+            owl:onProperty grip:appliedOnVariety ;
+            owl:someValuesFrom grip:WheatVariety ] .
 

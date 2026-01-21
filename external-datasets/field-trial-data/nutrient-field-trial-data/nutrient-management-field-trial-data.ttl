@@ -1,119 +1,242 @@
-@prefix ns: <http://grip.org/nutrient-trials/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns: <https://gwsp.cs.ksu.edu/nutrient-trials/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ns:N_time\(Fall-Spring-Anthesis\) a rdfs:Class ;
+    rdfs:label "N Time" ;
+    rdfs:subClassOf ns:treatment_3 .
+
 ns:biomass a rdfs:Class ;
-    rdfs:subClassOf ns:Observational_System .
+    rdfs:label "Biomass" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue ns:gram_per_sqm ;
+            owl:onProperty ns:has_unit ],
+        ns:Observational_System .
 
 ns:dap_apps a rdfs:Class ;
-    rdfs:subClassOf ns:Management_System .
+    rdfs:label "DAP Applications" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue ns:pounds_per_acre ;
+            owl:onProperty ns:has_unit ],
+        ns:Management_System .
 
 ns:dap_n a rdfs:Class ;
-    rdfs:subClassOf ns:Management_System .
+    rdfs:label "DAP Nitrogen" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue ns:pounds_per_acre ;
+            owl:onProperty ns:has_unit ],
+        ns:Management_System .
 
 ns:environment a rdfs:Class ;
-    ns:has_dap_apps ns:dap_apps ;
-    ns:has_dap_n ns:dap_n ;
-    ns:has_fung_apps_date ns:fung_apps_date ;
-    ns:has_location ns:location ;
-    ns:has_no3 ns:no3 ;
-    ns:has_plot ns:plot ;
-    ns:has_previous_crop ns:previous_crop ;
-    ns:has_rep ns:rep ;
-    ns:has_seed_rate ns:seed_rate ;
-    ns:has_sowing_date ns:sowing_date ;
-    ns:has_total_n ns:total_n ;
-    ns:has_trial ns:trial ;
-    ns:has_year ns:year ;
-    rdfs:subClassOf ns:Experimental_System .
+    rdfs:label "Environment" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_trial ;
+            owl:someValuesFrom ns:trial ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_total_n ;
+            owl:someValuesFrom ns:total_n ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_plot ;
+            owl:someValuesFrom ns:plot ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_no3 ;
+            owl:someValuesFrom ns:no3 ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_sowing_date ;
+            owl:someValuesFrom ns:sowing_date ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_year ;
+            owl:someValuesFrom ns:year ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_seed_rate ;
+            owl:someValuesFrom ns:seed_rate ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_location ;
+            owl:someValuesFrom ns:location ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_previous_crop ;
+            owl:someValuesFrom ns:previous_crop ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_dap_apps ;
+            owl:someValuesFrom ns:dap_apps ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_dap_n ;
+            owl:someValuesFrom ns:dap_n ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_fung_apps_date ;
+            owl:someValuesFrom ns:fung_apps_date ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_rep ;
+            owl:someValuesFrom ns:rep ],
+        ns:Experimental_System .
 
 ns:est_anthesis_time a rdfs:Class ;
+    rdfs:label "Estimated Anthesis Time" ;
     rdfs:subClassOf ns:Management_System .
 
 ns:experimental_design a rdfs:Class ;
+    rdfs:label "Experimental Design" ;
     rdfs:subClassOf ns:Experimental_System .
 
+ns:fertility a rdfs:Class ;
+    rdfs:label "Fertility" ;
+    rdfs:subClassOf ns:treatment_1 .
+
 ns:fung_apps_date a rdfs:Class ;
+    rdfs:label "Fungicide Application Date" ;
     rdfs:subClassOf ns:Management_System .
 
 ns:grain_protein a rdfs:Class ;
-    rdfs:subClassOf ns:Observational_System .
+    rdfs:label "Grain Protein" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue ns:gram ;
+            owl:onProperty ns:has_unit ],
+        ns:Observational_System .
 
 ns:harvest_index a rdfs:Class ;
+    rdfs:label "Harvest Index" ;
     rdfs:subClassOf ns:Observational_System .
 
 ns:heads_per_sqm a rdfs:Class ;
-    rdfs:subClassOf ns:Observational_System .
+    rdfs:label "Heads per Square Meter" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue ns:per_sqm ;
+            owl:onProperty ns:has_unit ],
+        ns:Observational_System .
 
 ns:kernel_per_head a rdfs:Class ;
+    rdfs:label "Kernels per Head" ;
     rdfs:subClassOf ns:Observational_System .
 
 ns:kernel_per_sqm a rdfs:Class ;
-    rdfs:subClassOf ns:Observational_System .
+    rdfs:label "Kernels per Square Meter" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue ns:per_sqm ;
+            owl:onProperty ns:has_unit ],
+        ns:Observational_System .
 
 ns:location a rdfs:Class ;
+    rdfs:label "Location" ;
     rdfs:subClassOf ns:Experimental_System .
 
+ns:management a rdfs:Class ;
+    rdfs:label "Management" ;
+    rdfs:subClassOf ns:treatment_1 .
+
 ns:maturity a rdfs:Class ;
+    rdfs:label "Maturity" ;
     rdfs:subClassOf ns:Management_System .
 
 ns:no3 a rdfs:Class ;
-    rdfs:subClassOf ns:Management_System .
+    rdfs:label "NO3" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue ns:pounds_per_acre ;
+            owl:onProperty ns:has_unit ],
+        ns:Management_System .
 
 ns:no_of_treatments a rdfs:Class ;
+    rdfs:label "Number of Treatments" ;
     rdfs:subClassOf ns:Treatment_System .
 
 ns:plant_growth_regulator a rdfs:Class ;
+    rdfs:label "Plant Growth Regulator" ;
     rdfs:subClassOf ns:treatment_3 .
 
 ns:plot a rdfs:Class ;
+    rdfs:label "Plot" ;
     rdfs:subClassOf ns:Experimental_System .
 
 ns:previous_crop a rdfs:Class ;
+    rdfs:label "Previous Crop" ;
     rdfs:subClassOf ns:Management_System .
 
 ns:rep a rdfs:Class ;
+    rdfs:label "Rep" ;
     rdfs:subClassOf ns:Experimental_System .
 
 ns:seed_rate a rdfs:Class ;
-    rdfs:subClassOf ns:Management_System .
+    rdfs:label "Seed Rate" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue ns:pounds_per_acre ;
+            owl:onProperty ns:has_unit ],
+        ns:Management_System .
 
 ns:sowing_date a rdfs:Class ;
+    rdfs:label "Sowing Date" ;
     rdfs:subClassOf ns:Management_System .
 
 ns:test_weight a rdfs:Class ;
-    rdfs:subClassOf ns:Observational_System .
+    rdfs:label "Test Weight" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue ns:pounds_per_bushel ;
+            owl:onProperty ns:has_unit ],
+        ns:Observational_System .
 
 ns:thousand_kernel_weight a rdfs:Class ;
-    rdfs:subClassOf ns:Observational_System .
+    rdfs:label "Thousand Kernel Weight" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue ns:gram ;
+            owl:onProperty ns:has_unit ],
+        ns:Observational_System .
 
 ns:total_n a rdfs:Class ;
-    rdfs:subClassOf ns:Management_System .
+    rdfs:label "Total Nitrogen" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue ns:pounds_per_acre ;
+            owl:onProperty ns:has_unit ],
+        ns:Management_System .
 
 ns:treatment_1 a rdfs:Class ;
+    rdfs:label "Treatment 1" ;
     rdfs:subClassOf ns:Treatment_System .
 
 ns:treatment_2 a rdfs:Class ;
+    rdfs:label "Treatment 2" ;
     rdfs:subClassOf ns:Treatment_System .
 
 ns:treatment_3 a rdfs:Class ;
+    rdfs:label "Treatment 3" ;
     rdfs:subClassOf ns:Treatment_System .
 
 ns:treatment_structure a rdfs:Class ;
+    rdfs:label "Treatment Structure" ;
     rdfs:subClassOf ns:Treatment_System .
 
 ns:trial a rdfs:Class ;
-    ns:has_experimental_design ns:experimental_design ;
-    ns:has_no_of_treatments ns:no_of_treatments ;
-    ns:has_treatment_structure ns:treatment_structure ;
-    rdfs:subClassOf ns:Experimental_System .
+    rdfs:label "Trial" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_experimental_design ;
+            owl:someValuesFrom ns:experimental_design ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_no_of_treatments ;
+            owl:someValuesFrom ns:no_of_treatments ],
+        [ a owl:Restriction ;
+            owl:onProperty ns:has_treatment_structure ;
+            owl:someValuesFrom ns:treatment_structure ],
+        ns:Experimental_System .
+
+ns:variety a rdfs:Class ;
+    rdfs:label "Variety" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns:has_maturity_property ;
+            owl:someValuesFrom ns:maturity ],
+        ns:treatment_2 .
 
 ns:year a rdfs:Class ;
+    rdfs:label "Year" ;
     rdfs:subClassOf ns:Experimental_System .
 
 ns:yield a rdfs:Class ;
-    rdfs:subClassOf ns:Observational_System .
+    rdfs:label "Yield" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue ns:pounds_per_acre ;
+            owl:onProperty ns:has_unit ],
+        ns:Observational_System .
+
+ns: a owl:Ontology ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
 
 ns:Plot_1001_2017-18_IWM_BJ_2_HUT a ns:environment ;
     ns:has_biomass "612.0734908136483"^^xsd:float ;
@@ -472,129 +595,132 @@ ns:Plot_114_2018-19_N_FFF_MNH a ns:environment ;
     ns:has_year "2018-19"^^xsd:string ;
     ns:has_yield "3422.0582116062246"^^xsd:float .
 
-ns:anthesis_timing a ns:N_time\(Fall-Spring-Anthesis\) .
+ns:anthesis_timing a ns:N_time\(Fall-Spring-Anthesis\) ;
+    rdfs:label "Anthesis Timing" .
 
 ns:bentley a ns:variety ;
+    rdfs:label "Bentley" ;
     ns:has_maturity_property ns:early .
 
 ns:bobdole a ns:variety ;
+    rdfs:label "Bob Dole" ;
     ns:has_maturity_property ns:medium_early .
 
 ns:byrd a ns:variety ;
+    rdfs:label "Byrd" ;
     ns:has_maturity_property ns:medium_late .
 
-ns:control a ns:plant_growth_regulator .
+ns:control a ns:plant_growth_regulator ;
+    rdfs:label "Control" .
 
 ns:double_stop a ns:variety ;
+    rdfs:label "Double Stop" ;
     ns:has_maturity_property ns:medium_late .
 
 ns:everest a ns:variety ;
+    rdfs:label "Everest" ;
     ns:has_maturity_property ns:super_early .
 
-ns:fall_timing a ns:N_time\(Fall-Spring-Anthesis\) .
+ns:fall_timing a ns:N_time\(Fall-Spring-Anthesis\) ;
+    rdfs:label "Fall Timing" .
 
-<http://grip.org/nutrient-trials/fp+n+mesz> a ns:fertility .
+<https://gwsp.cs.ksu.edu/nutrient-trials/fp+n+mesz> a ns:fertility .
 
 ns:greenhammer a ns:variety ;
+    rdfs:label "Greenhammer" ;
     ns:has_maturity_property ns:medium .
 
-ns:has_anthesis_timing a owl:DatatypeProperty .
+ns:has_anthesis_timing a owl:DatatypeProperty ;
+    rdfs:label "has anthesis timing" .
 
-ns:has_biomass a owl:DatatypeProperty .
+ns:has_biomass a owl:DatatypeProperty ;
+    rdfs:label "has biomass" .
 
-ns:has_dap_apps a owl:DatatypeProperty .
+ns:has_est_anthesis_time a owl:DatatypeProperty ;
+    rdfs:label "has estimated anthesis time" .
 
-ns:has_dap_n a owl:DatatypeProperty .
+ns:has_fall_timing a owl:DatatypeProperty ;
+    rdfs:label "has fall timing" .
 
-ns:has_est_anthesis_time a owl:DatatypeProperty .
+ns:has_grain_protein a owl:DatatypeProperty ;
+    rdfs:label "has grain protein" .
 
-ns:has_experimental_design a owl:ObjectProperty .
+ns:has_harvest_index a owl:DatatypeProperty ;
+    rdfs:label "has harvest index" .
 
-ns:has_fall_timing a owl:DatatypeProperty .
+ns:has_heads_per_sqm a owl:DatatypeProperty ;
+    rdfs:label "has heads per square meter" .
 
-ns:has_fung_apps_date a owl:DatatypeProperty .
+ns:has_kernel_per_head a owl:DatatypeProperty ;
+    rdfs:label "has kernels per head" .
 
-ns:has_grain_protein a owl:DatatypeProperty .
+ns:has_kernel_per_sqm a owl:DatatypeProperty ;
+    rdfs:label "has kernels per square meter" .
 
-ns:has_harvest_index a owl:DatatypeProperty .
+ns:has_nrate a owl:DatatypeProperty ;
+    rdfs:label "has N rate" .
 
-ns:has_heads_per_sqm a owl:DatatypeProperty .
+ns:has_spring_timing a owl:DatatypeProperty ;
+    rdfs:label "has spring timing" .
 
-ns:has_kernel_per_head a owl:DatatypeProperty .
+ns:has_test_weight a owl:DatatypeProperty ;
+    rdfs:label "has test weight" .
 
-ns:has_kernel_per_sqm a owl:DatatypeProperty .
+ns:has_thousand_kernel_weight a owl:DatatypeProperty ;
+    rdfs:label "has thousand kernel weight" .
 
-ns:has_location a owl:ObjectProperty .
+ns:has_treatment1 a owl:ObjectProperty ;
+    rdfs:label "has treatment 1" .
 
-ns:has_maturity_property a owl:ObjectProperty .
+ns:has_treatment2 a owl:ObjectProperty ;
+    rdfs:label "has treatment 2" .
 
-ns:has_no3 a owl:DatatypeProperty .
+ns:has_treatment3 a owl:ObjectProperty ;
+    rdfs:label "has treatment 3" .
 
-ns:has_no_of_treatments a owl:ObjectProperty .
+ns:has_treatment_level a owl:ObjectProperty ;
+    rdfs:label "has treatment level" .
 
-ns:has_nrate a owl:DatatypeProperty .
-
-ns:has_plot a owl:ObjectProperty .
-
-ns:has_previous_crop a owl:ObjectProperty .
-
-ns:has_rep a owl:ObjectProperty .
-
-ns:has_seed_rate a owl:DatatypeProperty .
-
-ns:has_sowing_date a owl:DatatypeProperty .
-
-ns:has_spring_timing a owl:DatatypeProperty .
-
-ns:has_test_weight a owl:DatatypeProperty .
-
-ns:has_thousand_kernel_weight a owl:DatatypeProperty .
-
-ns:has_total_n a owl:DatatypeProperty .
-
-ns:has_treatment1 a owl:ObjectProperty .
-
-ns:has_treatment2 a owl:ObjectProperty .
-
-ns:has_treatment3 a owl:ObjectProperty .
-
-ns:has_treatment_level a owl:ObjectProperty .
-
-ns:has_treatment_structure a owl:ObjectProperty .
-
-ns:has_trial a owl:ObjectProperty .
-
-ns:has_year a owl:ObjectProperty .
-
-ns:has_yield a owl:DatatypeProperty .
+ns:has_yield a owl:DatatypeProperty ;
+    rdfs:label "has yield" .
 
 ns:high a ns:management .
 
 ns:high_n a ns:management .
 
 ns:joe a ns:variety ;
+    rdfs:label "Joe" ;
     ns:has_maturity_property ns:late .
 
 ns:larry a ns:variety ;
+    rdfs:label "Larry" ;
     ns:has_maturity_property ns:medium .
 
 ns:mesz a ns:fertility .
 
-ns:palisade a ns:plant_growth_regulator .
+ns:palisade a ns:plant_growth_regulator ;
+    rdfs:label "Palisade" .
 
-ns:spring_timing a ns:N_time\(Fall-Spring-Anthesis\) .
+ns:spring_timing a ns:N_time\(Fall-Spring-Anthesis\) ;
+    rdfs:label "Spring Timing" .
 
 ns:sy_mountain a ns:variety ;
+    rdfs:label "SY Monument" ;
     ns:has_maturity_property ns:medium_late .
 
 ns:tatanaka a ns:variety ;
+    rdfs:label "Tatanka" ;
     ns:has_maturity_property ns:medium_late .
 
 ns:variety_1863 a ns:variety ;
+    rdfs:label "Variety 1863" ;
     ns:has_maturity_property ns:medium .
 
 ns:zenda a ns:variety ;
+    rdfs:label "Zenda" ;
     ns:has_maturity_property ns:medium .
+
+<https://creativecommons.org/licenses/by/4.0/> dcterms:title "Creative Commons Attribution 4.0 International"@en .
 
 ns:IWM_BJ_2 a ns:trial .
 
@@ -610,69 +736,153 @@ ns:PLOT_105 a ns:plot .
 
 ns:fp a ns:fertility .
 
-ns:super_early a ns:maturity .
+ns:gram_per_sqm a ns:Units ;
+    rdfs:label "Gram per Square Meter" ;
+    owl:sameAs <http://purl.obolibrary.org/obo/UO_0010049> .
+
+ns:has_dap_apps a owl:DatatypeProperty ;
+    rdfs:label "has DAP applications" .
+
+ns:has_dap_n a owl:DatatypeProperty ;
+    rdfs:label "has DAP nitrogen" .
+
+ns:has_experimental_design a owl:ObjectProperty ;
+    rdfs:label "has experimental design" .
+
+ns:has_fung_apps_date a owl:DatatypeProperty ;
+    rdfs:label "has fungicide application date" .
+
+ns:has_location a owl:ObjectProperty ;
+    rdfs:label "has location" .
+
+ns:has_maturity_property a owl:ObjectProperty ;
+    rdfs:label "has maturity property" .
+
+ns:has_no3 a owl:DatatypeProperty ;
+    rdfs:label "has NO3" .
+
+ns:has_no_of_treatments a owl:ObjectProperty ;
+    rdfs:label "has number of treatments" .
+
+ns:has_plot a owl:ObjectProperty ;
+    rdfs:label "has plot" .
+
+ns:has_previous_crop a owl:ObjectProperty ;
+    rdfs:label "has previous crop" .
+
+ns:has_rep a owl:ObjectProperty ;
+    rdfs:label "has rep" .
+
+ns:has_seed_rate a owl:DatatypeProperty ;
+    rdfs:label "has seed rate" .
+
+ns:has_sowing_date a owl:DatatypeProperty ;
+    rdfs:label "has sowing date" .
+
+ns:has_total_n a owl:DatatypeProperty ;
+    rdfs:label "has total nitrogen" .
+
+ns:has_treatment_structure a owl:ObjectProperty ;
+    rdfs:label "has treatment structure" .
+
+ns:has_trial a owl:ObjectProperty ;
+    rdfs:label "has trial" .
+
+ns:has_year a owl:ObjectProperty ;
+    rdfs:label "has year" .
+
+ns:pounds_per_bushel a ns:Units ;
+    rdfs:label "Pounds per Bushel" .
+
+ns:super_early a ns:maturity ;
+    rdfs:label "Super Early" .
 
 ns:variety_4303 a ns:variety ;
+    rdfs:label "Variety 4303" ;
     ns:has_maturity_property ns:early .
 
 ns:variety_4458 a ns:variety ;
+    rdfs:label "Variety 4458" ;
     ns:has_maturity_property ns:medium_early .
 
 ns:wb4269 a ns:variety ;
+    rdfs:label "WB 4269" ;
     ns:has_maturity_property ns:early .
 
 ns:wb4515 a ns:variety ;
+    rdfs:label "WB 4515" ;
     ns:has_maturity_property ns:medium .
 
-ns:late a ns:maturity .
+ns:gram a ns:Units ;
+    rdfs:label "Gram" ;
+    owl:sameAs <http://purl.obolibrary.org/obo/UO_0000021> .
 
-ns:management rdfs:subClassOf ns:treatment_1 .
+ns:late a ns:maturity ;
+    rdfs:label "Late" .
 
-ns:medium_early a ns:maturity .
+ns:medium_early a ns:maturity ;
+    rdfs:label "Medium Early" .
 
-ns:N_time\(Fall-Spring-Anthesis\) rdfs:subClassOf ns:treatment_3 .
+ns:per_sqm a ns:Units ;
+    rdfs:label "Per Square Meter" .
 
-ns:early a ns:maturity .
+ns:early a ns:maturity ;
+    rdfs:label "Early" .
 
 ns:BE a ns:location .
 
 ns:MNH a ns:location .
 
-ns:fertility rdfs:subClassOf ns:treatment_1 .
-
 ns:PLOT_114 a ns:plot .
+
+ns:Treatment_System a owl:Class ;
+    rdfs:label "Treatment System" .
+
+ns:Units a owl:Class ;
+    rdfs:label "Units" .
 
 ns:WB-NxV a ns:trial .
 
 ns:lcs_chrome a ns:variety ;
+    rdfs:label "LCS Chrome" ;
     ns:has_maturity_property ns:late .
 
-ns:medium a ns:maturity .
+ns:medium a ns:maturity ;
+    rdfs:label "Medium" .
 
-ns:medium_late a ns:maturity .
+ns:medium_late a ns:maturity ;
+    rdfs:label "Medium Late" .
 
 ns:PLOT_101 a ns:plot .
 
+ns:pounds_per_acre a ns:Units ;
+    rdfs:label "Pounds per Acre" .
+
 ns:wheat a ns:previous_crop .
 
-ns:Experimental_System a owl:Class .
+ns:Experimental_System a owl:Class ;
+    rdfs:label "Experimental System" .
 
 ns:wb_grainfield a ns:variety ;
+    rdfs:label "WB Grainfield" ;
     ns:has_maturity_property ns:medium_late .
 
 ns:HUT a ns:location .
 
-ns:Observational_System a owl:Class .
+ns:Observational_System a owl:Class ;
+    rdfs:label "Observational System" .
 
-ns:Management_System a owl:Class .
+ns:Management_System a owl:Class ;
+    rdfs:label "Management System" .
 
 ns:N_FFF a ns:trial .
 
 ns:soybeans a ns:previous_crop .
 
+ns:has_unit a owl:ObjectProperty ;
+    rdfs:label "has unit" .
+
 ns:nrate a ns:fertility .
 
 ns:REP_1 a ns:rep .
-
-ns:variety rdfs:subClassOf ns:treatment_2 .
 
