@@ -1,137 +1,124 @@
 # Sustainable-Wheat-Production-Datahub
-## From Field to Graph: A Semantically Rich Graph-Based Framework for Sustainable Wheat Production
+## From Field to Graph: GRIP Datahub, a Semantically Rich Graph-Based Framework for Sustainable Wheat Production
 
-This repository contains the ontology schemas and example datasets for the **GRIP Datahub**, a semantically rich knowledge graph for sustainable wheat production.  
-The datahub integrates nutrient management, disease management, climate, and drought information into a modular RDF/OWL framework.
-
-To the best of our knowledge, this is the first unified, wheat-focused agricultural datahub that semantically integrates heterogeneous datasets within a single ontology-driven architecture.
+This repository contains the ontology schemas and example datasets for the **GRIP Datahub**, a semantically rich knowledge graph for sustainable wheat production.
+The datahub integrates nutrient management, disease management, weather, and drought information into a modular RDF/OWL framework.
 
 ---
 
 ## Repository Structure
 ```
 GRIP_DATAHUB/
-├─ central-schema/
-│   ├─ disease-management/
-│   │   ├─ chemical_strategy.ttl
-│   │   ├─ cultural_practice.ttl
-│   │   ├─ disease-management-schema.ttl
-│   │   ├─ fungi_types.ttl
-│   │   ├─ host_genetics.ttl
-│   │   └─ merged.ttl
-│   └─ nutrient-management/
-│       ├─ environment.ttl
-│       ├─ fertilization.ttl
-│       ├─ merged.ttl
-│       ├─ nitrogen.ttl
-│       ├─ nutrient.ttl
-│       └─ soil_available_nitrogen.ttl
-├─ external-datasets/
-│   ├─ field-trial-data/
-│   │   ├─ disease-field-trial-data/
-│   │   │   └─ disease-field-trial-data.ttl
-│   │   └─ nutrient-field-trial-data/
-│   │       └─ nutrient-management-field-trial-data.ttl
-│   ├─ hprcc-climate-data/
-│   │   ├─ hprcc-climate-data-ks-schema.ttl
-│   │   └─ hprcc-climate-data-ks.nt
-│   └─ unl-drought-monitor-data/
-│       └─ unl-drought-monitor-data.ttl
-└─ README.md
+├── competency-questions/
+│   └── COMPETENCY_QUESTIONS.md
+├── data/
+│   ├── disease-data/
+│   │   ├── disease_data_observations.ttl
+│   │   └── disease_data_reference.ttl
+│   ├── drought-data/
+│   │   ├── drought_data_observations.ttl
+│   │   └── drought_data_reference.ttl
+│   ├── nutrient-data/
+│   │   ├── nm_data_observations.ttl
+│   │   └── nm_data_reference.ttl
+│   └── weather-data/
+│       ├── weather_data_observations.nt
+│       └── weather_data_reference.ttl
+├── ontology/
+│   ├── disease-management/
+│   │   ├── modules/
+│   │   │   ├── disease.ttl
+│   │   │   ├── management.ttl
+│   │   │   └── pathogen.ttl
+│   │   ├── dm_master.ttl
+│   │   └── dm_merged.ttl
+│   ├── drought-monitor/
+│   │   └── drought_monitor.ttl
+│   ├── nutrient-management/
+│   │   ├── modules/
+│   │   │   ├── nm_environment_revised.ttl
+│   │   │   ├── nm_fertilization_revised.ttl
+│   │   │   ├── nm_nitrogen_revised.ttl
+│   │   │   ├── nm_nutrient_revised.ttl
+│   │   │   ├── nm_observation.ttl
+│   │   │   └── nm_soil_available_nitrogen_revised.ttl
+│   │   ├── nm_master.ttl
+│   │   └── nm_merged.ttl
+│   └── weather-station/
+│       └── weather_station.ttl
+├── .gitignore
+└── README.md
 ```
 ---
-## Central Schema
-The `central-schema/` directory contains two subdirectories representing the two major modules of our core ontology: disease management and nutrient management. Rather than storing data, this directory defines the core vocabulary and upper-level concepts that specify what nutrient management and disease management are within the GRIP Datahub.
 
-## Disease Management Module
+## Ontology
+The `ontology/` directory holds the schema layer of the GRIP Datahub. It defines the vocabulary and upper-level concepts for four domains: nutrient management, disease management, weather, and drought. These files describe what each domain contains. They do not store the trial records themselves, which live under `data/`.
 
-The `disease-management/` folder contains the ontology components that model fungal pathogens, their characteristics, host genetics, and integrated management strategies.  
-Together, these schemas capture how chemical strategies, cultural practices, and wheat variety resistance interact to influence disease outcomes.
+Each domain follows the same modular pattern. Small, focused modules define the concepts, and two assembly files bring them together:
 
-- **chemical_strategy.ttl** – Defines fungicide products, active ingredients, application timings, rates, and chemical control strategies.  
-- **cultural_practice.ttl** – Represents cultural disease mitigation practices such as residue management, crop rotation, and tillage. 
-- **host_genetics.ttl** – Models wheat varieties, genetic resistance traits, and host–pathogen interactions.  
-- **fungi_types.ttl** – Provides a vocabulary of fungal species and their relevant biological and environmental properties.
-- **disease-management-schema.ttl** – Integrates all disease-related submodules and defines linking relationships among them.  
-- **merged.ttl** – A single aggregated file that imports and unifies all disease-management ontology components.
+- A **master** file (`nm_master.ttl`, `dm_master.ttl`) uses `owl:imports` to pull the modules together for editing and reasoning in tools like Protege.
+- A **merged** file (`nm_merged.ttl`, `dm_merged.ttl`) flattens the modules into one file and removes the duplicate stubs. This is the file to load into GraphDB, because it avoids `owl:imports` resolution issues.
 
+Every entity carries an `rdfs:label` and `rdfs:comment`, and every property declares its domain and range.
 
-## Nutrient Management Module
+### Nutrient Management Module
+Located in `ontology/nutrient-management/`. Six modules model the nutrient hierarchy and the nitrogen-centered concepts that drive nutrient dynamics in wheat.
 
-The `nutrient-management/` directory contains schemas representing the nutrient hierarchy and the nitrogen-centric modules essential for understanding nutrient dynamics in wheat production.  
-These files model nitrogen demand, supply, balance, environmental drivers, fertilization strategies, and soil nitrogen availability.
+- **nm_nutrient_revised.ttl**: High-level nutrient classification, covering non-minerals, primary and secondary minerals, micronutrients, and other nutrient forms. Also holds crop species, cultivar, crop response, and nutrient use efficiency.
+- **nm_nitrogen_revised.ttl**: Nitrogen demand, supply, and balance, the nitrogen cycle and plant nitrogen dynamics, and the transformation and loss pathways.
+- **nm_soil_available_nitrogen_revised.ttl**: Soil nitrogen pools, the processes that supply or deplete them, and the associated measurement properties.
+- **nm_environment_revised.ttl**: Environmental and soil factors that influence nutrient behavior, including the 12 USDA soil texture classes as individuals, temperature, moisture, and pH.
+- **nm_fertilization_revised.ttl**: Fertilizer sources and their guaranteed analysis, application rates and timings, enhanced efficiency fertilizers, and fertilization management practices.
+- **nm_observation.ttl**: The plot observation event that binds a cultivar, site-year, trial, and treatments to measured responses such as yield, protein, and test weight. Also holds maturity group, nitrogen timing split, and previous crop with its category link.
+- **nm_master.ttl / nm_merged.ttl**: The master imports the six modules under the `nutrient-management` root. The merged file is the deduplicated single file for GraphDB.
 
-- **nutrient.ttl** – High-level nutrient classification, including non-minerals, primary/secondary minerals, micronutrients, and other nutrient forms.  
-- **nitrogen.ttl** – Defines nitrogen demand, nitrogen supply, nitrogen balance, observational traits, and nitrogen–environment interactions.  
-- **soil_available_nitrogen.ttl** – Represents soil nitrogen pools and associated measurement properties.  
-- **environment.ttl** – Captures environmental and soil factors (temperature, moisture, pH, etc.) influencing nutrient behavior.  
-- **fertilization.ttl** – Models fertilizer treatments, rates, timings, and agronomic nitrogen management strategies.  
-- **merged.ttl** – A convenience file that imports all nutrient-management submodules into a unified schema.
+### Disease Management Module
+Located in `ontology/disease-management/`. Three modules model pathogens, the diseases they cause, and integrated management.
 
+- **pathogen.ttl**: Pathogen taxonomy (fungal, bacterial, viral) with specific pathogen individuals, plus inoculum reservoirs, dispersal mechanisms, and infection conditions.
+- **disease.ttl**: Wheat diseases as individuals, each linked to its causal organism through `caused_by`. Also models the disease triangle (host, pathogen, environment), disease assessment methods (incidence, severity, rating), and per-cultivar per-disease resistance ratings.
+- **management.ttl**: The three control pillars, namely chemical control (fungicides with FRAC groups, active ingredients, and application timings), cultural control practices, and host resistance types.
+- **dm_master.ttl / dm_merged.ttl**: Assembly files. They bridge to nutrient management through shared stubs such as environment and cultivar. Load the merged file into GraphDB.
 
-## External Datasets
+### Weather Station Ontology
+Located in `ontology/weather-station/weather_station.ttl`. Describes weather station metadata and the structure of daily weather observations such as temperature, precipitation, and snowfall. It provides the schema for the HPRCC weather records under `data/weather-data/`.
 
-The `external-datasets/` directory contains instance-level datasets that populate the ontology with empirical data from field trials, climate stations, and drought monitoring systems.  
-These datasets ground the schema in real agronomic observations and enable SPARQL-driven analysis across multiple environmental and management contexts.
-Only a small subset of the full datasets is included in this repository due to their large size, with the remainder stored externally.
-
-### Field Trial Data
-- **disease-field-trial-data.ttl** – Empirical field trial data documenting fungicide performance, disease severity ratings, and variety responses.  
-- **nutrient-management-field-trial-data.ttl** – Field trial observations related to nitrogen treatments, grain protein, test weight, and yield components.
-
-### HPRCC Climate Data
-- **hprcc-climate-data-ks-schema.ttl** – Schema describing climate station metadata and observation structure for the HPRCC dataset.  
-- **hprcc-climate-data-ks.nt** – Large N-Triples file containing daily climate observations (temperature, precipitation, snowfall, etc.).
-
-### UNL Drought Monitor Data
-- **unl-drought-monitor-data.ttl** – State- and county-level drought category observations spanning multiple years, aligned with the U.S. Drought Monitor classifications.
----
-
-## Schema Diagrams
-
-Below are the high-level diagrams illustrating the modular organization of the GRIP Datahub ontology.  
-These figures provide an overview of how the core schema and its two major modules—disease management and nutrient management—are structured and interconnected.
-
-### Nutrient Management Schemas
-![Nutrient Management Top-View](figures/central-schema/nutrient-management/nutrient_management_top.png)
-
-![Nutrient Module inside Nutrient management](figures/central-schema/nutrient-management/nutrient_management_nutrient.png)
-
-![Nitrogen Demand](figures/central-schema/nutrient-management/nutrient_management_nutrient_demand.png)
-
-![Nitrogen Supply](figures/central-schema/nutrient-management/nutrient_management_nutrient_supply.png)
-
-![Nitrogen Fertilization](figures/central-schema/nutrient-management/nutrient_management_fertilization.png)
-
-![Environment](figures/central-schema/nutrient-management/nutrient_management_environment.png)
-
-![Soil Available Nitrogen](figures/central-schema/nutrient-management/nutrient_management_soil_available_nitrogen.png)
+### Drought Monitor Ontology
+Located in `ontology/drought-monitor/drought_monitor.ttl`. Describes drought observations at state and county level, aligned with the U.S. Drought Monitor categories (D0 to D4). It provides the schema for the drought records under `data/drought-data/`.
 
 ---
 
-### Disease Management Schema
-![Disease Management Top-View](figures/central-schema/disease-management/fungicide_top.png)
+## Data
+The `data/` directory holds the instance-level records that populate the ontology with real observations from field trials, weather stations, and drought monitoring. Each domain is split into two files:
 
-![Chemical Strategy](figures/central-schema/disease-management/chemical_strategy.png)
+- A **reference** file (`*_reference.ttl`) holds the shared individuals a domain refers to, such as cultivars, locations, and site-years.
+- An **observations** file (`*_observations.ttl` or `.nt`) holds the measured records themselves.
 
-![Cultural Practices](figures/central-schema/disease-management/cultural_practices.png)
+### Nutrient Trial Data
+`data/nutrient-data/`. Field trial records for nitrogen treatments, grain protein, test weight, and yield components, drawn from the Kansas wheat variety and fertility trials.
 
-![Host Genetics](figures/central-schema/disease-management/host_gentics.png)
+- **nm_data_reference.ttl**: Reference individuals for the nutrient trials, including cultivars, locations, and site-years.
+- **nm_data_observations.ttl**: The plot-level observation records with their measured values.
 
-![Fungi Types](figures/central-schema/disease-management/fungi.png)
+### Disease Trial Data
+`data/disease-data/`. Field trial records documenting fungicide applications, disease severity and incidence assessments, DON readings, and variety responses for Fusarium head blight and stripe rust.
 
-![Disease Management Combined](figures/central-schema/disease-management/fungicide_all.png)
+- **disease_data_reference.ttl**: Reference individuals for the disease trials.
+- **disease_data_observations.ttl**: The fungicide application and disease assessment records.
+
+### Weather Data
+`data/weather-data/`. Daily weather observations from HPRCC stations in Kansas.
+
+- **weather_data_reference.ttl**: Station reference individuals.
+- **weather_data_observations.nt**: The daily observation records, stored as N-Triples because of their volume.
+
+### Drought Data
+`data/drought-data/`. State and county drought category observations aligned with the U.S. Drought Monitor.
+
+- **drought_data_reference.ttl**: State and county reference individuals.
+- **drought_data_observations.ttl**: The dated drought category records.
 
 ---
 
-### External Datasets' Schema
-#### Field-Trial Data
-![Field-Trial Data (Nutrient)](figures/external-datasets/field-trial-data/field_trial_nitrogen.png)
-
-![Field-Trial Data (Disease)](figures/external-datasets/field-trial-data/field_trial_fungicide.png)
-
-#### Climate Data Schema
-![HPRCC Climate Data](figures/external-datasets/hprcc_climate.png)
-
-#### Drought Monitor Schema
-![UNL Drought Monitor](figures/external-datasets/unl_drought_monitor.png)
+## Competency Questions
+The `competency-questions/` directory holds `COMPETENCY_QUESTIONS.md`, a set of 40 ready-to-run SPARQL queries. They validate the ontology at the schema level and answer real questions against the loaded trial data. Each query is self-contained and includes its prefixes, and the file lists which graphs to load for each group of queries.
