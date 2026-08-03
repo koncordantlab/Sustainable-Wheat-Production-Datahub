@@ -1,7 +1,7 @@
 # Sustainable-Wheat-Production-Datahub
 ## From Field to Graph: GRIP Datahub, a Semantically Rich Graph-Based Framework for Sustainable Wheat Production
 
-This repository contains the ontology schemas and example datasets for the **GRIP Datahub**, a semantically rich knowledge graph for sustainable wheat production.
+This repository contains the ontology schemas and datasets for the **Sustainable Wheat Production Datahub**, a semantically rich knowledge graph for sustainable wheat production.
 The datahub integrates nutrient management, disease management, weather, and drought information into a modular RDF/OWL framework.
 
 ---
