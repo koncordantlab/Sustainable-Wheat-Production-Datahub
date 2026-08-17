@@ -8,6 +8,8 @@ The ontology documentation is hosted at [https://gwsp.cs.ksu.edu/ontology/](http
 ---
 
 ## Citation
+The paper is available on arXiv: [https://arxiv.org/abs/2502.19507](https://arxiv.org/abs/2502.19507).
+
 If you use this work, please cite:
 
 ```bibtex
