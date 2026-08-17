@@ -3,6 +3,7 @@
 
 This repository contains the ontology schemas and datasets for the **Sustainable Wheat Production Datahub**, a semantically rich knowledge graph for sustainable wheat production.
 The datahub integrates nutrient management, disease management, weather, and drought information into a modular RDF/OWL framework.
+The ontology documentation is hosted at [https://gwsp.cs.ksu.edu/ontology/](https://gwsp.cs.ksu.edu/ontology/).
 
 ---
 
